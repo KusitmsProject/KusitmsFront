@@ -38,7 +38,7 @@
                                                     <userLayoutGuide location="91" affinity="minY"/>
                                                 </userGuides>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tLJ-Bv-l7v">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tLJ-Bv-l7v">
                                                         <rect key="frame" x="10.333333333333343" y="8" width="330" height="166"/>
                                                         <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -309,6 +309,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imagePlusButton" destination="bT6-Vn-TrA" id="dWX-Sv-n0z"/>
+                        <outlet property="imagePlusLabel" destination="fmo-XM-j34" id="Umr-N9-cUV"/>
                         <outlet property="photoView" destination="DYP-qe-8ez" id="vBa-9L-7VR"/>
                         <outlet property="selectImage" destination="tLJ-Bv-l7v" id="znJ-Lh-V34"/>
                     </connections>
