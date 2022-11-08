@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import PanModal
 
 class TodayMeViewController: UIViewController {
     
@@ -27,11 +28,26 @@ class TodayMeViewController: UIViewController {
         self.selectImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageOrCamera)))
     }
     
+    // 가사 모달 띄우기
+    @IBAction func LyricsButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Lyrics", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LyricsModalController") as! LyricsModalController
+        presentPanModal(vc)
+    }
+    
+    
+    // 기록 모달 띄우기
+    @IBAction func RecordButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Record", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RecordModalController") as! RecordModalController
+        presentPanModal(vc)
+    }
+    
     @objc func imageOrCamera(){
         selectImage.backgroundColor = UIColor(named: "bluehover")
         selectImage.layer.borderColor = UIColor(named: "bluehoverBorder")?.cgColor
         
-        let alert =  UIAlertController(title: "원하는 타이틀", message: "원하는 메세지", preferredStyle: .actionSheet)
+        let alert =  UIAlertController(title: "이미지 업로드 방식을 선택하세요.", message: nil, preferredStyle: .actionSheet)
         let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary() }
         let camera =  UIAlertAction(title: "카메라", style: .default) { (action) in self.openCamera() }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -47,8 +63,13 @@ class TodayMeViewController: UIViewController {
     }
 
     func openCamera(){
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: false, completion: nil)
+        if(UIImagePickerController .isSourceTypeAvailable(.camera)){
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated: false, completion: nil)
+        }
+        else{
+            print("Camera not available")
+        }
     }
     
     

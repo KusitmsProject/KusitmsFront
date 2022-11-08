@@ -205,6 +205,9 @@
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="LyricsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AFS-bc-o4F"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -257,6 +260,9 @@
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="RecordButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yOb-bi-Whp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
