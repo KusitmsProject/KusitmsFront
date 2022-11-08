@@ -264,6 +264,8 @@
 			children = (
 				03374F4729196122004AB96A /* TitleCell.swift */,
 				03374F4829196122004AB96A /* TitleCell.xib */,
+				03374F4F29196441004AB96A /* SaveCell.swift */,
+				03374F5029196441004AB96A /* SaveCell.xib */,
 				03F0E580291A35D00023BAEB /* RecordTVC */,
 				03F9EB2C291904BD0095C7CF /* LyricsTVC */,
 			);
@@ -275,8 +277,6 @@
 			children = (
 				03374F4B291962FC004AB96A /* LyricsCell.swift */,
 				03374F4C291962FC004AB96A /* LyricsCell.xib */,
-				03374F4F29196441004AB96A /* SaveCell.swift */,
-				03374F5029196441004AB96A /* SaveCell.xib */,
 			);
 			path = LyricsTVC;
 			sourceTree = "<group>";

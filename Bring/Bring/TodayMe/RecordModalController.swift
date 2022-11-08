@@ -10,7 +10,7 @@ import PanModal
 
 class RecordModalController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,9 @@ class RecordModalController: UIViewController {
         tableView.register(UINib(nibName: "DateCell", bundle: nil), forCellReuseIdentifier: "DateCell")
         tableView.register(UINib(nibName: "WeatherCell", bundle: nil), forCellReuseIdentifier: "WeatherCell")
         tableView.register(UINib(nibName: "FriendCell", bundle: nil), forCellReuseIdentifier: "FriendCell")
+        tableView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellReuseIdentifier: "PlaceCell")
+        tableView.register(UINib(nibName: "EmotionCell", bundle: nil), forCellReuseIdentifier: "EmotionCell")
+        tableView.register(UINib(nibName: "SaveCell", bundle: nil), forCellReuseIdentifier: "SaveCell")
     }
 }
 
@@ -39,7 +42,7 @@ extension RecordModalController: PanModalPresentable {
 extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //cell의 갯수 설정
-        return 7
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,6 +63,15 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else { return UITableViewCell() }
+            return cell
+        case 5:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath) as? PlaceCell else { return UITableViewCell() }
+            return cell
+        case 6:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmotionCell", for: indexPath) as? EmotionCell else { return UITableViewCell() }
+            return cell
+        case 7:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SaveCell", for: indexPath) as? SaveCell else { return UITableViewCell() }
             return cell
         default:
             return UITableViewCell()
