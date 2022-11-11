@@ -16,36 +16,48 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPI-Co-ls3">
-                        <rect key="frame" x="38" y="11.666666666666664" width="21" height="21"/>
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wnt-rp-lwo">
+                        <rect key="frame" x="26" y="16.666666666666664" width="13" height="11.666666666666668"/>
+                        <color key="tintColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="alR-BQ-o0z"/>
-                            <constraint firstAttribute="width" constant="21" id="wtY-7a-06A"/>
+                            <constraint firstAttribute="height" constant="13" id="5Lv-dJ-9kb"/>
+                            <constraint firstAttribute="width" constant="13" id="DrL-bA-Dmq"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 우리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9y-vY-Pks">
-                        <rect key="frame" x="74" y="14" width="60" height="16"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="함께 했던 친구를 추가하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dme-b5-O5m">
-                        <rect key="frame" x="150" y="5" width="209" height="34"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPI-Co-ls3">
+                        <rect key="frame" x="49" y="13.666666666666664" width="17" height="17"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="17" id="alR-BQ-o0z"/>
+                            <constraint firstAttribute="width" constant="17" id="wtY-7a-06A"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그때의 우리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9y-vY-Pks">
+                        <rect key="frame" x="79" y="15" width="51" height="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+ 함께 한 사람 추가하기" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dme-b5-O5m">
+                        <rect key="frame" x="146" y="5" width="209" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="SgM-TC-GXD"/>
                             <constraint firstAttribute="width" constant="209" id="rvM-iq-KmO"/>
                         </constraints>
+                        <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="BPI-Co-ls3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="38" id="GH4-QL-A4b"/>
-                    <constraint firstItem="P9y-vY-Pks" firstAttribute="leading" secondItem="BPI-Co-ls3" secondAttribute="trailing" constant="15" id="Trl-M3-rd8"/>
+                    <constraint firstItem="wnt-rp-lwo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5CZ-Bb-dpw"/>
+                    <constraint firstItem="wnt-rp-lwo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="Q9f-F0-IYi"/>
+                    <constraint firstItem="P9y-vY-Pks" firstAttribute="leading" secondItem="BPI-Co-ls3" secondAttribute="trailing" constant="13" id="Trl-M3-rd8"/>
                     <constraint firstItem="dme-b5-O5m" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Uzp-Gh-djT"/>
                     <constraint firstItem="dme-b5-O5m" firstAttribute="leading" secondItem="P9y-vY-Pks" secondAttribute="trailing" constant="16" id="VlZ-jd-hNp"/>
+                    <constraint firstItem="BPI-Co-ls3" firstAttribute="leading" secondItem="wnt-rp-lwo" secondAttribute="trailing" constant="10" id="cmQ-Fd-VTO"/>
                     <constraint firstItem="BPI-Co-ls3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eYn-PR-uKJ"/>
                     <constraint firstItem="P9y-vY-Pks" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="he9-aQ-qyE"/>
                 </constraints>
@@ -54,4 +66,7 @@
             <point key="canvasLocation" x="67.692307692307693" y="20.616113744075829"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+    </resources>
 </document>

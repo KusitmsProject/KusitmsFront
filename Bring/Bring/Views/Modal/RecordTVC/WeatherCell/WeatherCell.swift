@@ -14,12 +14,16 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var windyBtn: UIButton!
     @IBOutlet weak var rainyBtn: UIButton!
     
+    @IBOutlet weak var hotBtn: UIButton!
+    @IBOutlet weak var coldBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         setButton(sunnyBtn)
         setButton(snowBtn)
         setButton(windyBtn)
         setButton(rainyBtn)
+        setButton(coldBtn)
+        setButton(hotBtn)
         
     }
 

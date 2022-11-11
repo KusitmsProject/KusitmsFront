@@ -29,7 +29,9 @@ class RecordModalController: UIViewController {
         tableView.register(UINib(nibName: "FriendCell", bundle: nil), forCellReuseIdentifier: "FriendCell")
         tableView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellReuseIdentifier: "PlaceCell")
         tableView.register(UINib(nibName: "EmotionCell", bundle: nil), forCellReuseIdentifier: "EmotionCell")
+        tableView.register(UINib(nibName: "PictureCell", bundle: nil), forCellReuseIdentifier: "PictureCell")
         tableView.register(UINib(nibName: "SaveCell", bundle: nil), forCellReuseIdentifier: "SaveCell")
+        tableView.register(UINib(nibName: "TextCell", bundle: nil), forCellReuseIdentifier: "TextCell")
     }
 }
 
@@ -42,7 +44,7 @@ extension RecordModalController: PanModalPresentable {
 extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //cell의 갯수 설정
-        return 8
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,13 +55,13 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
             cell.titleIcon.image = UIImage(named: "pen_blue")
             return cell
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeasonCell", for: indexPath) as? SeasonCell else { return UITableViewCell() }
-            return cell
-        case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell", for: indexPath) as? DateCell else { return UITableViewCell() }
             return cell
-        case 3:
+        case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as? WeatherCell else { return UITableViewCell() }
+            return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeasonCell", for: indexPath) as? SeasonCell else { return UITableViewCell() }
             return cell
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else { return UITableViewCell() }
@@ -71,8 +73,12 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmotionCell", for: indexPath) as? EmotionCell else { return UITableViewCell() }
             return cell
         case 7:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SaveCell", for: indexPath) as? SaveCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as? PictureCell else { return UITableViewCell() }
             return cell
+        case 8:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as? TextCell else { return UITableViewCell() }
+            return cell
+            
         default:
             return UITableViewCell()
         }
