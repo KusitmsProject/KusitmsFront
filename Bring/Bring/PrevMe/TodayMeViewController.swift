@@ -13,9 +13,10 @@ class TodayMeViewController: UIViewController {
     
     @IBOutlet weak var photoView: UIView!
     @IBOutlet weak var selectImage: UIImageView!
-    @IBOutlet weak var imagePlusButton: UIButton!
     @IBOutlet weak var imagePlusLabel: UILabel!
     
+    @IBOutlet weak var recordBtn: UIButton!
+    @IBOutlet weak var textInput: UITextField!
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -36,12 +37,12 @@ class TodayMeViewController: UIViewController {
     }
     
     
-    // 기록 모달 띄우기
-    @IBAction func RecordButton(_ sender: Any) {
+    @IBAction func recordBtn(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Record", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RecordModalController") as! RecordModalController
         presentPanModal(vc)
     }
+    
     
     @objc func imageOrCamera(){
         selectImage.backgroundColor = UIColor(named: "bluehover")
@@ -76,9 +77,17 @@ class TodayMeViewController: UIViewController {
     func setUI() {
         photoView.layer.shadowOffset = CGSize(width: 0, height: 3)
         photoView.layer.shadowOpacity = 0.15
-        photoView.layer.borderWidth = 0.5
         photoView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
         selectImage.layer.cornerRadius = 10
+        
+        textInput.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
+        textInput.layer.borderWidth = 1
+        textInput.layer.cornerRadius = 10
+        
+        recordBtn.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
+        recordBtn.layer.borderWidth = 1
+        recordBtn.layer.cornerRadius = 10
+
     }
 
 }
@@ -97,7 +106,6 @@ UINavigationControllerDelegate{
         }
         self.selectImage.image = newImage // 받아온 이미지를 update
         if newImage != nil {
-            self.imagePlusButton.alpha = 0
             self.imagePlusLabel.alpha = 0
         }
         imagePicker.dismiss(animated: true, completion: nil) // picker를 닫아줌

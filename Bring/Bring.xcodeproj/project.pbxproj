@@ -146,7 +146,7 @@
 				03A1CCDD2916028000901B7A /* Storage */,
 				03A1CCDC2916027700901B7A /* Mypage */,
 				03A1CCC22915F95A00901B7A /* Views */,
-				03C0E0B329179FA600C80331 /* TodayMe */,
+				03C0E0B329179FA600C80331 /* PrevMe */,
 				03971D942914E868007C6659 /* Info.plist */,
 				03971D912914E868007C6659 /* LaunchScreen.storyboard */,
 			);
@@ -219,7 +219,7 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
-		03C0E0B329179FA600C80331 /* TodayMe */ = {
+		03C0E0B329179FA600C80331 /* PrevMe */ = {
 			isa = PBXGroup;
 			children = (
 				03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */,
@@ -228,7 +228,7 @@
 				03F0E57C291A2F940023BAEB /* Record.storyboard */,
 				03F0E57E291A2FD30023BAEB /* RecordModalController.swift */,
 			);
-			path = TodayMe;
+			path = PrevMe;
 			sourceTree = "<group>";
 		};
 		03F0E57B291A2F580023BAEB /* LyricsModal */ = {
