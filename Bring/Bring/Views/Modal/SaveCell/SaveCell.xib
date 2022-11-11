@@ -27,7 +27,7 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="filled" title="저장하기" cornerStyle="capsule">
                             <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
-                            <color key="baseBackgroundColor" red="0.6705882353" green="0.76470588240000004" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="baseBackgroundColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         </buttonConfiguration>
                     </button>
                 </subviews>

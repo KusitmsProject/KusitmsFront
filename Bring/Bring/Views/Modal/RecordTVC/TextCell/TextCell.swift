@@ -1,13 +1,13 @@
 //
-//  EmotionCell.swift
+//  TextCell.swift
 //  Bring
 //
-//  Created by 오예진 on 2022/11/08.
+//  Created by 오예진 on 2022/11/12.
 //
 
 import UIKit
 
-class EmotionCell: UITableViewCell {
+class TextCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

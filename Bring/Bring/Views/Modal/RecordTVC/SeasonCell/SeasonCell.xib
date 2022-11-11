@@ -16,28 +16,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5D-dV-qu9">
-                        <rect key="frame" x="38" y="11.666666666666664" width="21" height="21"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gEY-Vl-U6e">
+                        <rect key="frame" x="26" y="16.666666666666664" width="13" height="11.666666666666668"/>
+                        <color key="tintColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="21" id="Yyt-tz-MkD"/>
-                            <constraint firstAttribute="height" constant="21" id="s3P-No-vFE"/>
+                            <constraint firstAttribute="height" constant="13" id="X04-rh-FiF"/>
+                            <constraint firstAttribute="width" constant="13" id="v3X-FN-od3"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5D-dV-qu9">
+                        <rect key="frame" x="49" y="13.666666666666664" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="17" id="Yyt-tz-MkD"/>
+                            <constraint firstAttribute="height" constant="17" id="s3P-No-vFE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 계절" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmz-RH-i4K">
-                        <rect key="frame" x="74" y="14" width="60" height="16"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그때의 계절" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmz-RH-i4K">
+                        <rect key="frame" x="81" y="15.333333333333332" width="50.666666666666657" height="13.333333333333332"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ks2-U9-qaI">
-                        <rect key="frame" x="152" y="5" width="38" height="34"/>
+                        <rect key="frame" x="146.66666666666666" y="6" width="32" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="38" id="K7f-rn-fI7"/>
-                            <constraint firstAttribute="height" constant="34" id="VcG-Ny-O0O"/>
+                            <constraint firstAttribute="width" constant="32" id="K7f-rn-fI7"/>
+                            <constraint firstAttribute="height" constant="32" id="VcG-Ny-O0O"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="🌸">
@@ -45,11 +54,12 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wex-Aw-nd1">
-                        <rect key="frame" x="202" y="5" width="38" height="34"/>
+                        <rect key="frame" x="181.66666666666666" y="6" width="32" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="34" id="Lgh-9f-vhk"/>
-                            <constraint firstAttribute="width" constant="38" id="VzS-k3-MNK"/>
+                            <constraint firstAttribute="height" constant="32" id="Lgh-9f-vhk"/>
+                            <constraint firstAttribute="width" constant="32" id="VzS-k3-MNK"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="⛱">
@@ -57,11 +67,12 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6M-6U-pY6">
-                        <rect key="frame" x="252" y="5" width="38" height="34"/>
+                        <rect key="frame" x="216.66666666666666" y="6" width="32" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="34" id="KjO-Av-VaX"/>
-                            <constraint firstAttribute="width" constant="38" id="z7P-cy-UQ5"/>
+                            <constraint firstAttribute="height" constant="32" id="KjO-Av-VaX"/>
+                            <constraint firstAttribute="width" constant="32" id="z7P-cy-UQ5"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="🍁">
@@ -69,11 +80,12 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnM-IS-I9Z">
-                        <rect key="frame" x="302" y="5" width="38" height="34"/>
+                        <rect key="frame" x="251.66666666666663" y="6" width="32" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="34" id="7NZ-q1-gOT"/>
-                            <constraint firstAttribute="width" constant="38" id="9BV-PR-qW9"/>
+                            <constraint firstAttribute="height" constant="32" id="7NZ-q1-gOT"/>
+                            <constraint firstAttribute="width" constant="32" id="9BV-PR-qW9"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="⛄">
@@ -83,17 +95,19 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="ks2-U9-qaI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2g6-xd-WOl"/>
-                    <constraint firstItem="AnM-IS-I9Z" firstAttribute="leading" secondItem="Q6M-6U-pY6" secondAttribute="trailing" constant="12" id="62Y-1W-fxP"/>
+                    <constraint firstItem="Q5D-dV-qu9" firstAttribute="leading" secondItem="gEY-Vl-U6e" secondAttribute="trailing" constant="10" id="3yN-dB-5PD"/>
+                    <constraint firstItem="AnM-IS-I9Z" firstAttribute="leading" secondItem="Q6M-6U-pY6" secondAttribute="trailing" constant="3" id="62Y-1W-fxP"/>
                     <constraint firstItem="Wex-Aw-nd1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="86M-ps-Zlv"/>
                     <constraint firstItem="dmz-RH-i4K" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8EN-tb-Vr7"/>
-                    <constraint firstItem="Q5D-dV-qu9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="38" id="9tr-Ek-VU7"/>
+                    <constraint firstItem="gEY-Vl-U6e" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerYWithinMargins" id="Nhr-CH-ROj"/>
                     <constraint firstItem="Q5D-dV-qu9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RxO-3h-eTo"/>
                     <constraint firstItem="Q6M-6U-pY6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XcD-n7-yqc"/>
-                    <constraint firstItem="Wex-Aw-nd1" firstAttribute="leading" secondItem="ks2-U9-qaI" secondAttribute="trailing" constant="12" id="hy0-qv-0Eu"/>
-                    <constraint firstItem="Q6M-6U-pY6" firstAttribute="leading" secondItem="Wex-Aw-nd1" secondAttribute="trailing" constant="12" id="jK1-g1-4Ic"/>
+                    <constraint firstItem="gEY-Vl-U6e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="eRo-e1-x7R"/>
+                    <constraint firstItem="Wex-Aw-nd1" firstAttribute="leading" secondItem="ks2-U9-qaI" secondAttribute="trailing" constant="3" id="hy0-qv-0Eu"/>
+                    <constraint firstItem="Q6M-6U-pY6" firstAttribute="leading" secondItem="Wex-Aw-nd1" secondAttribute="trailing" constant="3" id="jK1-g1-4Ic"/>
                     <constraint firstItem="dmz-RH-i4K" firstAttribute="leading" secondItem="Q5D-dV-qu9" secondAttribute="trailing" constant="15" id="kMt-Ey-7Gf"/>
                     <constraint firstItem="AnM-IS-I9Z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lkF-f9-FK6"/>
-                    <constraint firstItem="ks2-U9-qaI" firstAttribute="leading" secondItem="dmz-RH-i4K" secondAttribute="trailing" constant="18" id="rcn-77-orZ"/>
+                    <constraint firstItem="ks2-U9-qaI" firstAttribute="leading" secondItem="dmz-RH-i4K" secondAttribute="trailing" constant="15" id="rcn-77-orZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -106,4 +120,7 @@
             <point key="canvasLocation" x="136.92307692307691" y="20.616113744075829"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+    </resources>
 </document>
