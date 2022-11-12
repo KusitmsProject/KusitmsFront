@@ -13,4 +13,5 @@ extension UIColor {
     static let bluehoverBorder = UIColor(named: "bluehoverBorder")
     static let dividerGray = UIColor(named: "dividerGray")
     static let LyricsBoxBorder = UIColor(named: "LyricsBoxBorder")
+    static let mainSelect = UIColor(named: "mainSelect")
 }

@@ -11,22 +11,31 @@ import PanModal
 
 class TodayMeViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var photoView: UIView!
     @IBOutlet weak var selectImage: UIImageView!
-    @IBOutlet weak var imagePlusLabel: UILabel!
-    
     @IBOutlet weak var recordBtn: UIButton!
-    @IBOutlet weak var textInput: UITextField!
-    let imagePicker = UIImagePickerController()
+    @IBOutlet weak var recordView: UIView!
+    
+    let data = ["All I Want for Christmas Is You", "All I Want for Christmas Is You - rock ver.", "All I Want for Christmas Is You - (This year ver.) "]
+    
+    var filteredData: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         
-        imagePicker.delegate = self
-        //이미지 클릭 가능하도록 설정
-        self.selectImage.isUserInteractionEnabled = true
-        self.selectImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageOrCamera)))
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        filteredData = []
+        
+        tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
+        
+//        searchBar.delegate = self
+        searchBar.text = PrevmeData.data.music
+
     }
     
     // 가사 모달 띄우기
@@ -42,37 +51,7 @@ class TodayMeViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "RecordModalController") as! RecordModalController
         presentPanModal(vc)
     }
-    
-    
-    @objc func imageOrCamera(){
-        selectImage.backgroundColor = UIColor(named: "bluehover")
-        selectImage.layer.borderColor = UIColor(named: "bluehoverBorder")?.cgColor
-        
-        let alert =  UIAlertController(title: "이미지 업로드 방식을 선택하세요.", message: nil, preferredStyle: .actionSheet)
-        let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary() }
-        let camera =  UIAlertAction(title: "카메라", style: .default) { (action) in self.openCamera() }
-        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-        alert.addAction(library)
-        alert.addAction(camera)
-        alert.addAction(cancel)
-        present(alert, animated: true, completion: nil)
-    }
-    
-    func openLibrary(){
-      imagePicker.sourceType = .photoLibrary
-      present(imagePicker, animated: false, completion: nil)
-    }
 
-    func openCamera(){
-        if(UIImagePickerController .isSourceTypeAvailable(.camera)){
-            imagePicker.sourceType = .camera
-            present(imagePicker, animated: false, completion: nil)
-        }
-        else{
-            print("Camera not available")
-        }
-    }
-    
     
     func setUI() {
         photoView.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -80,34 +59,63 @@ class TodayMeViewController: UIViewController {
         photoView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
         selectImage.layer.cornerRadius = 10
         
-        textInput.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
-        textInput.layer.borderWidth = 1
-        textInput.layer.cornerRadius = 10
         
         recordBtn.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
         recordBtn.layer.borderWidth = 1
         recordBtn.layer.cornerRadius = 10
+        
+        searchBar.searchTextField.backgroundColor = UIColor.white
+        searchBar.searchTextField.font = UIFont.systemFont(ofSize: 11)
+
 
     }
 
 }
 
-extension TodayMeViewController : UIImagePickerControllerDelegate,
-UINavigationControllerDelegate{
+extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        var newImage: UIImage? = nil // update 할 이미지
-        
-        if let possibleImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-                       newImage = possibleImage // 수정된 이미지가 있을 경우
-        } else if let possibleImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                       newImage = possibleImage // 원본 이미지가 있을 경우
-        }
-        self.selectImage.image = newImage // 받아온 이미지를 update
-        if newImage != nil {
-            self.imagePlusLabel.alpha = 0
-        }
-        imagePicker.dismiss(animated: true, completion: nil) // picker를 닫아줌
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredData.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as? SearchCell else { return UITableViewCell() }
+        cell.exLabel.text = filteredData[indexPath.row]
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let title = filteredData[indexPath.row]
+        searchBar.text = title
+        filteredData = []
+        tableView.reloadData()
+        tableView.layer.borderColor = UIColor.clear.cgColor
+        return nil
+    }
+    
+    
 }
+//
+//extension TodayMeViewController: UISearchBarDelegate {
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        filteredData = []
+//
+//        if searchText == "" {
+//            filteredData = []
+//            tableView.layer.borderColor = UIColor.clear.cgColor
+//        }
+//
+//        for word in data {
+//            if word.contains(searchText) {
+//                filteredData.append(word)
+//                tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
+//                tableView.layer.borderWidth = 1
+//                tableView.layer.cornerRadius = 10
+//
+//            }
+//        }
+//
+//        self.tableView.reloadData()
+//    }
+//}
