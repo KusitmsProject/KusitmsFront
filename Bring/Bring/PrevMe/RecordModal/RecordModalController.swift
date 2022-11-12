@@ -48,35 +48,46 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell", for: indexPath) as? TitleCell else { return UITableViewCell() }
             cell.titleLabel.text = "오늘의 추억 기록하기"
             cell.titleIcon.image = UIImage(named: "pen_blue")
+            cell.selectionStyle = .none
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell", for: indexPath) as? DateCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as? WeatherCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeasonCell", for: indexPath) as? SeasonCell else { return UITableViewCell() }
             return cell
+            cell.selectionStyle = .none
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath) as? PlaceCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         case 6:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmotionCell", for: indexPath) as? EmotionCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         case 7:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as? PictureCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         case 8:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as? TextCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
             
         default:

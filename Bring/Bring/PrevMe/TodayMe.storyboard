@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="blc-7q-XgY">
-                                <rect key="frame" x="0.0" y="96" width="390" height="482"/>
+                                <rect key="frame" x="0.0" y="96" width="390" height="537"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmk-bw-i67">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="48"/>
@@ -103,7 +103,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-Ma-y3w">
-                                        <rect key="frame" x="0.0" y="242" width="390" height="120"/>
+                                        <rect key="frame" x="0.0" y="242" width="390" height="175"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그때의 노래 기록하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-Iu-qXm">
                                                 <rect key="frame" x="29" y="56" width="108" height="15.666666666666671"/>
@@ -114,43 +114,50 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="note" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-WA-4iu">
                                                 <rect key="frame" x="140" y="56" width="14" height="14"/>
                                             </imageView>
-                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="질문과 관련있는 그때의 노래를 검색해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9V-Y4-q6A">
-                                                <rect key="frame" x="45" y="82.666666666666686" width="300" height="34"/>
-                                                <color key="tintColor" red="0.72941176470588232" green="0.6705882352941176" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="ufa-Ls-xje">
+                                                <rect key="frame" x="40" y="82.666666666666686" width="310" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="34" id="8lx-E9-JiH"/>
-                                                    <constraint firstAttribute="width" constant="300" id="aEG-bb-RVc"/>
+                                                    <constraint firstAttribute="width" constant="310" id="Iao-wc-J0z"/>
+                                                    <constraint firstAttribute="height" constant="34" id="rVc-94-YjR"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.68235294117647061" green="0.61568627450980395" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <color key="tintColor" red="0.68235294120000001" green="0.61568627450000002" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-iw-rEs">
-                                                <rect key="frame" x="323" y="82.666666666666686" width="12" height="34.333333333333343"/>
+                                                <scopeButtonTitles>
+                                                    <string>Title</string>
+                                                    <string>Title</string>
+                                                </scopeButtonTitles>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="i4R-vP-2O7"/>
+                                                </connections>
+                                            </searchBar>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" style="plain" separatorStyle="none" separatorInsetReference="fromAutomaticInsets" rowHeight="20" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8K0-92-PHy">
+                                                <rect key="frame" x="44" y="116.66666666666669" width="302" height="58"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="12" id="E9D-yF-H9r"/>
+                                                    <constraint firstAttribute="height" constant="58" id="W0b-AU-uOp"/>
+                                                    <constraint firstAttribute="width" constant="302" id="jQn-iA-wNs"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
-                                                    <color key="baseForegroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <color key="sectionIndexColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </tableView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="HNx-Iu-qXm" firstAttribute="top" secondItem="Imc-Ma-y3w" secondAttribute="top" constant="56" id="1oW-xi-xKa"/>
-                                            <constraint firstItem="MrD-iw-rEs" firstAttribute="centerY" secondItem="s9V-Y4-q6A" secondAttribute="centerY" id="Suj-8G-0F2"/>
+                                            <constraint firstItem="8K0-92-PHy" firstAttribute="centerX" secondItem="ufa-Ls-xje" secondAttribute="centerX" id="BtB-KC-DFZ"/>
+                                            <constraint firstItem="8K0-92-PHy" firstAttribute="top" secondItem="ufa-Ls-xje" secondAttribute="bottom" id="Vmg-Ew-MnC"/>
                                             <constraint firstItem="rSk-WA-4iu" firstAttribute="top" secondItem="Imc-Ma-y3w" secondAttribute="top" constant="56" id="Wmj-tM-mqs"/>
-                                            <constraint firstItem="s9V-Y4-q6A" firstAttribute="top" secondItem="HNx-Iu-qXm" secondAttribute="bottom" constant="11" id="b5i-ct-mXK"/>
                                             <constraint firstItem="rSk-WA-4iu" firstAttribute="leading" secondItem="HNx-Iu-qXm" secondAttribute="trailing" constant="3" id="byj-EX-ocY"/>
                                             <constraint firstItem="HNx-Iu-qXm" firstAttribute="leading" secondItem="Imc-Ma-y3w" secondAttribute="leading" constant="29" id="hnT-gd-6bN"/>
-                                            <constraint firstAttribute="height" constant="120" id="rDr-cb-nG3"/>
-                                            <constraint firstItem="MrD-iw-rEs" firstAttribute="trailing" secondItem="s9V-Y4-q6A" secondAttribute="trailing" constant="-10" id="rMw-Fp-e5P"/>
-                                            <constraint firstItem="s9V-Y4-q6A" firstAttribute="centerX" secondItem="Imc-Ma-y3w" secondAttribute="centerX" id="wRP-M2-4dv"/>
+                                            <constraint firstItem="ufa-Ls-xje" firstAttribute="top" secondItem="HNx-Iu-qXm" secondAttribute="bottom" constant="11" id="pz4-XC-LH5"/>
+                                            <constraint firstAttribute="height" constant="175" id="rDr-cb-nG3"/>
+                                            <constraint firstItem="ufa-Ls-xje" firstAttribute="centerX" secondItem="Imc-Ma-y3w" secondAttribute="centerX" id="zHz-Ii-Xfb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz2-XR-agL">
-                                        <rect key="frame" x="0.0" y="362" width="390" height="120"/>
+                                        <rect key="frame" x="0.0" y="417" width="390" height="120"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85l-gz-zVh">
                                                 <rect key="frame" x="29" y="25" width="332" height="20"/>
@@ -249,11 +256,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imagePlusLabel" destination="fmo-XM-j34" id="Umr-N9-cUV"/>
                         <outlet property="photoView" destination="DYP-qe-8ez" id="vBa-9L-7VR"/>
                         <outlet property="recordBtn" destination="XQM-Rb-JCw" id="OBM-2f-v8Q"/>
+                        <outlet property="recordView" destination="fz2-XR-agL" id="34J-w4-sWN"/>
+                        <outlet property="searchBar" destination="ufa-Ls-xje" id="Zd9-cQ-nRq"/>
                         <outlet property="selectImage" destination="tLJ-Bv-l7v" id="znJ-Lh-V34"/>
-                        <outlet property="textInput" destination="s9V-Y4-q6A" id="mtS-Vt-Mb9"/>
+                        <outlet property="tableView" destination="8K0-92-PHy" id="P5g-cm-1qo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -264,7 +272,6 @@
     <resources>
         <image name="PrevMeBG" width="391" height="844"/>
         <image name="Sample" width="330" height="166"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="note" width="14" height="14"/>
         <image name="pen" width="58" height="58"/>
         <systemColor name="systemBackgroundColor">
