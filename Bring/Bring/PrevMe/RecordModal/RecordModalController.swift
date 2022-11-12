@@ -67,8 +67,8 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeasonCell", for: indexPath) as? SeasonCell else { return UITableViewCell() }
-            return cell
             cell.selectionStyle = .none
+            return cell
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else { return UITableViewCell() }
             cell.selectionStyle = .none

@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="blc-7q-XgY">
-                                <rect key="frame" x="0.0" y="96" width="390" height="537"/>
+                                <rect key="frame" x="0.0" y="96" width="390" height="502"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmk-bw-i67">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="48"/>
@@ -103,7 +103,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-Ma-y3w">
-                                        <rect key="frame" x="0.0" y="242" width="390" height="175"/>
+                                        <rect key="frame" x="0.0" y="242" width="390" height="140"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그때의 노래 기록하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-Iu-qXm">
                                                 <rect key="frame" x="29" y="56" width="108" height="15.666666666666671"/>
@@ -133,11 +133,11 @@
                                                 </connections>
                                             </searchBar>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" style="plain" separatorStyle="none" separatorInsetReference="fromAutomaticInsets" rowHeight="20" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8K0-92-PHy">
-                                                <rect key="frame" x="44" y="116.66666666666669" width="302" height="58"/>
+                                                <rect key="frame" x="44" y="116.66666666666669" width="302" height="0.0"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="tintColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="58" id="W0b-AU-uOp"/>
+                                                    <constraint firstAttribute="height" id="W0b-AU-uOp"/>
                                                     <constraint firstAttribute="width" constant="302" id="jQn-iA-wNs"/>
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -152,12 +152,12 @@
                                             <constraint firstItem="rSk-WA-4iu" firstAttribute="leading" secondItem="HNx-Iu-qXm" secondAttribute="trailing" constant="3" id="byj-EX-ocY"/>
                                             <constraint firstItem="HNx-Iu-qXm" firstAttribute="leading" secondItem="Imc-Ma-y3w" secondAttribute="leading" constant="29" id="hnT-gd-6bN"/>
                                             <constraint firstItem="ufa-Ls-xje" firstAttribute="top" secondItem="HNx-Iu-qXm" secondAttribute="bottom" constant="11" id="pz4-XC-LH5"/>
-                                            <constraint firstAttribute="height" constant="175" id="rDr-cb-nG3"/>
+                                            <constraint firstAttribute="height" constant="140" id="rDr-cb-nG3"/>
                                             <constraint firstItem="ufa-Ls-xje" firstAttribute="centerX" secondItem="Imc-Ma-y3w" secondAttribute="centerX" id="zHz-Ii-Xfb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz2-XR-agL">
-                                        <rect key="frame" x="0.0" y="417" width="390" height="120"/>
+                                        <rect key="frame" x="0.0" y="382" width="390" height="120"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85l-gz-zVh">
                                                 <rect key="frame" x="29" y="25" width="332" height="20"/>

@@ -33,7 +33,7 @@ class TodayMeViewController: UIViewController {
         
         tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
         
-        searchBar.delegate = self
+//        searchBar.delegate = self
         searchBar.text = PrevmeData.data.music
 
     }
@@ -96,26 +96,26 @@ extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
-
-extension TodayMeViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredData = []
-        
-        if searchText == "" {
-            filteredData = []
-            tableView.layer.borderColor = UIColor.clear.cgColor
-        }
-        
-        for word in data {
-            if word.contains(searchText) {
-                filteredData.append(word)
-                tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
-                tableView.layer.borderWidth = 1
-                tableView.layer.cornerRadius = 10
-
-            }
-        }
-        
-        self.tableView.reloadData()
-    }
-}
+//
+//extension TodayMeViewController: UISearchBarDelegate {
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        filteredData = []
+//
+//        if searchText == "" {
+//            filteredData = []
+//            tableView.layer.borderColor = UIColor.clear.cgColor
+//        }
+//
+//        for word in data {
+//            if word.contains(searchText) {
+//                filteredData.append(word)
+//                tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
+//                tableView.layer.borderWidth = 1
+//                tableView.layer.cornerRadius = 10
+//
+//            }
+//        }
+//
+//        self.tableView.reloadData()
+//    }
+//}
