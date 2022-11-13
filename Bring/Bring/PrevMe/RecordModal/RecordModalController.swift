@@ -53,8 +53,9 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell", for: indexPath) as? TitleCell else { return UITableViewCell() }
-            cell.titleLabel.text = "오늘의 추억 기록하기"
-            cell.titleIcon.image = UIImage(named: "pen_blue")
+            cell.titleLabel.text = "그때의 추억 기록하기"
+            cell.titleLabel.textColor = UIColor(named: "prevMain")
+            cell.titleIcon.image = UIImage(named: "pen")
             cell.selectionStyle = .none
             return cell
         case 1:

@@ -14,6 +14,7 @@ class SeasonCell: UITableViewCell {
     @IBOutlet weak var fallBtn: UIButton!
     @IBOutlet weak var winterBtn: UIButton!
     
+    @IBOutlet weak var checkMark: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,11 +29,30 @@ class SeasonCell: UITableViewCell {
         btn.layer.borderWidth = 1
         btn.layer.cornerRadius = 10
     }
+    
+    @IBAction func springTapped(_ sender: Any) {
+        setTapped(springBtn)
+    }
+    @IBAction func summerTapped(_ sender: Any) {
+        setTapped(summerBtn)
+    }
+    @IBAction func fallTapped(_ sender: Any) {
+        setTapped(fallBtn)
+    }
+    @IBAction func winterTapped(_ sender: Any) {
+        setTapped(winterBtn)
+    }
+    
+    
+    func setTapped(_ btn: UIButton) {
+        btn.layer.borderColor = UIColor(named: "prevMain")?.cgColor
+        btn.backgroundColor = UIColor(named: "prevMainSoft")
+        checkMark.tintColor = UIColor(named: "prevMain")
+    }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

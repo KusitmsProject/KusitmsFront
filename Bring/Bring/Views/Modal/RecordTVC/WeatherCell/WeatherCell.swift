@@ -9,13 +9,14 @@ import UIKit
 
 class WeatherCell: UITableViewCell {
 
+    @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var sunnyBtn: UIButton!
     @IBOutlet weak var snowBtn: UIButton!
     @IBOutlet weak var windyBtn: UIButton!
     @IBOutlet weak var rainyBtn: UIButton!
-    
     @IBOutlet weak var hotBtn: UIButton!
     @IBOutlet weak var coldBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setButton(sunnyBtn)
@@ -24,7 +25,31 @@ class WeatherCell: UITableViewCell {
         setButton(rainyBtn)
         setButton(coldBtn)
         setButton(hotBtn)
-        
+    }
+    
+    @IBAction func sunnyTapped(_ sender: Any) {
+        setTapped(sunnyBtn)
+    }
+    @IBAction func snowTapped(_ sender: Any) {
+        setTapped(snowBtn)
+    }
+    @IBAction func windyTapped(_ sender: Any) {
+        setTapped(windyBtn)
+    }
+    @IBAction func rainyTapped(_ sender: Any) {
+        setTapped(rainyBtn)
+    }
+    @IBAction func coldTapped(_ sender: Any) {
+        setTapped(coldBtn)
+    }
+    @IBAction func hotTapped(_ sender: Any) {
+        setTapped(hotBtn)
+    }
+    
+    func setTapped(_ btn: UIButton) {
+        btn.layer.borderColor = UIColor(named: "prevMain")?.cgColor
+        btn.backgroundColor = UIColor(named: "prevMainSoft")
+        checkMark.tintColor = UIColor(named: "prevMain")
     }
 
     func setButton(_ btn: UIButton) {

@@ -12,7 +12,11 @@ class PictureCell: UITableViewCell {
     
     let imagePicker = UIImagePickerController()
     
-
+    @IBOutlet weak var imgBtn: UIButton!
+    @IBOutlet weak var imgIcon: UIImageView!
+    
+    @IBOutlet weak var checkMark: UIImageView!
+    @IBOutlet weak var confirmLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,7 +26,9 @@ class PictureCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        imgIcon.alpha = 0
+        confirmLabel.alpha = 0
+        
         // Configure the view for the selected state
     }
     
@@ -80,7 +86,12 @@ extension PictureCell: UIImagePickerControllerDelegate, UINavigationControllerDe
        }
 //                               self.selectImage.image = newImage // 받아온 이미지를 update
        if newImage != nil {
-//                                   self.imagePlusLabel.alpha = 0
+           imgBtn.setTitle("", for: .normal)
+           imgBtn.setTitleColor(UIColor.black, for: .normal)
+           imgIcon.alpha = 1
+           confirmLabel.alpha = 1
+           checkMark.tintColor = UIColor(named: "prevMain")
+           imgBtn.layer.borderColor = UIColor(named: "prevMain")!.cgColor
        }
        imagePicker.dismiss(animated: true, completion: nil) // picker를 닫아줌
    }

@@ -18,7 +18,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="D5J-bx-SBV">
                         <rect key="frame" x="26" y="10.999999999999998" width="13" height="11.666666666666666"/>
-                        <color key="tintColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="bhZ-Xj-rk9"/>
                             <constraint firstAttribute="width" constant="13" id="tl1-Vd-dpA"/>
@@ -63,6 +63,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkMark" destination="D5J-bx-SBV" id="eXj-xb-mBP"/>
+                <outlet property="textField" destination="AYM-AW-ThG" id="QBF-gd-iMK"/>
+            </connections>
             <point key="canvasLocation" x="67.692307692307693" y="59.715639810426538"/>
         </tableViewCell>
     </objects>

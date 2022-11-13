@@ -18,7 +18,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QYc-QR-Wpx">
                         <rect key="frame" x="26" y="16.666666666666664" width="13" height="11.666666666666668"/>
-                        <color key="tintColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="OnE-HA-51b"/>
                             <constraint firstAttribute="width" constant="13" id="p9f-eZ-Wuo"/>
@@ -59,8 +59,25 @@
                             <action selector="btnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oF7-0y-rhP"/>
                         </connections>
                     </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ite-fo-oDG">
+                        <rect key="frame" x="335.33333333333331" y="16.666666666666668" width="10.666666666666686" height="10.666666666666668"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10.699999999999999" id="IvI-wI-tVP"/>
+                            <constraint firstAttribute="height" constant="10.699999999999999" id="pOk-p0-taU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진 등록 완료!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH4-yv-F0U">
+                        <rect key="frame" x="222" y="16" width="61" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="oH4-yv-F0U" firstAttribute="centerY" secondItem="2bO-e5-bnd" secondAttribute="centerY" id="1FD-8g-TGg"/>
+                    <constraint firstItem="oH4-yv-F0U" firstAttribute="centerX" secondItem="2bO-e5-bnd" secondAttribute="centerX" id="47i-T7-XgU"/>
+                    <constraint firstItem="ite-fo-oDG" firstAttribute="centerY" secondItem="2bO-e5-bnd" secondAttribute="centerY" id="B54-JH-3EA"/>
+                    <constraint firstItem="ite-fo-oDG" firstAttribute="trailing" secondItem="2bO-e5-bnd" secondAttribute="trailing" constant="-11" id="Kwr-g2-U9V"/>
                     <constraint firstItem="QYc-QR-Wpx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="S1h-1x-s2Y"/>
                     <constraint firstItem="F2E-kr-N42" firstAttribute="leading" secondItem="jSL-UG-P6r" secondAttribute="trailing" constant="13" id="ZoA-ZT-YaC"/>
                     <constraint firstItem="jSL-UG-P6r" firstAttribute="centerY" secondItem="QYc-QR-Wpx" secondAttribute="centerY" id="abc-f5-OHL"/>
@@ -72,10 +89,17 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkMark" destination="QYc-QR-Wpx" id="alL-My-Bv7"/>
+                <outlet property="confirmLabel" destination="oH4-yv-F0U" id="Xr7-lT-c8D"/>
+                <outlet property="imgBtn" destination="2bO-e5-bnd" id="8Ap-Ya-eSj"/>
+                <outlet property="imgIcon" destination="ite-fo-oDG" id="zpp-1b-m6K"/>
+            </connections>
             <point key="canvasLocation" x="136.92307692307691" y="20.616113744075829"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="imgIcon" width="12" height="12"/>
     </resources>
 </document>
