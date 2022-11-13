@@ -17,8 +17,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wnt-rp-lwo">
-                        <rect key="frame" x="26" y="16.666666666666664" width="13" height="11.666666666666668"/>
-                        <color key="tintColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="26" y="16.666666666666664" width="13" height="11.666666666666654"/>
+                        <color key="tintColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="5Lv-dJ-9kb"/>
                             <constraint firstAttribute="width" constant="13" id="DrL-bA-Dmq"/>
@@ -40,13 +40,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+ 함께 한 사람 추가하기" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dme-b5-O5m">
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+ 함께 한 사람 추가하기" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dme-b5-O5m">
                         <rect key="frame" x="146" y="5" width="209" height="34"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="SgM-TC-GXD"/>
                             <constraint firstAttribute="width" constant="209" id="rvM-iq-KmO"/>
                         </constraints>
-                        <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.72941176470588232" green="0.6705882352941176" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -63,6 +63,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkMark" destination="wnt-rp-lwo" id="RxS-DF-Gux"/>
+                <outlet property="textField" destination="dme-b5-O5m" id="Jcv-ak-ePB"/>
+            </connections>
             <point key="canvasLocation" x="67.692307692307693" y="20.616113744075829"/>
         </tableViewCell>
     </objects>
