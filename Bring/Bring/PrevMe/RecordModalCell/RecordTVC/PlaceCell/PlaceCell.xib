@@ -55,6 +55,9 @@
                             </backgroundConfiguration>
                             <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="btnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g8B-mD-xkM"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -69,6 +72,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mapBtn" destination="FK1-ha-Erf" id="A2Y-zw-5bq"/>
+            </connections>
             <point key="canvasLocation" x="129" y="21"/>
         </tableViewCell>
     </objects>
