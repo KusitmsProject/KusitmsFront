@@ -91,7 +91,7 @@ extension PictureCell: UIImagePickerControllerDelegate, UINavigationControllerDe
            imgIcon.alpha = 1
            confirmLabel.alpha = 1
            checkMark.tintColor = UIColor(named: "prevMain")
-           imgBtn.layer.borderColor = UIColor(named: "prevMain")!.cgColor
+           imgBtn.layer.borderColor = UIColor(named: "prevMain")?.cgColor
        }
        imagePicker.dismiss(animated: true, completion: nil) // picker를 닫아줌
    }
