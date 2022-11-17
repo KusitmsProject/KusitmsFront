@@ -60,6 +60,7 @@
 		03F9EB292918F97F0095C7CF /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 03F9EB282918F97F0095C7CF /* PanModal */; };
 		03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9EB2A291900900095C7CF /* LyricsModalController.swift */; };
 		03FD3DBA291F46F200E154B2 /* PrevmeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */; };
+		FEB28C4EE0E9F9E8F67BFAA9 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630091018C5FC4C2BD3BD797 /* Pods_Bring.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,9 @@
 		03F9EB232918CE430095C7CF /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		03F9EB2A291900900095C7CF /* LyricsModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsModalController.swift; sourceTree = "<group>"; };
 		03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevmeRecord.swift; sourceTree = "<group>"; };
+		08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
+		630091018C5FC4C2BD3BD797 /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F9EB292918F97F0095C7CF /* PanModal in Frameworks */,
+				FEB28C4EE0E9F9E8F67BFAA9 /* Pods_Bring.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +178,8 @@
 			children = (
 				03971D852914E867007C6659 /* Bring */,
 				03971D842914E867007C6659 /* Products */,
+				BC8D670321221612ECCE5E62 /* Pods */,
+				7FA719B6EA15F742DBAAB419 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -423,6 +430,24 @@
 			path = LyricsTVC;
 			sourceTree = "<group>";
 		};
+		7FA719B6EA15F742DBAAB419 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				630091018C5FC4C2BD3BD797 /* Pods_Bring.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC8D670321221612ECCE5E62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */,
+				08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,9 +455,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03971D972914E868007C6659 /* Build configuration list for PBXNativeTarget "Bring" */;
 			buildPhases = (
+				205B0A3E8BBFC76A7FA83368 /* [CP] Check Pods Manifest.lock */,
 				03971D7F2914E867007C6659 /* Sources */,
 				03971D802914E867007C6659 /* Frameworks */,
 				03971D812914E867007C6659 /* Resources */,
+				94C5D12F610A4767F17C9DB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -471,7 +498,7 @@
 			);
 			mainGroup = 03971D7A2914E867007C6659;
 			packageReferences = (
-				03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */,
+				03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */,
 			);
 			productRefGroup = 03971D842914E867007C6659 /* Products */;
 			projectDirPath = "";
@@ -514,6 +541,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		205B0A3E8BBFC76A7FA83368 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bring-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94C5D12F610A4767F17C9DB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bring/Pods-Bring-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bring/Pods-Bring-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bring/Pods-Bring-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03971D7F2914E867007C6659 /* Sources */ = {
@@ -714,6 +783,7 @@
 		};
 		03971D982914E868007C6659 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -742,6 +812,7 @@
 		};
 		03971D992914E868007C6659 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -792,7 +863,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */ = {
+		03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/slackhq/PanModal.git";
 			requirement = {
@@ -805,7 +876,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		03F9EB282918F97F0095C7CF /* PanModal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */;
+			package = 03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */;
 			productName = PanModal;
 		};
 /* End XCSwiftPackageProductDependency section */
