@@ -12,10 +12,14 @@ class RecordModalController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
+    var record = Record()
+    
+    public var data: String = "aksdjflkd"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
-
+        print(record)
     }
     
     func setUpTable() {
@@ -65,6 +69,7 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as? WeatherCell else { return UITableViewCell() }
             cell.selectionStyle = .none
+            record.track = cell.weather
             return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeasonCell", for: indexPath) as? SeasonCell else { return UITableViewCell() }

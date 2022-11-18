@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Foundation
+//import Foundation
 import PanModal
 
 class TodayMeViewController: UIViewController {
@@ -21,10 +21,14 @@ class TodayMeViewController: UIViewController {
     let data = ["All I Want for Christmas Is You", "All I Want for Christmas Is You - rock ver.", "All I Want for Christmas Is You - (This year ver.) "]
     
     var filteredData: [String]!
+
+    var record = Record()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        print(record)
+        searchBar.delegate = self
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,17 +36,7 @@ class TodayMeViewController: UIViewController {
         filteredData = []
         
         tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
-        
-//        searchBar.delegate = self
-        searchBar.text = PrevmeData.data.music
 
-    }
-    
-    // 가사 모달 띄우기
-    @IBAction func LyricsButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Lyrics", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LyricsModalController") as! LyricsModalController
-        presentPanModal(vc)
     }
     
     
@@ -96,26 +90,14 @@ extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
-//
-//extension TodayMeViewController: UISearchBarDelegate {
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        filteredData = []
-//
-//        if searchText == "" {
-//            filteredData = []
-//            tableView.layer.borderColor = UIColor.clear.cgColor
-//        }
-//
-//        for word in data {
-//            if word.contains(searchText) {
-//                filteredData.append(word)
-//                tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
-//                tableView.layer.borderWidth = 1
-//                tableView.layer.cornerRadius = 10
-//
-//            }
-//        }
-//
-//        self.tableView.reloadData()
-//    }
-//}
+
+extension TodayMeViewController: UISearchBarDelegate {
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        guard var track = searchBar.text else { return }
+        
+        record.update(date: "", emotion: "", season: "", weather: [""], lyrics: "", placeNickname: "", place: "", imageURL: "", record: "", track: track, artist: "", friendList: [""], options: 1)
+        
+        print(record)
+    }
+}

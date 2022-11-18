@@ -26,6 +26,8 @@
 		03374F4E291962FC004AB96A /* LyricsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F4C291962FC004AB96A /* LyricsCell.xib */; };
 		03374F5129196441004AB96A /* SaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03374F4F29196441004AB96A /* SaveCell.swift */; };
 		03374F5229196441004AB96A /* SaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F5029196441004AB96A /* SaveCell.xib */; };
+		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
+		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
 		03971D872914E867007C6659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D862914E867007C6659 /* AppDelegate.swift */; };
 		03971D892914E867007C6659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D882914E867007C6659 /* SceneDelegate.swift */; };
 		03971D8E2914E867007C6659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03971D8C2914E867007C6659 /* Main.storyboard */; };
@@ -60,7 +62,6 @@
 		03F9EB292918F97F0095C7CF /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 03F9EB282918F97F0095C7CF /* PanModal */; };
 		03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9EB2A291900900095C7CF /* LyricsModalController.swift */; };
 		03FD3DBA291F46F200E154B2 /* PrevmeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */; };
-		FEB28C4EE0E9F9E8F67BFAA9 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630091018C5FC4C2BD3BD797 /* Pods_Bring.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		03374F4C291962FC004AB96A /* LyricsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LyricsCell.xib; sourceTree = "<group>"; };
 		03374F4F29196441004AB96A /* SaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCell.swift; sourceTree = "<group>"; };
 		03374F5029196441004AB96A /* SaveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveCell.xib; sourceTree = "<group>"; };
+		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
 		03971D832914E867007C6659 /* Bring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03971D862914E867007C6659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03971D882914E867007C6659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +122,6 @@
 		03F9EB2A291900900095C7CF /* LyricsModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsModalController.swift; sourceTree = "<group>"; };
 		03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevmeRecord.swift; sourceTree = "<group>"; };
 		08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
-		630091018C5FC4C2BD3BD797 /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +131,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F9EB292918F97F0095C7CF /* PanModal in Frameworks */,
-				FEB28C4EE0E9F9E8F67BFAA9 /* Pods_Bring.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +180,6 @@
 				03971D852914E867007C6659 /* Bring */,
 				03971D842914E867007C6659 /* Products */,
 				BC8D670321221612ECCE5E62 /* Pods */,
-				7FA719B6EA15F742DBAAB419 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */,
+				037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +271,7 @@
 			children = (
 				0330C71C291646DB00737848 /* Storage.storyboard */,
 				0330C70F291641B500737848 /* StorageViewController.swift */,
+				037DD25D2927A3D60078DD77 /* SliderCell.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -430,21 +432,12 @@
 			path = LyricsTVC;
 			sourceTree = "<group>";
 		};
-		7FA719B6EA15F742DBAAB419 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				630091018C5FC4C2BD3BD797 /* Pods_Bring.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BC8D670321221612ECCE5E62 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */,
 				08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -498,7 +491,7 @@
 			);
 			mainGroup = 03971D7A2914E867007C6659;
 			packageReferences = (
-				03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */,
+				03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */,
 			);
 			productRefGroup = 03971D842914E867007C6659 /* Products */;
 			projectDirPath = "";
@@ -605,10 +598,12 @@
 				03140F92291F1FFC0090B78C /* SearchCell.swift in Sources */,
 				03374F5129196441004AB96A /* SaveCell.swift in Sources */,
 				03971D872914E867007C6659 /* AppDelegate.swift in Sources */,
+				037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */,
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
 				0330C716291641F300737848 /* HomeViewController.swift in Sources */,
 				03374F4929196122004AB96A /* TitleCell.swift in Sources */,
+				037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */,
 				0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */,
 				03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */,
 				03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */,
@@ -787,11 +782,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NMC6ZX3X68;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bring/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bring/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This application requires location services to work";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This application requires location services to work";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -816,11 +821,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NMC6ZX3X68;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bring/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bring/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This application requires location services to work";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This application requires location services to work";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -863,7 +877,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */ = {
+		03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/slackhq/PanModal.git";
 			requirement = {
@@ -876,7 +890,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		03F9EB282918F97F0095C7CF /* PanModal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */;
+			package = 03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */;
 			productName = PanModal;
 		};
 /* End XCSwiftPackageProductDependency section */
