@@ -8,6 +8,7 @@
 import UIKit
 
 class WeatherCell: UITableViewCell {
+    
 
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var sunnyBtn: UIButton!
@@ -27,8 +28,11 @@ class WeatherCell: UITableViewCell {
         setButton(hotBtn)
     }
     
+    var weather: String = ""
+    
     @IBAction func sunnyTapped(_ sender: Any) {
         setTapped(sunnyBtn)
+        weather = "SUN"
     }
     @IBAction func snowTapped(_ sender: Any) {
         setTapped(snowBtn)
@@ -61,6 +65,14 @@ class WeatherCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+    }
+    
+    func savedWeather(_ a: String) {
+        let storyboard = UIStoryboard(name:"Record", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "RecordModalController") as? RecordModalController else { return }
+        
+        vc.data = a
+        print(vc)
     }
     
 }

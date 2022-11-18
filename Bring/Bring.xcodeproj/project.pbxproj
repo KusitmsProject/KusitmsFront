@@ -26,6 +26,8 @@
 		03374F4E291962FC004AB96A /* LyricsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F4C291962FC004AB96A /* LyricsCell.xib */; };
 		03374F5129196441004AB96A /* SaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03374F4F29196441004AB96A /* SaveCell.swift */; };
 		03374F5229196441004AB96A /* SaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F5029196441004AB96A /* SaveCell.xib */; };
+		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
+		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
 		03971D872914E867007C6659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D862914E867007C6659 /* AppDelegate.swift */; };
 		03971D892914E867007C6659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D882914E867007C6659 /* SceneDelegate.swift */; };
 		03971D8E2914E867007C6659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03971D8C2914E867007C6659 /* Main.storyboard */; };
@@ -82,6 +84,8 @@
 		03374F4C291962FC004AB96A /* LyricsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LyricsCell.xib; sourceTree = "<group>"; };
 		03374F4F29196441004AB96A /* SaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCell.swift; sourceTree = "<group>"; };
 		03374F5029196441004AB96A /* SaveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveCell.xib; sourceTree = "<group>"; };
+		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
 		03971D832914E867007C6659 /* Bring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03971D862914E867007C6659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03971D882914E867007C6659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		03F9EB232918CE430095C7CF /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		03F9EB2A291900900095C7CF /* LyricsModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsModalController.swift; sourceTree = "<group>"; };
 		03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevmeRecord.swift; sourceTree = "<group>"; };
+		08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
+		A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 			children = (
 				03971D852914E867007C6659 /* Bring */,
 				03971D842914E867007C6659 /* Products */,
+				BC8D670321221612ECCE5E62 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */,
+				037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 			children = (
 				0330C71C291646DB00737848 /* Storage.storyboard */,
 				0330C70F291641B500737848 /* StorageViewController.swift */,
+				037DD25D2927A3D60078DD77 /* SliderCell.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -423,6 +432,15 @@
 			path = LyricsTVC;
 			sourceTree = "<group>";
 		};
+		BC8D670321221612ECCE5E62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */,
+				08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,9 +448,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03971D972914E868007C6659 /* Build configuration list for PBXNativeTarget "Bring" */;
 			buildPhases = (
+				205B0A3E8BBFC76A7FA83368 /* [CP] Check Pods Manifest.lock */,
 				03971D7F2914E867007C6659 /* Sources */,
 				03971D802914E867007C6659 /* Frameworks */,
 				03971D812914E867007C6659 /* Resources */,
+				94C5D12F610A4767F17C9DB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -515,6 +535,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		205B0A3E8BBFC76A7FA83368 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bring-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94C5D12F610A4767F17C9DB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bring/Pods-Bring-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bring/Pods-Bring-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bring/Pods-Bring-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03971D7F2914E867007C6659 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -536,10 +598,12 @@
 				03140F92291F1FFC0090B78C /* SearchCell.swift in Sources */,
 				03374F5129196441004AB96A /* SaveCell.swift in Sources */,
 				03971D872914E867007C6659 /* AppDelegate.swift in Sources */,
+				037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */,
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
 				0330C716291641F300737848 /* HomeViewController.swift in Sources */,
 				03374F4929196122004AB96A /* TitleCell.swift in Sources */,
+				037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */,
 				0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */,
 				03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */,
 				03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */,
@@ -714,14 +778,25 @@
 		};
 		03971D982914E868007C6659 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NMC6ZX3X68;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bring/DaumMap.embeddedframework",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bring/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This application requires location services to work";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This application requires location services to work";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -742,14 +817,24 @@
 		};
 		03971D992914E868007C6659 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NMC6ZX3X68;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bring/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bring/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This application requires location services to work";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This application requires location services to work";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

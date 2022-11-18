@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CV-uv-ewm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xzi-cD-3QZ">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OW-q1-Ora">
                                 <rect key="frame" x="10" y="67" width="50" height="50"/>
                                 <constraints>
@@ -103,6 +102,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                             <color key="baseBackgroundColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ODf-EO-6Z7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,21 +132,22 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <constraints>
-                            <constraint firstItem="0CV-uv-ewm" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="AS5-Al-VDf"/>
+                            <constraint firstAttribute="trailing" secondItem="Xzi-cD-3QZ" secondAttribute="trailing" id="1uc-kc-In1"/>
                             <constraint firstItem="4OW-q1-Ora" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Aaa-2p-WzM"/>
-                            <constraint firstAttribute="bottom" secondItem="0CV-uv-ewm" secondAttribute="bottom" id="B9a-r5-oKv"/>
                             <constraint firstItem="6ve-vd-ulh" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="BdZ-Ax-4VU"/>
                             <constraint firstItem="6ve-vd-ulh" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="XKq-I2-8JE"/>
                             <constraint firstItem="4OW-q1-Ora" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="gfI-bD-V3o"/>
-                            <constraint firstItem="0CV-uv-ewm" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jr2-DC-q8N"/>
-                            <constraint firstItem="0CV-uv-ewm" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="pRO-8j-knC"/>
+                            <constraint firstItem="Xzi-cD-3QZ" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="jEH-7U-1qo"/>
+                            <constraint firstItem="Xzi-cD-3QZ" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="mSf-cI-VIV"/>
+                            <constraint firstAttribute="top" secondItem="Xzi-cD-3QZ" secondAttribute="top" id="uqW-db-ufe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oXT-m1-0im"/>
                     <connections>
-                        <outlet property="mapView" destination="0CV-uv-ewm" id="tNW-M6-wrv"/>
                         <outlet property="miniModal" destination="6ve-vd-ulh" id="oLZ-8M-rZg"/>
+                        <outlet property="nicknameField" destination="kgq-Ya-v1O" id="ZsB-Zi-BoB"/>
                         <outlet property="searchBar" destination="t7f-oN-60q" id="Orc-Pk-XGV"/>
+                        <outlet property="subView" destination="Xzi-cD-3QZ" id="1ur-Q8-eHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

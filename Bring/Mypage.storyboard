@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Page-->
+        <!--View Controller-->
         <scene sceneID="CfT-o4-XIz">
             <objects>
                 <viewController id="mf9-Es-NjY" sceneMemberID="viewController">
@@ -27,7 +27,9 @@
                         <viewLayoutGuide key="safeArea" id="ZEW-R7-jWv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Page" image="person.fill" catalog="system" id="dRh-Ck-PB1"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-user-nonfill" id="dRh-Ck-PB1">
+                        <color key="badgeColor" red="0.68235294120000001" green="0.61568627450000002" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOJ-3V-XIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +37,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="tab-user-nonfill" width="23" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

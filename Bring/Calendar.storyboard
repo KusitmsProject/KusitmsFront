@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calendar-->
+        <!--Calendar View Controller-->
         <scene sceneID="xbk-bV-ea4">
             <objects>
                 <viewController storyboardIdentifier="CalendarViewController" id="4AS-44-88C" customClass="CalendarViewController" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                         <viewLayoutGuide key="safeArea" id="Shs-Ra-rhX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="mcb-ZK-kfy"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab-calendar-fill" id="mcb-ZK-kfy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZr-0L-GoE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +35,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="tab-calendar-fill" width="36" height="31"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

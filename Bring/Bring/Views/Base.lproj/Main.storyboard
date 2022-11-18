@@ -1,40 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p8T-Go-7OY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KDa-X7-TmW">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="KfJ-3z-hyS">
-            <objects>
-                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="p8T-Go-7OY" customClass="MainNavigationController" customModule="Bring" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6ub-96-aai"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m7k-bu-Alm">
-                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="KDa-X7-TmW" kind="relationship" relationship="rootViewController" id="LGQ-W7-9JJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mqb-4w-fbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="588" y="-7"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hDg-wN-kbU">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KDa-X7-TmW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="XYD-xa-IPg"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="XYD-xa-IPg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2XW-t6-2kH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.71372549019607845" green="0.69803921568627447" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="Xhp-IM-wIB" kind="relationship" relationship="viewControllers" id="l7c-tF-xxZ"/>

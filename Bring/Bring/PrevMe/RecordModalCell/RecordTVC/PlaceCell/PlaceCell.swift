@@ -11,6 +11,7 @@ import Foundation
 class PlaceCell: UITableViewCell {
 
     
+    @IBOutlet weak var checkMark: UIImageView!
     
     @IBOutlet weak var mapBtn: UIButton!
 
@@ -18,7 +19,10 @@ class PlaceCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
+    
+
 
     @IBAction func btnTapped(_ sender: Any) {
 

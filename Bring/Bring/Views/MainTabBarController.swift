@@ -14,6 +14,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         delegate = self
+
     }
     
     // TabBarContoller가 보여지기 시작하는 시점에
