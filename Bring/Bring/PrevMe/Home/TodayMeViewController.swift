@@ -57,23 +57,57 @@ class TodayMeViewController: UIViewController {
     
     @IBAction func smileTapped(_ sender: Any) {
         setTapped(smileBtn)
+        reset(loveBtn)
+        reset(angryBtn)
+        reset(sadBtn)
+        reset(crazyBtn)
+        reset(tiredBtn)
     }
     @IBAction func loveTapped(_ sender: Any) {
         setTapped(loveBtn)
+        reset(smileBtn)
+        reset(angryBtn)
+        reset(sadBtn)
+        reset(crazyBtn)
+        reset(tiredBtn)
     }
     @IBAction func angryTapped(_ sender: Any) {
         setTapped(angryBtn)
+        reset(smileBtn)
+        reset(loveBtn)
+        reset(sadBtn)
+        reset(crazyBtn)
+        reset(tiredBtn)
     }
     @IBAction func sadTapped(_ sender: Any) {
         setTapped(sadBtn)
+        reset(smileBtn)
+        reset(loveBtn)
+        reset(angryBtn)
+        reset(crazyBtn)
+        reset(tiredBtn)
     }
     @IBAction func crazyTapped(_ sender: Any) {
         setTapped(crazyBtn)
+        reset(smileBtn)
+        reset(loveBtn)
+        reset(sadBtn)
+        reset(angryBtn)
+        reset(tiredBtn)
     }
     @IBAction func tiredTapped(_ sender: Any) {
         setTapped(tiredBtn)
+        reset(smileBtn)
+        reset(loveBtn)
+        reset(sadBtn)
+        reset(angryBtn)
+        reset(crazyBtn)
     }
     
+    func reset(_ btn: UIButton) {
+        btn.layer.borderColor = UIColor(named: "LyricsBoxBorder")?.cgColor
+        btn.backgroundColor = UIColor.white
+    }
     
     func setButton(_ btn: UIButton) {
         btn.layer.borderColor = UIColor(named: "LyricsBoxBorder")?.cgColor

@@ -16,7 +16,6 @@
 		0330C716291641F300737848 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330C715291641F300737848 /* HomeViewController.swift */; };
 		0330C7192916464300737848 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0330C7172916464200737848 /* Home.storyboard */; };
 		0330C71B291646B300737848 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0330C71A291646B300737848 /* Calendar.storyboard */; };
-		0330C71E291646DB00737848 /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0330C71C291646DB00737848 /* Storage.storyboard */; };
 		0330C7202916470D00737848 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0330C71F2916470D00737848 /* Mypage.storyboard */; };
 		03322622291E823500856940 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03322621291E823500856940 /* UIResponder.swift */; };
 		0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0334090B2917BE1F0005B4C4 /* UIColor.swift */; };
@@ -44,6 +43,7 @@
 		03A1CCC62915FED600901B7A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A1CCC52915FED600901B7A /* MainTabBarController.swift */; };
 		03A1CCC82916003A00901B7A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A1CCC72916003A00901B7A /* MainNavigationController.swift */; };
 		03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A1CCEA29160AE400901B7A /* CustomBarItem.swift */; };
+		03AE8B232928A28B0018433E /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B212928A28B0018433E /* Storage.storyboard */; };
 		03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */; };
 		03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */; };
 		03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */; };
@@ -82,7 +82,6 @@
 		0330C715291641F300737848 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0330C7182916464200737848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bring/Views/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
 		0330C71A291646B300737848 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = SOURCE_ROOT; };
-		0330C71D291646DB00737848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bring/Views/Base.lproj/Storage.storyboard; sourceTree = SOURCE_ROOT; };
 		0330C71F2916470D00737848 /* Mypage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = SOURCE_ROOT; };
 		03322621291E823500856940 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		0334090B2917BE1F0005B4C4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		03A1CCC52915FED600901B7A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		03A1CCC72916003A00901B7A /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		03A1CCEA29160AE400901B7A /* CustomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarItem.swift; sourceTree = "<group>"; };
+		03AE8B222928A28B0018433E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bring/Views/Base.lproj/Storage.storyboard; sourceTree = "<group>"; };
 		03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
 		03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMeViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +229,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		037DD2B929289A900078DD77 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				03AE8B212928A28B0018433E /* Storage.storyboard */,
+				0330C70F291641B500737848 /* StorageViewController.swift */,
+				037DD25D2927A3D60078DD77 /* SliderCell.swift */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
 		03971D7A2914E867007C6659 = {
 			isa = PBXGroup;
 			children = (
@@ -327,9 +337,7 @@
 		03A1CCDD2916028000901B7A /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				0330C71C291646DB00737848 /* Storage.storyboard */,
-				0330C70F291641B500737848 /* StorageViewController.swift */,
-				037DD25D2927A3D60078DD77 /* SliderCell.swift */,
+				037DD2B929289A900078DD77 /* Slider */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -576,10 +584,10 @@
 				03971D902914E868007C6659 /* Assets.xcassets in Resources */,
 				03F0E585291A36320023BAEB /* SeasonCell.xib in Resources */,
 				03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */,
-				0330C71E291646DB00737848 /* Storage.storyboard in Resources */,
 				03F0E595291A48A80023BAEB /* PlaceCell.xib in Resources */,
 				03971D8E2914E867007C6659 /* Main.storyboard in Resources */,
 				03F0E589291A40BD0023BAEB /* DateCell.xib in Resources */,
+				03AE8B232928A28B0018433E /* Storage.storyboard in Resources */,
 				0330C71B291646B300737848 /* Calendar.storyboard in Resources */,
 				03374F5229196441004AB96A /* SaveCell.xib in Resources */,
 				03F0E599291A493F0023BAEB /* EmotionCell.xib in Resources */,
@@ -694,14 +702,6 @@
 			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
-		0330C71C291646DB00737848 /* Storage.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0330C71D291646DB00737848 /* Base */,
-			);
-			name = Storage.storyboard;
-			sourceTree = "<group>";
-		};
 		03971D8C2914E867007C6659 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -716,6 +716,14 @@
 				03971D922914E868007C6659 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		03AE8B212928A28B0018433E /* Storage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03AE8B222928A28B0018433E /* Base */,
+			);
+			name = Storage.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
