@@ -27,6 +27,7 @@
 		03374F5229196441004AB96A /* SaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F5029196441004AB96A /* SaveCell.xib */; };
 		034D76692928F602006FD543 /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D76682928F601006FD543 /* TodayCDViewController.swift */; };
 		034D766B2928F622006FD543 /* TodayCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D766A2928F622006FD543 /* TodayCD.storyboard */; };
+		034D766D29293374006FD543 /* ByEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D766C29293374006FD543 /* ByEmojiCell.swift */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
 		037DD2A729286D370078DD77 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2A629286D370078DD77 /* OpenGLES.framework */; };
@@ -97,6 +98,7 @@
 		03374F5029196441004AB96A /* SaveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveCell.xib; sourceTree = "<group>"; };
 		034D76682928F601006FD543 /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayCDViewController.swift; path = "../../../../Bring 2/Bring/TodayCD/TodayCDViewController.swift"; sourceTree = "<group>"; };
 		034D766A2928F622006FD543 /* TodayCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayCD.storyboard; path = ../../../../Bring/Bring/TodayCD/TodayCD.storyboard; sourceTree = "<group>"; };
+		034D766C29293374006FD543 /* ByEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiCell.swift; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
 		037DD2A629286D370078DD77 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -429,6 +431,7 @@
 			children = (
 				03AE8B252928A3F00018433E /* ByEmoji.storyboard */,
 				03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */,
+				034D766C29293374006FD543 /* ByEmojiCell.swift */,
 			);
 			path = ByEmoji;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				03971D872914E867007C6659 /* AppDelegate.swift in Sources */,
 				037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */,
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
+				034D766D29293374006FD543 /* ByEmojiCell.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
 				0330C716291641F300737848 /* HomeViewController.swift in Sources */,
 				03374F4929196122004AB96A /* TitleCell.swift in Sources */,
