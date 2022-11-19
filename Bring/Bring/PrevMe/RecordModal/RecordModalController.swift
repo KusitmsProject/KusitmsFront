@@ -32,7 +32,6 @@ class RecordModalController: UIViewController {
         tableView.register(UINib(nibName: "WeatherCell", bundle: nil), forCellReuseIdentifier: "WeatherCell")
         tableView.register(UINib(nibName: "FriendCell", bundle: nil), forCellReuseIdentifier: "FriendCell")
         tableView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellReuseIdentifier: "PlaceCell")
-        tableView.register(UINib(nibName: "EmotionCell", bundle: nil), forCellReuseIdentifier: "EmotionCell")
         tableView.register(UINib(nibName: "PictureCell", bundle: nil), forCellReuseIdentifier: "PictureCell")
         tableView.register(UINib(nibName: "SaveCell", bundle: nil), forCellReuseIdentifier: "SaveCell")
         tableView.register(UINib(nibName: "TextCell", bundle: nil), forCellReuseIdentifier: "TextCell")
@@ -84,14 +83,10 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
             cell.selectionStyle = .none
             return cell
         case 6:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmotionCell", for: indexPath) as? EmotionCell else { return UITableViewCell() }
-            cell.selectionStyle = .none
-            return cell
-        case 7:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as? PictureCell else { return UITableViewCell() }
             cell.selectionStyle = .none
             return cell
-        case 8:
+        case 7:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as? TextCell else { return UITableViewCell() }
             cell.selectionStyle = .none
             return cell
