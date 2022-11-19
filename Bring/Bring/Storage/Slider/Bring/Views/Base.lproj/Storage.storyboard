@@ -111,6 +111,9 @@
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="goStorageBtn"/>
+                                                            <connections>
+                                                                <action selector="ByEmojiTapped:" destination="o88-KG-TjG" eventType="touchUpInside" id="x4G-9i-tJn"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEJ-2V-JVs">
                                                             <rect key="frame" x="20" y="13.333333333333314" width="80" height="33.333333333333336"/>
