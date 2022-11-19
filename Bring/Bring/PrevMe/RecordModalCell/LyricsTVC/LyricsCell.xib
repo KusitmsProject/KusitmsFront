@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="LyricsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="LyricsCell" rowHeight="381" id="KGk-i7-Jjw" customClass="LyricsCell" customModule="Bring" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="381"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="381"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All I Want for Christmas Is You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9t-W7-jgX">
+                        <rect key="frame" x="84.666666666666686" y="15" width="149" height="19.666666666666671"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                        <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWh-ea-YTT">
+                        <rect key="frame" x="12" y="43.666666666666657" width="294" height="294"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGp-8a-Yfu">
+                                <rect key="frame" x="0.0" y="0.0" width="294" height="294"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="pGp-8a-Yfu" firstAttribute="leading" secondItem="KWh-ea-YTT" secondAttribute="leading" id="2lk-vS-F4e"/>
+                            <constraint firstAttribute="width" constant="294" id="Kip-Tt-jO4"/>
+                            <constraint firstAttribute="bottom" secondItem="pGp-8a-Yfu" secondAttribute="bottom" id="Qif-Z9-9Nm"/>
+                            <constraint firstAttribute="trailing" secondItem="pGp-8a-Yfu" secondAttribute="trailing" id="Qw0-Ne-rMi"/>
+                            <constraint firstItem="pGp-8a-Yfu" firstAttribute="top" secondItem="KWh-ea-YTT" secondAttribute="top" id="Zx9-WS-iqM"/>
+                            <constraint firstItem="pGp-8a-Yfu" firstAttribute="height" secondItem="KWh-ea-YTT" secondAttribute="height" id="avF-Cn-5yr"/>
+                            <constraint firstAttribute="height" constant="294" id="bqL-bM-V6U"/>
+                            <constraint firstItem="pGp-8a-Yfu" firstAttribute="width" secondItem="KWh-ea-YTT" secondAttribute="width" id="nKV-8I-nli"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="G78-IK-GV8"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="rOV-Qm-tGh"/>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KWh-ea-YTT" firstAttribute="top" secondItem="J9t-W7-jgX" secondAttribute="bottom" constant="9" id="FKy-gN-6NP"/>
+                    <constraint firstItem="KWh-ea-YTT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QLX-cD-BvH"/>
+                    <constraint firstItem="KWh-ea-YTT" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="W2b-lR-COr"/>
+                    <constraint firstItem="J9t-W7-jgX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="qOh-VT-B2Y"/>
+                    <constraint firstItem="J9t-W7-jgX" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sna-sk-ofm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lyricsBox" destination="pGp-8a-Yfu" id="2lZ-54-9D7"/>
+            </connections>
+            <point key="canvasLocation" x="-16.923076923076923" y="140.40284360189574"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
