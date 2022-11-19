@@ -25,6 +25,8 @@
 		03374F4E291962FC004AB96A /* LyricsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F4C291962FC004AB96A /* LyricsCell.xib */; };
 		03374F5129196441004AB96A /* SaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03374F4F29196441004AB96A /* SaveCell.swift */; };
 		03374F5229196441004AB96A /* SaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F5029196441004AB96A /* SaveCell.xib */; };
+		034D76692928F602006FD543 /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D76682928F601006FD543 /* TodayCDViewController.swift */; };
+		034D766B2928F622006FD543 /* TodayCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D766A2928F622006FD543 /* TodayCD.storyboard */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
 		037DD2A729286D370078DD77 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2A629286D370078DD77 /* OpenGLES.framework */; };
@@ -46,8 +48,6 @@
 		03AE8B232928A28B0018433E /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B212928A28B0018433E /* Storage.storyboard */; };
 		03AE8B262928A3F00018433E /* ByEmoji.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B252928A3F00018433E /* ByEmoji.storyboard */; };
 		03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */; };
-		03AE8B2C2928BF2B0018433E /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE8B2A2928BF2B0018433E /* TodayCDViewController.swift */; };
-		03AE8B312928BFC20018433E /* TodayCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B302928BFC20018433E /* TodayCD.storyboard */; };
 		03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */; };
 		03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */; };
 		03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */; };
@@ -95,6 +95,8 @@
 		03374F4C291962FC004AB96A /* LyricsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LyricsCell.xib; sourceTree = "<group>"; };
 		03374F4F29196441004AB96A /* SaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCell.swift; sourceTree = "<group>"; };
 		03374F5029196441004AB96A /* SaveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveCell.xib; sourceTree = "<group>"; };
+		034D76682928F601006FD543 /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayCDViewController.swift; path = "../../../../Bring 2/Bring/TodayCD/TodayCDViewController.swift"; sourceTree = "<group>"; };
+		034D766A2928F622006FD543 /* TodayCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayCD.storyboard; path = ../../../../Bring/Bring/TodayCD/TodayCD.storyboard; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
 		037DD2A629286D370078DD77 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -119,8 +121,6 @@
 		03AE8B222928A28B0018433E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bring/Views/Base.lproj/Storage.storyboard; sourceTree = "<group>"; };
 		03AE8B252928A3F00018433E /* ByEmoji.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByEmoji.storyboard; sourceTree = "<group>"; };
 		03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiViewController.swift; sourceTree = "<group>"; };
-		03AE8B2A2928BF2B0018433E /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayCDViewController.swift; path = ../../../../Bring/Bring/TodayCD/TodayCDViewController.swift; sourceTree = "<group>"; };
-		03AE8B302928BFC20018433E /* TodayCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayCD.storyboard; path = ../../../../Bring/TodayCD.storyboard; sourceTree = "<group>"; };
 		03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
 		03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMeViewController.swift; sourceTree = "<group>"; };
@@ -436,8 +436,8 @@
 		03AE8B292928BF1C0018433E /* TodayCD */ = {
 			isa = PBXGroup;
 			children = (
-				03AE8B302928BFC20018433E /* TodayCD.storyboard */,
-				03AE8B2A2928BF2B0018433E /* TodayCDViewController.swift */,
+				034D766A2928F622006FD543 /* TodayCD.storyboard */,
+				034D76682928F601006FD543 /* TodayCDViewController.swift */,
 			);
 			path = TodayCD;
 			sourceTree = "<group>";
@@ -615,7 +615,7 @@
 				03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */,
 				03F0E595291A48A80023BAEB /* PlaceCell.xib in Resources */,
 				03971D8E2914E867007C6659 /* Main.storyboard in Resources */,
-				03AE8B312928BFC20018433E /* TodayCD.storyboard in Resources */,
+				034D766B2928F622006FD543 /* TodayCD.storyboard in Resources */,
 				03F0E589291A40BD0023BAEB /* DateCell.xib in Resources */,
 				03AE8B232928A28B0018433E /* Storage.storyboard in Resources */,
 				0330C71B291646B300737848 /* Calendar.storyboard in Resources */,
@@ -705,7 +705,7 @@
 				0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */,
 				03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */,
 				03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */,
-				03AE8B2C2928BF2B0018433E /* TodayCDViewController.swift in Sources */,
+				034D76692928F602006FD543 /* TodayCDViewController.swift in Sources */,
 				03F9EB242918CE430095C7CF /* CALayer.swift in Sources */,
 				03A1CCC62915FED600901B7A /* MainTabBarController.swift in Sources */,
 				03971D892914E867007C6659 /* SceneDelegate.swift in Sources */,
