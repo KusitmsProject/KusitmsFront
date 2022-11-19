@@ -18,6 +18,14 @@ class TodayMeViewController: UIViewController {
     @IBOutlet weak var recordBtn: UIButton!
     @IBOutlet weak var recordView: UIView!
     
+    
+    @IBOutlet var tiredBtn: UIButton!
+    @IBOutlet var crazyBtn: UIButton!
+    @IBOutlet var sadBtn: UIButton!
+    @IBOutlet var angryBtn: UIButton!
+    @IBOutlet var loveBtn: UIButton!
+    @IBOutlet var smileBtn: UIButton!
+    
     let data = ["All I Want for Christmas Is You", "All I Want for Christmas Is You - rock ver.", "All I Want for Christmas Is You - (This year ver.) "]
     
     var filteredData: [String]!
@@ -37,6 +45,45 @@ class TodayMeViewController: UIViewController {
         
         tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
 
+        setButton(smileBtn)
+        setButton(crazyBtn)
+        setButton(sadBtn)
+        setButton(angryBtn)
+        setButton(loveBtn)
+        setButton(tiredBtn)
+        
+    }
+    
+    
+    @IBAction func smileTapped(_ sender: Any) {
+        setTapped(smileBtn)
+    }
+    @IBAction func loveTapped(_ sender: Any) {
+        setTapped(loveBtn)
+    }
+    @IBAction func angryTapped(_ sender: Any) {
+        setTapped(angryBtn)
+    }
+    @IBAction func sadTapped(_ sender: Any) {
+        setTapped(sadBtn)
+    }
+    @IBAction func crazyTapped(_ sender: Any) {
+        setTapped(crazyBtn)
+    }
+    @IBAction func tiredTapped(_ sender: Any) {
+        setTapped(tiredBtn)
+    }
+    
+    
+    func setButton(_ btn: UIButton) {
+        btn.layer.borderColor = UIColor(named: "LyricsBoxBorder")?.cgColor
+        btn.layer.borderWidth = 1
+        btn.layer.cornerRadius = 10
+    }
+    
+    func setTapped(_ btn: UIButton) {
+        btn.layer.borderColor = UIColor(named: "prevMain")?.cgColor
+        btn.backgroundColor = UIColor(named: "prevMainSoft")
     }
     
     
