@@ -41,7 +41,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.startMonitoringSignificantLocationChanges()
        
         setMapView(coordinate: currentLoc, addr: findAddr(lat: currentLoc.latitude, long: currentLoc.longitude))
-        //        setMapView(coordinate: CLLocationCoordinate2D(latitude: self.currentLocation!.coordinate.latitude, longitude: self.currentLocation!.coordinate.longitude), addr: "현재위치")
         
         UICustom()
     }

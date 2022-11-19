@@ -44,6 +44,10 @@
 		03A1CCC82916003A00901B7A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A1CCC72916003A00901B7A /* MainNavigationController.swift */; };
 		03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A1CCEA29160AE400901B7A /* CustomBarItem.swift */; };
 		03AE8B232928A28B0018433E /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B212928A28B0018433E /* Storage.storyboard */; };
+		03AE8B262928A3F00018433E /* ByEmoji.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B252928A3F00018433E /* ByEmoji.storyboard */; };
+		03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */; };
+		03AE8B2C2928BF2B0018433E /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE8B2A2928BF2B0018433E /* TodayCDViewController.swift */; };
+		03AE8B312928BFC20018433E /* TodayCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B302928BFC20018433E /* TodayCD.storyboard */; };
 		03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */; };
 		03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */; };
 		03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */; };
@@ -113,6 +117,10 @@
 		03A1CCC72916003A00901B7A /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		03A1CCEA29160AE400901B7A /* CustomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarItem.swift; sourceTree = "<group>"; };
 		03AE8B222928A28B0018433E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bring/Views/Base.lproj/Storage.storyboard; sourceTree = "<group>"; };
+		03AE8B252928A3F00018433E /* ByEmoji.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByEmoji.storyboard; sourceTree = "<group>"; };
+		03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiViewController.swift; sourceTree = "<group>"; };
+		03AE8B2A2928BF2B0018433E /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayCDViewController.swift; path = ../../../../Bring/Bring/TodayCD/TodayCDViewController.swift; sourceTree = "<group>"; };
+		03AE8B302928BFC20018433E /* TodayCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayCD.storyboard; path = ../../../../Bring/TodayCD.storyboard; sourceTree = "<group>"; };
 		03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
 		03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMeViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 		03971D852914E867007C6659 /* Bring */ = {
 			isa = PBXGroup;
 			children = (
+				03AE8B292928BF1C0018433E /* TodayCD */,
 				037DD2B429286DEF0078DD77 /* DaumMap.embeddedframework */,
 				03A1CCC42915F97500901B7A /* Resources */,
 				03A1CCC12915F95200901B7A /* Models */,
@@ -337,6 +346,7 @@
 		03A1CCDD2916028000901B7A /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				03AE8B242928A3E00018433E /* ByEmoji */,
 				037DD2B929289A900078DD77 /* Slider */,
 			);
 			path = Storage;
@@ -412,6 +422,24 @@
 				03374F5029196441004AB96A /* SaveCell.xib */,
 			);
 			path = SaveCell;
+			sourceTree = "<group>";
+		};
+		03AE8B242928A3E00018433E /* ByEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				03AE8B252928A3F00018433E /* ByEmoji.storyboard */,
+				03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */,
+			);
+			path = ByEmoji;
+			sourceTree = "<group>";
+		};
+		03AE8B292928BF1C0018433E /* TodayCD */ = {
+			isa = PBXGroup;
+			children = (
+				03AE8B302928BFC20018433E /* TodayCD.storyboard */,
+				03AE8B2A2928BF2B0018433E /* TodayCDViewController.swift */,
+			);
+			path = TodayCD;
 			sourceTree = "<group>";
 		};
 		03C0E0B329179FA600C80331 /* PrevMe */ = {
@@ -580,12 +608,14 @@
 				0329FBE22924F07200A1F982 /* Map.storyboard in Resources */,
 				0330C7202916470D00737848 /* Mypage.storyboard in Resources */,
 				03EC79A42922235D002D88EC /* TodayMe.storyboard in Resources */,
+				03AE8B262928A3F00018433E /* ByEmoji.storyboard in Resources */,
 				03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */,
 				03971D902914E868007C6659 /* Assets.xcassets in Resources */,
 				03F0E585291A36320023BAEB /* SeasonCell.xib in Resources */,
 				03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */,
 				03F0E595291A48A80023BAEB /* PlaceCell.xib in Resources */,
 				03971D8E2914E867007C6659 /* Main.storyboard in Resources */,
+				03AE8B312928BFC20018433E /* TodayCD.storyboard in Resources */,
 				03F0E589291A40BD0023BAEB /* DateCell.xib in Resources */,
 				03AE8B232928A28B0018433E /* Storage.storyboard in Resources */,
 				0330C71B291646B300737848 /* Calendar.storyboard in Resources */,
@@ -653,6 +683,7 @@
 				03F0E588291A40BD0023BAEB /* DateCell.swift in Sources */,
 				03374F4D291962FC004AB96A /* LyricsCell.swift in Sources */,
 				03F0E584291A36320023BAEB /* SeasonCell.swift in Sources */,
+				03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */,
 				0330C714291641E300737848 /* CalendarViewController.swift in Sources */,
 				03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */,
 				03322622291E823500856940 /* UIResponder.swift in Sources */,
@@ -674,6 +705,7 @@
 				0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */,
 				03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */,
 				03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */,
+				03AE8B2C2928BF2B0018433E /* TodayCDViewController.swift in Sources */,
 				03F9EB242918CE430095C7CF /* CALayer.swift in Sources */,
 				03A1CCC62915FED600901B7A /* MainTabBarController.swift in Sources */,
 				03971D892914E867007C6659 /* SceneDelegate.swift in Sources */,

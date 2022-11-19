@@ -36,5 +36,27 @@ class SliderCell: UICollectionViewCell {
         playBtn.setImage(playBtnImg, for: .normal)
     }
     
+    @IBAction func ByEmojiTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "ByEmoji", bundle: nil)
+        let ByEmoji = storyboard.instantiateViewController(withIdentifier: "ByEmojiViewController") 
+        if let vc = self.next(ofType: UIViewController.self) {
+            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            vc.modalPresentationStyle = .fullScreen
+            vc.present(ByEmoji, animated: true, completion: nil)
+        }
+
+        
+//        let childVC = ByEmojiViewController()
+//        let parentVC = StorageViewController()
+//
+//        childVC.view.backgroundColor = .yellow
+//
+//        // currentContext 테스트
+//        childVC.modalPresentationStyle = .currentContext
+//
+//        parentVC.present(childVC, animated: true, completion: nil)
+//
+    }
+    
 }
 
