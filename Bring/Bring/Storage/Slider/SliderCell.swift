@@ -40,8 +40,8 @@ class SliderCell: UICollectionViewCell {
         let storyboard = UIStoryboard(name: "ByEmoji", bundle: nil)
         let ByEmoji = storyboard.instantiateViewController(withIdentifier: "ByEmojiViewController") 
         if let vc = self.next(ofType: UIViewController.self) {
-            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-            vc.modalPresentationStyle = .fullScreen
+//            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            ByEmoji.modalPresentationStyle = .fullScreen
             vc.present(ByEmoji, animated: true, completion: nil)
         }
 

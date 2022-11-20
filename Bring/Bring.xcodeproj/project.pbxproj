@@ -27,16 +27,9 @@
 		03374F5229196441004AB96A /* SaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F5029196441004AB96A /* SaveCell.xib */; };
 		034D76692928F602006FD543 /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D76682928F601006FD543 /* TodayCDViewController.swift */; };
 		034D766B2928F622006FD543 /* TodayCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D766A2928F622006FD543 /* TodayCD.storyboard */; };
+		034D766D29293374006FD543 /* ByEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D766C29293374006FD543 /* ByEmojiCell.swift */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
-		037DD2A729286D370078DD77 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2A629286D370078DD77 /* OpenGLES.framework */; };
-		037DD2A929286D530078DD77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2A829286D530078DD77 /* SystemConfiguration.framework */; };
-		037DD2AB29286D5A0078DD77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2AA29286D590078DD77 /* CoreLocation.framework */; };
-		037DD2AD29286D600078DD77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2AC29286D5F0078DD77 /* QuartzCore.framework */; };
-		037DD2AF29286D690078DD77 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2AE29286D660078DD77 /* libc++.tbd */; };
-		037DD2B129286D760078DD77 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2B029286D730078DD77 /* libxml2.tbd */; };
-		037DD2B329286D840078DD77 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 037DD2B229286D7D0078DD77 /* libsqlite3.tbd */; };
-		037DD2B729286DEF0078DD77 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 037DD2B629286DEF0078DD77 /* Headers */; };
 		03971D872914E867007C6659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D862914E867007C6659 /* AppDelegate.swift */; };
 		03971D892914E867007C6659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D882914E867007C6659 /* SceneDelegate.swift */; };
 		03971D8E2914E867007C6659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03971D8C2914E867007C6659 /* Main.storyboard */; };
@@ -97,17 +90,9 @@
 		03374F5029196441004AB96A /* SaveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveCell.xib; sourceTree = "<group>"; };
 		034D76682928F601006FD543 /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayCDViewController.swift; path = "../../../../Bring 2/Bring/TodayCD/TodayCDViewController.swift"; sourceTree = "<group>"; };
 		034D766A2928F622006FD543 /* TodayCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayCD.storyboard; path = ../../../../Bring/Bring/TodayCD/TodayCD.storyboard; sourceTree = "<group>"; };
+		034D766C29293374006FD543 /* ByEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiCell.swift; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
-		037DD2A629286D370078DD77 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		037DD2A829286D530078DD77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		037DD2AA29286D590078DD77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		037DD2AC29286D5F0078DD77 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		037DD2AE29286D660078DD77 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		037DD2B029286D730078DD77 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		037DD2B229286D7D0078DD77 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		037DD2B629286DEF0078DD77 /* Headers */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Headers; sourceTree = "<group>"; };
-		037DD2B829286ECF0078DD77 /* Kakao-Map-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kakao-Map-Bridge-Header.h"; sourceTree = "<group>"; };
 		03971D832914E867007C6659 /* Bring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03971D862914E867007C6659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03971D882914E867007C6659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,14 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				037DD2AF29286D690078DD77 /* libc++.tbd in Frameworks */,
-				037DD2AB29286D5A0078DD77 /* CoreLocation.framework in Frameworks */,
-				037DD2B329286D840078DD77 /* libsqlite3.tbd in Frameworks */,
-				037DD2AD29286D600078DD77 /* QuartzCore.framework in Frameworks */,
 				03F9EB292918F97F0095C7CF /* PanModal in Frameworks */,
-				037DD2B129286D760078DD77 /* libxml2.tbd in Frameworks */,
-				037DD2A929286D530078DD77 /* SystemConfiguration.framework in Frameworks */,
-				037DD2A729286D370078DD77 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,37 +184,6 @@
 			path = PictureCell;
 			sourceTree = "<group>";
 		};
-		037DD2A529286D360078DD77 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				037DD2B229286D7D0078DD77 /* libsqlite3.tbd */,
-				037DD2B029286D730078DD77 /* libxml2.tbd */,
-				037DD2AE29286D660078DD77 /* libc++.tbd */,
-				037DD2AC29286D5F0078DD77 /* QuartzCore.framework */,
-				037DD2AA29286D590078DD77 /* CoreLocation.framework */,
-				037DD2A829286D530078DD77 /* SystemConfiguration.framework */,
-				037DD2A629286D370078DD77 /* OpenGLES.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		037DD2B429286DEF0078DD77 /* DaumMap.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				037DD2B529286DEF0078DD77 /* Resources */,
-			);
-			name = DaumMap.embeddedframework;
-			path = "../../../Downloads/IOS_DaumMap_SDK_1.4.0 2/lib/DaumMap.embeddedframework";
-			sourceTree = "<group>";
-		};
-		037DD2B529286DEF0078DD77 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				037DD2B629286DEF0078DD77 /* Headers */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		037DD2B929289A900078DD77 /* Slider */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,11 +197,9 @@
 		03971D7A2914E867007C6659 = {
 			isa = PBXGroup;
 			children = (
-				037DD2B829286ECF0078DD77 /* Kakao-Map-Bridge-Header.h */,
 				03971D852914E867007C6659 /* Bring */,
 				03971D842914E867007C6659 /* Products */,
 				BC8D670321221612ECCE5E62 /* Pods */,
-				037DD2A529286D360078DD77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				03AE8B292928BF1C0018433E /* TodayCD */,
-				037DD2B429286DEF0078DD77 /* DaumMap.embeddedframework */,
 				03A1CCC42915F97500901B7A /* Resources */,
 				03A1CCC12915F95200901B7A /* Models */,
 				03A1CCDA2916025900901B7A /* Home */,
@@ -429,6 +373,7 @@
 			children = (
 				03AE8B252928A3F00018433E /* ByEmoji.storyboard */,
 				03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */,
+				034D766C29293374006FD543 /* ByEmojiCell.swift */,
 			);
 			path = ByEmoji;
 			sourceTree = "<group>";
@@ -604,7 +549,6 @@
 				03F0E58D291A44F20023BAEB /* WeatherCell.xib in Resources */,
 				03374F4E291962FC004AB96A /* LyricsCell.xib in Resources */,
 				03971D932914E868007C6659 /* LaunchScreen.storyboard in Resources */,
-				037DD2B729286DEF0078DD77 /* Headers in Resources */,
 				0329FBE22924F07200A1F982 /* Map.storyboard in Resources */,
 				0330C7202916470D00737848 /* Mypage.storyboard in Resources */,
 				03EC79A42922235D002D88EC /* TodayMe.storyboard in Resources */,
@@ -698,6 +642,7 @@
 				03971D872914E867007C6659 /* AppDelegate.swift in Sources */,
 				037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */,
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
+				034D766D29293374006FD543 /* ByEmojiCell.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
 				0330C716291641F300737848 /* HomeViewController.swift in Sources */,
 				03374F4929196122004AB96A /* TitleCell.swift in Sources */,
@@ -908,7 +853,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.2621.Bring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/oyejin/KusitmsFront/Bring/Kakao-Map-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -947,7 +892,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.2621.Bring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/oyejin/KusitmsFront/Bring/Kakao-Map-Bridge-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

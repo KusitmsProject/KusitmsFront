@@ -22,6 +22,13 @@ class RecordModalController: UIViewController {
         print(record)
     }
     
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        if let vc = self.presentingViewController as? TodayMeViewController {
+            vc.record = record
+        }
+        super.dismiss(animated: flag, completion: completion)
+    }
+     
     func setUpTable() {
         tableView.delegate = self
         tableView.dataSource = self

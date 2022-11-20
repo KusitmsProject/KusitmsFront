@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,16 +16,341 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ByEmojiBG" id="GOE-v3-oUF">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감정 보관함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVA-Ym-g7B">
+                                <rect key="frame" x="28" y="56" width="91" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-DX-wZL">
+                                <rect key="frame" x="2.6666666666666572" y="93" width="385" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvL-Zq-tHX">
+                                        <rect key="frame" x="28" y="1" width="50" height="38"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Myd-rD-Mn2"/>
+                                            <constraint firstAttribute="height" constant="38" id="iiI-Ma-eVv"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="754" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlF-IA-Bxr">
+                                        <rect key="frame" x="28" y="1" width="50" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="MGo-7t-YsR"/>
+                                            <constraint firstAttribute="height" constant="38" id="UCP-ch-eUf"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="emoji"/>
+                                        <state key="selected" image="x"/>
+                                        <connections>
+                                            <action selector="searchEmojiTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zxY-6U-Y5l"/>
+                                        </connections>
+                                    </button>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="노래 제목, 가수로 검색해주세요" translatesAutoresizingMaskIntoConstraints="NO" id="ZYC-dz-Mtc">
+                                        <rect key="frame" x="88" y="-10" width="280" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="CLo-S4-9O3"/>
+                                            <constraint firstAttribute="width" constant="280" id="Nzb-Xt-VJH"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                        <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9w-Hv-1FJ">
+                                        <rect key="frame" x="78" y="0.0" width="310" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEK-Hr-Pd2">
+                                                <rect key="frame" x="0.0" y="1" width="50" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="8bI-BH-PIk"/>
+                                                    <constraint firstAttribute="height" constant="38" id="d1l-Rz-6Fc"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="😆"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="😆">
+                                                            <attributes>
+                                                                <font key="NSFont" size="25" name="AppleColorEmoji"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="smileTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8LY-qi-oB4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRy-lq-aYH">
+                                                <rect key="frame" x="49.999999999999986" y="1" width="50" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Wwv-cQ-VYv"/>
+                                                    <constraint firstAttribute="height" constant="38" id="fNS-AY-Vfs"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="😆"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🥰">
+                                                            <attributes>
+                                                                <font key="NSFont" size="25" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="loveTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j0Y-LT-k7k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arg-OC-KyV">
+                                                <rect key="frame" x="99.999999999999986" y="1" width="50.000000000000014" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="1fX-21-XNU"/>
+                                                    <constraint firstAttribute="width" constant="50" id="NcB-fE-5Un"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="😆"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="😡">
+                                                            <attributes>
+                                                                <font key="NSFont" size="25" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="angryTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sbC-FH-mIE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se5-54-jcl">
+                                                <rect key="frame" x="150" y="1" width="50" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="IZ2-XT-eei"/>
+                                                    <constraint firstAttribute="height" constant="38" id="WPk-jy-L8J"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="😆"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="😭">
+                                                            <attributes>
+                                                                <font key="NSFont" size="25" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sadTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3rv-zY-b4A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifw-Pr-GP1">
+                                                <rect key="frame" x="200" y="1" width="50" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="4aQ-UA-xU7"/>
+                                                    <constraint firstAttribute="height" constant="38" id="Pwp-YM-Fru"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="😆"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="🤯">
+                                                            <attributes>
+                                                                <font key="NSFont" size="25" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="explodeTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zj3-Me-qRe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hV3-cb-VFK">
+                                                <rect key="frame" x="250" y="1" width="50" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Whd-a3-BW0"/>
+                                                    <constraint firstAttribute="height" constant="38" id="cpJ-6J-1AX"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="😆"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="😮‍💨">
+                                                            <attributes>
+                                                                <font key="NSFont" size="25" name="AppleColorEmoji"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tiredTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="liO-ES-JYS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="gEK-Hr-Pd2" firstAttribute="centerY" secondItem="y9w-Hv-1FJ" secondAttribute="centerY" id="40z-cd-4xU"/>
+                                            <constraint firstItem="Se5-54-jcl" firstAttribute="centerY" secondItem="y9w-Hv-1FJ" secondAttribute="centerY" id="4gT-Te-Akp"/>
+                                            <constraint firstItem="fRy-lq-aYH" firstAttribute="centerY" secondItem="y9w-Hv-1FJ" secondAttribute="centerY" id="9I3-mn-IeO"/>
+                                            <constraint firstAttribute="height" constant="40" id="Duf-s6-mor"/>
+                                            <constraint firstItem="Arg-OC-KyV" firstAttribute="leading" secondItem="fRy-lq-aYH" secondAttribute="trailing" id="IHF-cJ-iYc"/>
+                                            <constraint firstItem="hV3-cb-VFK" firstAttribute="leading" secondItem="Ifw-Pr-GP1" secondAttribute="trailing" id="Uld-zT-cnw"/>
+                                            <constraint firstItem="Ifw-Pr-GP1" firstAttribute="leading" secondItem="Se5-54-jcl" secondAttribute="trailing" id="V3p-i9-5jT"/>
+                                            <constraint firstItem="Arg-OC-KyV" firstAttribute="centerY" secondItem="y9w-Hv-1FJ" secondAttribute="centerY" id="Zwe-OQ-p1B"/>
+                                            <constraint firstItem="fRy-lq-aYH" firstAttribute="leading" secondItem="gEK-Hr-Pd2" secondAttribute="trailing" id="azY-1D-y9F"/>
+                                            <constraint firstItem="hV3-cb-VFK" firstAttribute="centerY" secondItem="y9w-Hv-1FJ" secondAttribute="centerY" id="hWw-6M-eaQ"/>
+                                            <constraint firstItem="gEK-Hr-Pd2" firstAttribute="leading" secondItem="y9w-Hv-1FJ" secondAttribute="leading" id="kmG-xK-Zau"/>
+                                            <constraint firstItem="Se5-54-jcl" firstAttribute="leading" secondItem="Arg-OC-KyV" secondAttribute="trailing" id="mLX-5a-JzB"/>
+                                            <constraint firstItem="Ifw-Pr-GP1" firstAttribute="centerY" secondItem="y9w-Hv-1FJ" secondAttribute="centerY" id="oM6-zq-uah"/>
+                                            <constraint firstAttribute="width" constant="310" id="uKk-8t-WrO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AiH-u8-K7C"/>
+                                    <constraint firstItem="y9w-Hv-1FJ" firstAttribute="centerY" secondItem="7N0-DX-wZL" secondAttribute="centerY" id="HSu-cp-36i"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZYC-dz-Mtc" secondAttribute="trailing" constant="17" id="HiA-h7-l7S"/>
+                                    <constraint firstAttribute="width" constant="385" id="KX5-6x-loy"/>
+                                    <constraint firstItem="IlF-IA-Bxr" firstAttribute="leading" secondItem="7N0-DX-wZL" secondAttribute="leading" constant="28" id="V5U-HU-OeF"/>
+                                    <constraint firstItem="y9w-Hv-1FJ" firstAttribute="leading" secondItem="IlF-IA-Bxr" secondAttribute="trailing" id="e8D-qu-pZz"/>
+                                    <constraint firstItem="ZYC-dz-Mtc" firstAttribute="centerY" secondItem="7N0-DX-wZL" secondAttribute="centerY" id="euG-vg-mMh"/>
+                                    <constraint firstItem="QvL-Zq-tHX" firstAttribute="centerY" secondItem="7N0-DX-wZL" secondAttribute="centerY" id="okP-NF-irQ"/>
+                                    <constraint firstItem="QvL-Zq-tHX" firstAttribute="leading" secondItem="7N0-DX-wZL" secondAttribute="leading" constant="28" id="rrL-eS-838"/>
+                                    <constraint firstItem="IlF-IA-Bxr" firstAttribute="centerY" secondItem="7N0-DX-wZL" secondAttribute="centerY" id="tD8-pV-4dm"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmM-AI-45D">
+                                <rect key="frame" x="2" y="152" width="386" height="604"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TBk-ZV-kgd">
+                                    <size key="itemSize" width="386" height="631"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ByEmojiCell" reuseIdentifier="ByEmojiCell" id="IFR-Oa-Se3" customClass="ByEmojiCell" customModule="Bring" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="386" height="631"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HDa-Mv-wc7">
+                                            <rect key="frame" x="0.0" y="0.0" width="386" height="631"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile-card" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-te-OYZ">
+                                                    <rect key="frame" x="34" y="19" width="318" height="88"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="88" id="CGz-xP-kQw"/>
+                                                        <constraint firstAttribute="width" constant="318" id="hSR-DA-KYl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmI-46-pLQ">
+                                                    <rect key="frame" x="69" y="35" width="93" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <color key="textColor" red="0.52549019607843139" green="0.40392156862745099" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ed Sheeran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFL-4y-eZ1">
+                                                    <rect key="frame" x="69" y="65" width="83" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" red="0.52549019607843139" green="0.40392156862745099" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dgV-te-OYZ" firstAttribute="centerX" secondItem="HDa-Mv-wc7" secondAttribute="centerX" id="BQc-AA-qqE"/>
+                                                <constraint firstItem="GmI-46-pLQ" firstAttribute="top" secondItem="HDa-Mv-wc7" secondAttribute="top" constant="35" id="PcL-Tr-gVZ"/>
+                                                <constraint firstItem="GmI-46-pLQ" firstAttribute="leading" secondItem="dgV-te-OYZ" secondAttribute="leading" constant="35" id="TxD-ts-yLH"/>
+                                                <constraint firstItem="dgV-te-OYZ" firstAttribute="top" secondItem="HDa-Mv-wc7" secondAttribute="top" constant="19" id="iyK-iF-f7e"/>
+                                                <constraint firstItem="gFL-4y-eZ1" firstAttribute="top" secondItem="GmI-46-pLQ" secondAttribute="bottom" id="vGA-x7-N2t"/>
+                                                <constraint firstItem="gFL-4y-eZ1" firstAttribute="leading" secondItem="dgV-te-OYZ" secondAttribute="leading" constant="35" id="yfF-LO-vNd"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="386" height="631"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GOE-v3-oUF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="0bH-n3-4Yt"/>
+                            <constraint firstItem="7N0-DX-wZL" firstAttribute="top" secondItem="TVA-Ym-g7B" secondAttribute="bottom" constant="13" id="7lY-Iy-Ab7"/>
+                            <constraint firstItem="TmM-AI-45D" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="A1N-d8-pQp"/>
+                            <constraint firstItem="TVA-Ym-g7B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="Av2-li-fAM"/>
+                            <constraint firstItem="TmM-AI-45D" firstAttribute="top" secondItem="7N0-DX-wZL" secondAttribute="bottom" constant="19" id="L3Y-8A-y20"/>
+                            <constraint firstAttribute="bottom" secondItem="GOE-v3-oUF" secondAttribute="bottom" id="L94-sy-xR7"/>
+                            <constraint firstItem="TVA-Ym-g7B" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="9" id="SEH-mV-C3c"/>
+                            <constraint firstItem="TmM-AI-45D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="2" id="aja-Ph-c8U"/>
+                            <constraint firstItem="7N0-DX-wZL" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="bf0-jr-LlX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TmM-AI-45D" secondAttribute="bottom" constant="54" id="eyM-Y2-GEq"/>
+                            <constraint firstAttribute="trailing" secondItem="GOE-v3-oUF" secondAttribute="trailing" id="gzA-TK-LNj"/>
+                            <constraint firstItem="GOE-v3-oUF" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="qIz-cG-btf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="angryBtn" destination="Arg-OC-KyV" id="3sU-e1-PTQ"/>
+                        <outlet property="collectionView" destination="TmM-AI-45D" id="IWQ-TU-13u"/>
+                        <outlet property="emojiBtns" destination="y9w-Hv-1FJ" id="c7D-MP-kFM"/>
+                        <outlet property="explodeBtn" destination="Ifw-Pr-GP1" id="pdX-H7-GPw"/>
+                        <outlet property="loveBtn" destination="fRy-lq-aYH" id="eYd-Hl-Arq"/>
+                        <outlet property="sadBtn" destination="Se5-54-jcl" id="62l-5U-nRA"/>
+                        <outlet property="searchBar" destination="ZYC-dz-Mtc" id="AWk-Cf-I67"/>
+                        <outlet property="searchEmoji" destination="IlF-IA-Bxr" id="k99-bD-KVH"/>
+                        <outlet property="searchView" destination="QvL-Zq-tHX" id="hZg-Ic-VkW"/>
+                        <outlet property="smileBtn" destination="gEK-Hr-Pd2" id="CP8-kM-kVq"/>
+                        <outlet property="tiredBtn" destination="hV3-cb-VFK" id="Dsv-v3-0hC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12" y="-34"/>
+            <point key="canvasLocation" x="10.769230769230768" y="-34.123222748815166"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ByEmojiBG" width="390" height="844"/>
+        <image name="emoji" width="17" height="17"/>
+        <image name="smile-card" width="348" height="119"/>
+        <image name="x" width="15" height="15"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
