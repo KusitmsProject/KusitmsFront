@@ -41,6 +41,7 @@
 		03AE8B232928A28B0018433E /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B212928A28B0018433E /* Storage.storyboard */; };
 		03AE8B262928A3F00018433E /* ByEmoji.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B252928A3F00018433E /* ByEmoji.storyboard */; };
 		03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */; };
+		03AEE15C292A4157003117B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03AEE15B292A4157003117B4 /* GoogleService-Info.plist */; };
 		03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */; };
 		03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */; };
 		03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */; };
@@ -67,6 +68,7 @@
 		03F9EB292918F97F0095C7CF /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 03F9EB282918F97F0095C7CF /* PanModal */; };
 		03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9EB2A291900900095C7CF /* LyricsModalController.swift */; };
 		03FD3DBA291F46F200E154B2 /* PrevmeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */; };
+		D1CCE25E0C5420E5EB5EE757 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C48529E665DC2CEC4B1039E /* Pods_Bring.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +108,7 @@
 		03AE8B222928A28B0018433E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bring/Views/Base.lproj/Storage.storyboard; sourceTree = "<group>"; };
 		03AE8B252928A3F00018433E /* ByEmoji.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByEmoji.storyboard; sourceTree = "<group>"; };
 		03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiViewController.swift; sourceTree = "<group>"; };
+		03AEE15B292A4157003117B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
 		03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMeViewController.swift; sourceTree = "<group>"; };
@@ -131,8 +134,9 @@
 		03F9EB232918CE430095C7CF /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		03F9EB2A291900900095C7CF /* LyricsModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsModalController.swift; sourceTree = "<group>"; };
 		03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevmeRecord.swift; sourceTree = "<group>"; };
-		08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
-		A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
+		1C48529E665DC2CEC4B1039E /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F2EA694AAAB46FA3A2C1B0 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
+		8262974692D337AB8224E970 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F9EB292918F97F0095C7CF /* PanModal in Frameworks */,
+				D1CCE25E0C5420E5EB5EE757 /* Pods_Bring.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +204,8 @@
 			children = (
 				03971D852914E867007C6659 /* Bring */,
 				03971D842914E867007C6659 /* Products */,
-				BC8D670321221612ECCE5E62 /* Pods */,
+				A88CA8785606A6184CF11126 /* Pods */,
+				50F90D1C42B279C33099244C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +230,7 @@
 				03A1CCC22915F95A00901B7A /* Views */,
 				03C0E0B329179FA600C80331 /* PrevMe */,
 				03971D942914E868007C6659 /* Info.plist */,
+				03AEE15B292A4157003117B4 /* GoogleService-Info.plist */,
 				03971D912914E868007C6659 /* LaunchScreen.storyboard */,
 			);
 			path = Bring;
@@ -471,12 +478,21 @@
 			path = LyricsTVC;
 			sourceTree = "<group>";
 		};
-		BC8D670321221612ECCE5E62 /* Pods */ = {
+		50F90D1C42B279C33099244C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */,
-				08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */,
+				1C48529E665DC2CEC4B1039E /* Pods_Bring.framework */,
 			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A88CA8785606A6184CF11126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8262974692D337AB8224E970 /* Pods-Bring.debug.xcconfig */,
+				37F2EA694AAAB46FA3A2C1B0 /* Pods-Bring.release.xcconfig */,
+			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -530,7 +546,7 @@
 			);
 			mainGroup = 03971D7A2914E867007C6659;
 			packageReferences = (
-				03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */,
+				03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */,
 			);
 			productRefGroup = 03971D842914E867007C6659 /* Products */;
 			projectDirPath = "";
@@ -559,6 +575,7 @@
 				03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */,
 				03F0E595291A48A80023BAEB /* PlaceCell.xib in Resources */,
 				03971D8E2914E867007C6659 /* Main.storyboard in Resources */,
+				03AEE15C292A4157003117B4 /* GoogleService-Info.plist in Resources */,
 				034D766B2928F622006FD543 /* TodayCD.storyboard in Resources */,
 				03F0E589291A40BD0023BAEB /* DateCell.xib in Resources */,
 				03AE8B232928A28B0018433E /* Storage.storyboard in Resources */,
@@ -822,7 +839,7 @@
 		};
 		03971D982914E868007C6659 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */;
+			baseConfigurationReference = 8262974692D337AB8224E970 /* Pods-Bring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -861,7 +878,7 @@
 		};
 		03971D992914E868007C6659 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */;
+			baseConfigurationReference = 37F2EA694AAAB46FA3A2C1B0 /* Pods-Bring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -922,7 +939,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */ = {
+		03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/slackhq/PanModal.git";
 			requirement = {
@@ -935,7 +952,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		03F9EB282918F97F0095C7CF /* PanModal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */;
+			package = 03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */;
 			productName = PanModal;
 		};
 /* End XCSwiftPackageProductDependency section */
