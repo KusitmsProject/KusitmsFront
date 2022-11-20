@@ -116,7 +116,6 @@ class ByEmojiViewController: UIViewController {
         switch btn {
         case self.smileBtn:
             self.searchEmoji.setImage(UIImage(named: "smile-ic"), for: .normal)
-            print("sdfsdf")
         case self.angryBtn:
             self.searchEmoji.setImage(UIImage(named: "angry-ic"), for: .normal)
         case self.sadBtn:
@@ -126,7 +125,7 @@ class ByEmojiViewController: UIViewController {
         case self.loveBtn:
             self.searchEmoji.setImage(UIImage(named: "love-ic"), for: .normal)
         case self.tiredBtn:
-            self.searchEmoji.setImage(UIImage(named: "tried-ic"), for: .normal)
+            self.searchEmoji.setImage(UIImage(named: "tired-ic"), for: .normal)
         default:
             self.searchEmoji.setImage(UIImage(named: "emoji"), for: .normal)
         }
@@ -170,7 +169,7 @@ class ByEmojiViewController: UIViewController {
 
 extension ByEmojiViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

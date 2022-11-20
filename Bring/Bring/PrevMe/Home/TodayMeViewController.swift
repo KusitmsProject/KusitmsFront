@@ -124,6 +124,9 @@ class TodayMeViewController: UIViewController {
     @IBAction func recordBtn(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Record", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RecordModalController") as! RecordModalController
+        
+        vc.record = record
+        
         presentPanModal(vc)
     }
 
