@@ -26,16 +26,21 @@ class TodayMeViewController: UIViewController {
     @IBOutlet var loveBtn: UIButton!
     @IBOutlet var smileBtn: UIButton!
     
+    @IBOutlet var saveBtn: UIButton!
+    
+    
     let data = ["All I Want for Christmas Is You", "All I Want for Christmas Is You - rock ver.", "All I Want for Christmas Is You - (This year ver.) "]
     
     var filteredData: [String]!
 
-    var record = Record()
+    var record: Record?
+    
+    var music: Bool = false
+    var emoji: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        print(record)
         searchBar.delegate = self
         
         tableView.delegate = self
@@ -62,6 +67,7 @@ class TodayMeViewController: UIViewController {
         reset(sadBtn)
         reset(crazyBtn)
         reset(tiredBtn)
+        record?.emotion = "HAPPY"
     }
     @IBAction func loveTapped(_ sender: Any) {
         setTapped(loveBtn)
@@ -70,6 +76,7 @@ class TodayMeViewController: UIViewController {
         reset(sadBtn)
         reset(crazyBtn)
         reset(tiredBtn)
+        record?.emotion = "LOVELY"
     }
     @IBAction func angryTapped(_ sender: Any) {
         setTapped(angryBtn)
@@ -78,6 +85,7 @@ class TodayMeViewController: UIViewController {
         reset(sadBtn)
         reset(crazyBtn)
         reset(tiredBtn)
+        record?.emotion = "ANGRY"
     }
     @IBAction func sadTapped(_ sender: Any) {
         setTapped(sadBtn)
@@ -86,6 +94,7 @@ class TodayMeViewController: UIViewController {
         reset(angryBtn)
         reset(crazyBtn)
         reset(tiredBtn)
+        record?.emotion = "SAD"
     }
     @IBAction func crazyTapped(_ sender: Any) {
         setTapped(crazyBtn)
@@ -94,6 +103,7 @@ class TodayMeViewController: UIViewController {
         reset(sadBtn)
         reset(angryBtn)
         reset(tiredBtn)
+        record?.emotion = "EXPLODE"
     }
     @IBAction func tiredTapped(_ sender: Any) {
         setTapped(tiredBtn)
@@ -102,6 +112,7 @@ class TodayMeViewController: UIViewController {
         reset(sadBtn)
         reset(angryBtn)
         reset(crazyBtn)
+        record?.emotion = "TIRED"
     }
     
     func reset(_ btn: UIButton) {
@@ -118,6 +129,10 @@ class TodayMeViewController: UIViewController {
     func setTapped(_ btn: UIButton) {
         btn.layer.borderColor = UIColor(named: "prevMain")?.cgColor
         btn.backgroundColor = UIColor(named: "prevMainSoft")
+        emoji = true
+        if (music && emoji) {
+            saveBtn.isEnabled = true
+        }
     }
     
     
@@ -126,7 +141,6 @@ class TodayMeViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "RecordModalController") as! RecordModalController
         
         vc.record = record
-        
         presentPanModal(vc)
     }
 
@@ -145,9 +159,14 @@ class TodayMeViewController: UIViewController {
         searchBar.searchTextField.backgroundColor = UIColor.white
         searchBar.searchTextField.font = UIFont.systemFont(ofSize: 11)
 
-
+        saveBtn.isEnabled = false
     }
 
+    // MARK: 서버로 기록 POST
+    @IBAction func saveTapped(_ sender: Any) {
+        
+    }
+    
 }
 
 extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -178,10 +197,13 @@ extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
 extension TodayMeViewController: UISearchBarDelegate {
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        guard var track = searchBar.text else { return }
+        let track = searchBar.text!
         
-        record.update(date: "", emotion: "", season: "", weather: [""], lyrics: "", placeNickname: "", place: "", imageURL: "", record: "", track: track, artist: "", friendList: [""], options: 1)
+        self.record = Record(userIdx: 1, date: "", emotion: "", season: "", weather: [""], lyrics: "", placeNickname: "", place: "", imageURL: "", record: "", track: track, artist: "", friendList: [""], options: 0)
         
-        print(record)
+        music = true
+        if (music && emoji) {
+            saveBtn.isEnabled = true
+        }
     }
 }

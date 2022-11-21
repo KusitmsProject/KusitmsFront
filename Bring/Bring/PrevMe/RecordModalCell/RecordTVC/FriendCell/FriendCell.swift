@@ -7,14 +7,26 @@
 
 import UIKit
 
-class FriendCell: UITableViewCell {
+protocol FriendCellDelegate: AnyObject {
+    func didInsertText(_ inText: String)
+}
+
+class FriendCell: UITableViewCell, UITextFieldDelegate {
+    
+    public weak var delegate: FriendCellDelegate?
 
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var textField: UITextField!
+    
+    var record: Record?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setField()
+        
+        self.textField.delegate = self
+
         self.textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
@@ -26,6 +38,7 @@ class FriendCell: UITableViewCell {
     }
     
     @objc func textFieldDidChange(_ sender: Any?) {
+        
         if self.textField?.text != "" {
             checkMark.tintColor = UIColor(named: "prevMain")
         } else {
@@ -33,6 +46,17 @@ class FriendCell: UITableViewCell {
         }
     }
 
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == self.textField {
+            let text: String = textField.text!
+            
+            self.delegate?.didInsertText(text)
+            
+        }
+        return true
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -47,6 +47,9 @@
                             <constraint firstAttribute="height" constant="34" id="NMP-HD-Iyz"/>
                         </constraints>
                         <locale key="locale" localeIdentifier="ko_KR"/>
+                        <connections>
+                            <action selector="datePick:" destination="KGk-i7-Jjw" eventType="valueChanged" id="eZL-C8-pzF"/>
+                        </connections>
                     </datePicker>
                 </subviews>
                 <constraints>

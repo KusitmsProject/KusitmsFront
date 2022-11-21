@@ -9,9 +9,17 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol PlaceCellDelegate: AnyObject {
+    func insertPlace(_ text: String)
+    func insertPlaceNickname(_ text: String)
+}
+
+
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    public weak var delegate: PlaceCellDelegate?
 
-
+    var record: Record?
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet weak var miniModal: UIView!
@@ -122,6 +130,8 @@ extension MapViewController: UISearchBarDelegate {
         default:
             setMapView(coordinate: currentLoc, addr: "현재위치")
         }
-        print("--> 검색어: \(searchBar.text)")
+        var searchPlace = searchBar.text!
+        self.delegate?.insertPlace(searchPlace)
+        print("****", searchPlace)
     }
 }

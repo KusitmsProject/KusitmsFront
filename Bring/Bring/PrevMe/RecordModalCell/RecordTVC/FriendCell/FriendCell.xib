@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wnt-rp-lwo">
-                        <rect key="frame" x="26" y="16.666666666666664" width="13" height="11.666666666666654"/>
+                        <rect key="frame" x="26" y="16.666666666666664" width="13" height="11.666666666666668"/>
                         <color key="tintColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="5Lv-dJ-9kb"/>
@@ -46,7 +46,7 @@
                             <constraint firstAttribute="height" constant="34" id="SgM-TC-GXD"/>
                             <constraint firstAttribute="width" constant="209" id="rvM-iq-KmO"/>
                         </constraints>
-                        <color key="textColor" red="0.72941176470588232" green="0.6705882352941176" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>

@@ -7,8 +7,17 @@
 
 import UIKit
 
+protocol WeatherCellDelegate: AnyObject{
+    func didTapSunnyButton()
+    func didTapSnowButton()
+    func didTapWindyButton()
+    func didTapRainyButton()
+    func didTapHotButton()
+    func didTapColdButton()
+}
 class WeatherCell: UITableViewCell {
     
+    public weak var delegate: WeatherCellDelegate?
 
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var sunnyBtn: UIButton!
@@ -17,6 +26,8 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var rainyBtn: UIButton!
     @IBOutlet weak var hotBtn: UIButton!
     @IBOutlet weak var coldBtn: UIButton!
+    
+    var record: Record?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,22 +42,27 @@ class WeatherCell: UITableViewCell {
     var weather: String = ""
     
     @IBAction func sunnyTapped(_ sender: Any) {
+        self.delegate?.didTapSunnyButton()
         setTapped(sunnyBtn)
-        weather = "SUN"
     }
     @IBAction func snowTapped(_ sender: Any) {
+        self.delegate?.didTapSnowButton()
         setTapped(snowBtn)
     }
     @IBAction func windyTapped(_ sender: Any) {
+        self.delegate?.didTapWindyButton()
         setTapped(windyBtn)
     }
     @IBAction func rainyTapped(_ sender: Any) {
+        self.delegate?.didTapRainyButton()
         setTapped(rainyBtn)
     }
     @IBAction func coldTapped(_ sender: Any) {
+        self.delegate?.didTapColdButton()
         setTapped(coldBtn)
     }
     @IBAction func hotTapped(_ sender: Any) {
+        self.delegate?.didTapHotButton()
         setTapped(hotBtn)
     }
     
@@ -65,14 +81,6 @@ class WeatherCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-    }
-    
-    func savedWeather(_ a: String) {
-        let storyboard = UIStoryboard(name:"Record", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "RecordModalController") as? RecordModalController else { return }
-        
-        vc.data = a
-        print(vc)
     }
     
 }

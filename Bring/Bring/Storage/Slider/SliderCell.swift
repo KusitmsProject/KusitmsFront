@@ -45,17 +45,6 @@ class SliderCell: UICollectionViewCell {
             vc.present(ByEmoji, animated: true, completion: nil)
         }
 
-        
-//        let childVC = ByEmojiViewController()
-//        let parentVC = StorageViewController()
-//
-//        childVC.view.backgroundColor = .yellow
-//
-//        // currentContext 테스트
-//        childVC.modalPresentationStyle = .currentContext
-//
-//        parentVC.present(childVC, animated: true, completion: nil)
-//
     }
     
 }

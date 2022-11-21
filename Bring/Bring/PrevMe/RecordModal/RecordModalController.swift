@@ -12,14 +12,12 @@ class RecordModalController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    var record = Record()
     
-    public var data: String = "aksdjflkd"
+    var record: Record?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
-        print(record)
     }
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
@@ -70,23 +68,31 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell", for: indexPath) as? DateCell else { return UITableViewCell() }
+            cell.record = record
             cell.selectionStyle = .none
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as? WeatherCell else { return UITableViewCell() }
+            cell.record = record
+            cell.delegate = self
             cell.selectionStyle = .none
-            record.track = cell.weather
             return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeasonCell", for: indexPath) as? SeasonCell else { return UITableViewCell() }
+            cell.record = record
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else { return UITableViewCell() }
+            cell.record = record
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath) as? PlaceCell else { return UITableViewCell() }
+            cell.record = record
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         case 6:
@@ -95,6 +101,8 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case 7:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as? TextCell else { return UITableViewCell() }
+            cell.record = record
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
             
@@ -103,4 +111,76 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+}
+
+extension RecordModalController: WeatherCellDelegate{
+    func didTapSunnyButton() {
+        let weather = "SUNNY"
+        record?.weather = [weather]
+    }
+    
+    func didTapSnowButton() {
+        let weather = "SNOW"
+        record?.weather = [weather]
+    }
+    
+    func didTapWindyButton() {
+        let weather = "CLOUD"
+        record?.weather = [weather]
+    }
+    
+    func didTapRainyButton() {
+        let weather = "RAIN"
+        record?.weather = [weather]
+    }
+    
+    func didTapHotButton() {
+        let weather = "HOT"
+        record?.weather = [weather]
+    }
+    
+    func didTapColdButton() {
+        let weather = "COLD"
+        record?.weather = [weather]
+    }
+}
+
+extension RecordModalController: SeasonCellDelegate{
+    func didTapSpringBtn() {
+        record?.season = "SPRING"
+    }
+    func didTapSummerBtn() {
+        record?.season = "SUMMER"
+    }
+    func didTapFallBtn() {
+        record?.season = "FALL"
+    }
+    func didTapWinterBtn() {
+        record?.season = "WINTER"
+    }
+}
+
+extension RecordModalController: FriendCellDelegate{
+    func didInsertText(_ inText: String) {
+        record?.friendList = [inText]
+    }
+}
+
+extension RecordModalController: PlaceCellDelegate{
+    
+    func insertPlace(_ text: String) {
+        record?.place = text
+    }
+    
+    func insertPlaceNickname(_ text: String) {
+        record?.placeNickname = text
+    }
+}
+
+extension RecordModalController: TextCellDelegate{
+    func didInsertRecords(_ inText: String) {
+        record?.record = inText
+        
+        print("------>", record)
+    }
 }

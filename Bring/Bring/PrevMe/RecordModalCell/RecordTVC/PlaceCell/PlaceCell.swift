@@ -8,13 +8,15 @@
 import UIKit
 import Foundation
 
+
 class PlaceCell: UITableViewCell {
 
+    public weak var delegate: PlaceCellDelegate?
     
     @IBOutlet weak var checkMark: UIImageView!
-    
     @IBOutlet weak var mapBtn: UIButton!
-
+    
+    var record: Record?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +28,11 @@ class PlaceCell: UITableViewCell {
 
     @IBAction func btnTapped(_ sender: Any) {
 
-//        let mapStoryboard = UIViewController.init(name: "MapViewController", bundle: nil)
         let storyboard = UIStoryboard(name: "Map", bundle: nil)
-        let mapStoryboard = storyboard.instantiateViewController(withIdentifier: "MapViewController")
-
+        let mapStoryboard = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        
+        mapStoryboard.record = record
+        
         if let vc = self.next(ofType: UIViewController.self) {
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             vc.modalPresentationStyle = .fullScreen
