@@ -27,9 +27,11 @@
 		03374F5229196441004AB96A /* SaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F5029196441004AB96A /* SaveCell.xib */; };
 		034D76692928F602006FD543 /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D76682928F601006FD543 /* TodayCDViewController.swift */; };
 		034D766B2928F622006FD543 /* TodayCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D766A2928F622006FD543 /* TodayCD.storyboard */; };
-		034D766D29293374006FD543 /* ByEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D766C29293374006FD543 /* ByEmojiCell.swift */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
+		03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B28292A65CC00C006C8 /* CDStorage.swift */; };
+		03954B2B292B06F900C006C8 /* sameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B2A292B06F900C006C8 /* sameCell.swift */; };
+		03954B2D292B206B00C006C8 /* diffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B2C292B206B00C006C8 /* diffCell.swift */; };
 		03971D872914E867007C6659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D862914E867007C6659 /* AppDelegate.swift */; };
 		03971D892914E867007C6659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D882914E867007C6659 /* SceneDelegate.swift */; };
 		03971D8E2914E867007C6659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03971D8C2914E867007C6659 /* Main.storyboard */; };
@@ -92,9 +94,11 @@
 		03374F5029196441004AB96A /* SaveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveCell.xib; sourceTree = "<group>"; };
 		034D76682928F601006FD543 /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayCDViewController.swift; path = "../../../../Bring 2/Bring/TodayCD/TodayCDViewController.swift"; sourceTree = "<group>"; };
 		034D766A2928F622006FD543 /* TodayCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayCD.storyboard; path = ../../../../Bring/Bring/TodayCD/TodayCD.storyboard; sourceTree = "<group>"; };
-		034D766C29293374006FD543 /* ByEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiCell.swift; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
+		03954B28292A65CC00C006C8 /* CDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDStorage.swift; sourceTree = "<group>"; };
+		03954B2A292B06F900C006C8 /* sameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sameCell.swift; sourceTree = "<group>"; };
+		03954B2C292B206B00C006C8 /* diffCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diffCell.swift; sourceTree = "<group>"; };
 		03971D832914E867007C6659 /* Bring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03971D862914E867007C6659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03971D882914E867007C6659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,6 +245,7 @@
 			children = (
 				03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */,
 				037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */,
+				03954B28292A65CC00C006C8 /* CDStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -380,7 +385,8 @@
 			children = (
 				03AE8B252928A3F00018433E /* ByEmoji.storyboard */,
 				03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */,
-				034D766C29293374006FD543 /* ByEmojiCell.swift */,
+				03954B2A292B06F900C006C8 /* sameCell.swift */,
+				03954B2C292B206B00C006C8 /* diffCell.swift */,
 			);
 			path = ByEmoji;
 			sourceTree = "<group>";
@@ -492,7 +498,6 @@
 				8262974692D337AB8224E970 /* Pods-Bring.debug.xcconfig */,
 				37F2EA694AAAB46FA3A2C1B0 /* Pods-Bring.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -546,7 +551,7 @@
 			);
 			mainGroup = 03971D7A2914E867007C6659;
 			packageReferences = (
-				03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */,
+				03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */,
 			);
 			productRefGroup = 03971D842914E867007C6659 /* Products */;
 			projectDirPath = "";
@@ -642,12 +647,15 @@
 			files = (
 				03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */,
 				03F0E588291A40BD0023BAEB /* DateCell.swift in Sources */,
+				03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */,
 				03374F4D291962FC004AB96A /* LyricsCell.swift in Sources */,
 				03F0E584291A36320023BAEB /* SeasonCell.swift in Sources */,
 				03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */,
+				03954B2B292B06F900C006C8 /* sameCell.swift in Sources */,
 				0330C714291641E300737848 /* CalendarViewController.swift in Sources */,
 				03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */,
 				03322622291E823500856940 /* UIResponder.swift in Sources */,
+				03954B2D292B206B00C006C8 /* diffCell.swift in Sources */,
 				03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */,
 				03F0E590291A47660023BAEB /* FriendCell.swift in Sources */,
 				03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */,
@@ -659,7 +667,6 @@
 				03971D872914E867007C6659 /* AppDelegate.swift in Sources */,
 				037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */,
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
-				034D766D29293374006FD543 /* ByEmojiCell.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
 				0330C716291641F300737848 /* HomeViewController.swift in Sources */,
 				03374F4929196122004AB96A /* TitleCell.swift in Sources */,
@@ -939,7 +946,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */ = {
+		03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/slackhq/PanModal.git";
 			requirement = {
@@ -952,7 +959,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		03F9EB282918F97F0095C7CF /* PanModal */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal.git" */;
+			package = 03F9EB272918F97F0095C7CF /* XCRemoteSwiftPackageReference "PanModal" */;
 			productName = PanModal;
 		};
 /* End XCSwiftPackageProductDependency section */
