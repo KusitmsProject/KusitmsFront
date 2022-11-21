@@ -12,7 +12,7 @@ class RecordModalController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    
+    var place: Place?
     var record: Record?
     
     override func viewDidLoad() {
@@ -93,6 +93,7 @@ extension RecordModalController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath) as? PlaceCell else { return UITableViewCell() }
             cell.record = record
             cell.delegate = self
+            cell.place = place
             cell.selectionStyle = .none
             return cell
         case 6:
@@ -170,6 +171,8 @@ extension RecordModalController: PlaceCellDelegate{
     
     func insertPlace(_ text: String) {
         record?.place = text
+        
+        print("------------>", record?.place)
     }
     
     func insertPlaceNickname(_ text: String) {
@@ -180,7 +183,5 @@ extension RecordModalController: PlaceCellDelegate{
 extension RecordModalController: TextCellDelegate{
     func didInsertRecords(_ inText: String) {
         record?.record = inText
-        
-        print("------>", record)
     }
 }

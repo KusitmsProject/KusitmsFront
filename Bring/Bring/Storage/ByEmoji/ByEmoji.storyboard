@@ -452,15 +452,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJU-hN-xap">
-                                <rect key="frame" x="309" y="720" width="65" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="4jY-Tl-W3Q"/>
-                                    <constraint firstAttribute="width" constant="65" id="gDz-7U-gh4"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plusBtn"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -480,10 +471,8 @@
                             <constraint firstItem="87s-JJ-FC7" firstAttribute="top" secondItem="UtX-o3-gNm" secondAttribute="bottom" constant="9" id="gsH-tw-MFp"/>
                             <constraint firstAttribute="trailing" secondItem="GOE-v3-oUF" secondAttribute="trailing" id="gzA-TK-LNj"/>
                             <constraint firstItem="pc0-Xq-jvi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="hNJ-I7-Cf7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SJU-hN-xap" secondAttribute="bottom" constant="25" id="hno-22-Qsg"/>
                             <constraint firstItem="8zP-ZT-yz4" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="kPy-NM-tBw"/>
                             <constraint firstItem="pc0-Xq-jvi" firstAttribute="top" secondItem="dgV-te-OYZ" secondAttribute="bottom" constant="13" id="n0D-jl-ppZ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SJU-hN-xap" secondAttribute="trailing" constant="16" id="pM9-nE-EEx"/>
                             <constraint firstItem="GOE-v3-oUF" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="qIz-cG-btf"/>
                         </constraints>
                     </view>
@@ -514,7 +503,6 @@
         <image name="calendar-ic-blue" width="19" height="21"/>
         <image name="calendar-ic-pupple" width="19" height="21"/>
         <image name="emoji" width="17" height="17"/>
-        <image name="plusBtn" width="86" height="86"/>
         <image name="smile-card" width="348" height="119"/>
         <image name="x" width="15" height="15"/>
         <systemColor name="systemBackgroundColor">

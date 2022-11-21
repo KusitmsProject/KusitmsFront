@@ -40,12 +40,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="1sC-fJ-6Z4">
-                        <rect key="frame" x="129.66666666666663" y="5" width="209" height="34"/>
+                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sC-fJ-6Z4">
+                        <rect key="frame" x="147.66666666666666" y="5" width="121.99999999999997" height="34"/>
                         <color key="tintColor" red="0.68235294120000001" green="0.61568627450000002" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="NMP-HD-Iyz"/>
+                            <constraint firstAttribute="width" constant="122" id="u3W-6t-wbE"/>
                         </constraints>
+                        <date key="date" timeIntervalSinceReferenceDate="691081829.52128696">
+                            <!--2022-11-25 15:10:29 +0000-->
+                        </date>
                         <locale key="locale" localeIdentifier="ko_KR"/>
                         <connections>
                             <action selector="datePick:" destination="KGk-i7-Jjw" eventType="valueChanged" id="eZL-C8-pzF"/>

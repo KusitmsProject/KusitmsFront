@@ -16,12 +16,19 @@ class PlaceCell: UITableViewCell {
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var mapBtn: UIButton!
     
+    @IBOutlet var nickNameLabel: UILabel!
+    @IBOutlet var addressLabel: UILabel!
+    
     var record: Record?
+    var place: Place?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
+        nickNameLabel.alpha = 0
+        addressLabel.alpha = 0
+        
+        print("---------------=======", place)
     }
     
 
@@ -37,7 +44,14 @@ class PlaceCell: UITableViewCell {
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             vc.modalPresentationStyle = .fullScreen
             vc.present(mapStoryboard, animated: true, completion: nil)
+            
+            nickNameLabel.alpha = 1
+            addressLabel.alpha = 1
+            mapBtn.setTitle("", for: .normal)
+            checkMark.tintColor = UIColor(named: "prevMain")
         }
+        
+
         
         
     }

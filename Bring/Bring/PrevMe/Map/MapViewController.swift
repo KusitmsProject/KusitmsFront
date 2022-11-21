@@ -15,15 +15,17 @@ protocol PlaceCellDelegate: AnyObject {
 }
 
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate {
     
     public weak var delegate: PlaceCellDelegate?
 
+    var place: Place?
     var record: Record?
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet weak var miniModal: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet var nickNameField: UITextField!
     
     let dobongLoc = CLLocationCoordinate2D(latitude: 37.6658609, longitude: 127.0317674) // 도봉구
     let eunpyeongLoc = CLLocationCoordinate2D(latitude: 37.6176125, longitude: 126.9227004) // 은평구
@@ -38,6 +40,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         super.viewDidLoad()
         
         searchBar.delegate = self
+        self.nickNameField.delegate = self
         
         self.mapView.showsUserLocation = true
         self.mapView.setUserTrackingMode(.follow, animated: true)
@@ -63,6 +66,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     @IBAction func backTapped(_ sender: Any) {
         // 모달창 내리기
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func saveTapped(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Record", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RecordModalController") as! RecordModalController
+        
+        vc.place = place
+        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -112,26 +124,40 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         annotation.coordinate = coordinate
         annotation.title = addr
         self.mapView.addAnnotation(annotation)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        self.findAddr(lat: coordinate.latitude, long: coordinate.longitude)
+        if nickNameField == self.nickNameField{
+            let text: String = nickNameField.text!
+            
+            self.place?.nickName = text
+            print("***>",self.place)
+        }
+        
+        return true
     }
 }
 
 extension MapViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        let searchPlace = searchBar.text!
+        print(searchPlace)
+        self.place = Place(address: searchPlace, nickName: "")
+        print(self.place)
+        
         switch searchBar.text {
         case "도봉구":
             setMapView(coordinate: dobongLoc, addr: "도봉구")
         case "동대문구":
             setMapView(coordinate: dongdaemoonLoc, addr: "동대문구")
-        case "도봉구":
-            setMapView(coordinate: dobongLoc, addr: "도봉구")
+        case "은평구":
+            setMapView(coordinate: dobongLoc, addr: "은평구")
         default:
             setMapView(coordinate: currentLoc, addr: "현재위치")
         }
-        var searchPlace = searchBar.text!
-        self.delegate?.insertPlace(searchPlace)
-        print("****", searchPlace)
+
     }
 }

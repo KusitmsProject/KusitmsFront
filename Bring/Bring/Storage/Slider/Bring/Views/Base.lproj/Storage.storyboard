@@ -38,15 +38,6 @@
                                 <color key="pageIndicatorTintColor" red="0.93333333333333335" green="0.90980392156862744" blue="0.98431372549019602" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.72941176470588232" green="0.6705882352941176" blue="0.85882352941176465" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSD-bw-OuQ">
-                                <rect key="frame" x="309" y="720" width="65" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="2xM-wH-gza"/>
-                                    <constraint firstAttribute="width" constant="65" id="PvZ-mG-aOT"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plusBtn"/>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WUf-HM-51G">
                                 <rect key="frame" x="0.0" y="126" width="390" height="595"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,11 +163,9 @@
                             <constraint firstItem="VUK-9F-mmy" firstAttribute="centerX" secondItem="GHL-N1-d7U" secondAttribute="centerX" id="Ade-HJ-NbY"/>
                             <constraint firstAttribute="top" secondItem="HN0-H2-8aG" secondAttribute="top" id="BJM-9H-bNX"/>
                             <constraint firstItem="WUf-HM-51G" firstAttribute="centerX" secondItem="GHL-N1-d7U" secondAttribute="centerX" id="IRc-9b-tQ7"/>
-                            <constraint firstItem="GHL-N1-d7U" firstAttribute="bottom" secondItem="WSD-bw-OuQ" secondAttribute="bottom" constant="25" id="OIw-WX-dTD"/>
                             <constraint firstItem="ZfF-VM-FLd" firstAttribute="top" secondItem="bg1-dc-iOP" secondAttribute="bottom" constant="25" id="Pf5-Ih-FeF"/>
                             <constraint firstItem="bg1-dc-iOP" firstAttribute="top" secondItem="GHL-N1-d7U" secondAttribute="top" constant="9" id="SoN-8H-gt0"/>
                             <constraint firstItem="VUK-9F-mmy" firstAttribute="top" secondItem="WUf-HM-51G" secondAttribute="bottom" constant="33" id="Uh8-mg-ltT"/>
-                            <constraint firstItem="GHL-N1-d7U" firstAttribute="trailing" secondItem="WSD-bw-OuQ" secondAttribute="trailing" constant="16" id="Z1C-jb-VOy"/>
                             <constraint firstItem="GHL-N1-d7U" firstAttribute="bottom" secondItem="VUK-9F-mmy" secondAttribute="bottom" constant="30" id="c4C-u8-Pqo"/>
                             <constraint firstItem="ZfF-VM-FLd" firstAttribute="centerX" secondItem="GHL-N1-d7U" secondAttribute="centerX" id="fsn-Yw-eL0"/>
                             <constraint firstItem="HN0-H2-8aG" firstAttribute="leading" secondItem="PJk-Vo-TeQ" secondAttribute="leading" id="sXI-vl-sUn"/>
@@ -201,7 +190,6 @@
         <image name="emotionBG" width="392" height="843"/>
         <image name="goPlayBtn" width="113" height="47"/>
         <image name="goStorageBtn" width="113" height="47"/>
-        <image name="plusBtn" width="86" height="86"/>
         <image name="tab-cd-fill" width="46" height="31"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

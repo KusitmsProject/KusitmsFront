@@ -35,14 +35,14 @@ class TodayCDViewController: UIViewController {
     private func configureViews() {
         view.layoutIfNeeded()
         
-        bottomView.roundCorners(topLeft: 16, topRight: 16)
+//        bottomView.roundCorners(topLeft: 16, topRight: 16)
 
         saveButton.layer.cornerRadius = 10
         saveButton.layer.masksToBounds = true
 
 
         gradient.frame = topBackgroundView.bounds
-        gradient.colors = [UIColor(hexString: "BAABDB").cgColor, UIColor(hexString: "ABC3DB").cgColor]
+//        gradient.colors = [UIColor(hexString: "BAABDB").cgColor, UIColor(hexString: "ABC3DB").cgColor]
         gradient.startPoint = CGPoint(x: 0.5, y: 0)
         gradient.endPoint = CGPoint(x: 0.5, y: 1)
         if gradient.superlayer == nil {
