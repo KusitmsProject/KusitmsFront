@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 class ByEmojiViewController: UIViewController {
 
@@ -14,7 +15,7 @@ class ByEmojiViewController: UIViewController {
     @IBOutlet var searchEmoji: UIButton!
     @IBOutlet var searchView: UIView!
     
-    @IBOutlet var youtubeView: UIView!
+    @IBOutlet var youtubeView: YTPlayerView!
     
     @IBOutlet var smileBtn: UIButton!
     @IBOutlet var tiredBtn: UIButton!
@@ -25,6 +26,9 @@ class ByEmojiViewController: UIViewController {
     
     @IBOutlet var sameCollectionView: UICollectionView!
     @IBOutlet var diffCollectionView: UICollectionView!
+    
+    // 첫 뷰 : 카드 데이터 모델 가져오기
+    let emotionCards: [EmotionSlider] = EmotionSlider.emotionCards
     
     // 같은 감정 collectionView
     let songsByEmotion: [ByEmotion] = ByEmotion.list
@@ -37,13 +41,16 @@ class ByEmojiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
+        
+//        youtubeView.load(withVideoId: "WfA47O-Fb_M")
+        
         sameCollectionView.dataSource = self
         sameCollectionView.delegate = self
         
         diffCollectionView.dataSource = self
         diffCollectionView.delegate = self
-        
-        setUI()
+
 
     }
     
@@ -51,6 +58,7 @@ class ByEmojiViewController: UIViewController {
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0
         searchBar.searchTextField.font = .systemFont(ofSize: 11)
+        youtubeView.load(withVideoId: "WfA47O-Fb_M")
         youtubeView.layer.cornerRadius = 10
     }
     

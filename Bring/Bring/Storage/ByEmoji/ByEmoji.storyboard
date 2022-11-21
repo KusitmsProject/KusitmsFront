@@ -266,7 +266,7 @@
                                     <constraint firstAttribute="width" constant="318" id="hSR-DA-KYl"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pc0-Xq-jvi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pc0-Xq-jvi" customClass="YTPlayerView">
                                 <rect key="frame" x="37.666666666666657" y="253" width="315" height="177"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -500,7 +500,7 @@
                         <outlet property="searchView" destination="QvL-Zq-tHX" id="hZg-Ic-VkW"/>
                         <outlet property="smileBtn" destination="gEK-Hr-Pd2" id="CP8-kM-kVq"/>
                         <outlet property="tiredBtn" destination="hV3-cb-VFK" id="Dsv-v3-0hC"/>
-                        <outlet property="youtubeView" destination="pc0-Xq-jvi" id="Eui-gv-fZP"/>
+                        <outlet property="youtubeView" destination="pc0-Xq-jvi" id="J3t-YL-3Yg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
