@@ -38,6 +38,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="LoginBtn"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C3a-8V-cz7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
