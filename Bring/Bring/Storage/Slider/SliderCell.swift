@@ -9,12 +9,16 @@ import UIKit
 
 class SliderCell: UICollectionViewCell {
     
+    @IBOutlet var artistLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var emotionLabel: UILabel!
     @IBOutlet var emotionCard: UIImageView!
     @IBOutlet var lyrics: UILabel!
     
     @IBOutlet var storageBtn: UIButton!
     @IBOutlet var playBtn: UIButton!
+    
+    var emotion: String?
     
     // 데이터 연결
     func configure(_ emotionCards: EmotionSlider) {
@@ -34,10 +38,22 @@ class SliderCell: UICollectionViewCell {
         var playBtnImg: UIImage?
         playBtnImg = UIImage(named: emotionCards.playBtn)
         playBtn.setImage(playBtnImg, for: .normal)
+        
+        emotion = emotionCards.emotion
+        
+        titleLabel.text = emotionCards.track
+        artistLabel.text = emotionCards.artist
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name: "Emoji", bundle: nil)
+        guard let Emoji = storyboard.instantiateViewController(withIdentifier: "EmojiViewController") as? EmojiViewController else {return}
+        if let vc = self.next(ofType: UIViewController.self) {
+            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            Emoji.modalPresentationStyle = .fullScreen
+            Emoji.emotion = emotion
+            vc.present(Emoji, animated: true, completion: nil)
+        }
     }
     
     @IBAction func GoPlayTapped(_ sender: Any) {

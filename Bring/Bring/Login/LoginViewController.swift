@@ -10,6 +10,8 @@ import KakaoSDKUser
 
 class LoginViewController: UIViewController {
     
+    var kakao = Kakao(kakaoNickname: "", email: "")
+    
     let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
@@ -45,7 +47,7 @@ extension LoginViewController {
                         if let error = error {
                             print(error)
                         } else {
-                            print("카카오톡으로 로그인 성공")
+                            print("카카오톡앱으로 로그인 성공")
                             _ = oauthToken
                             self.presentToHome()
                         }
@@ -68,11 +70,14 @@ extension LoginViewController {
                         if let error = error {
                             print(error)
                         } else {
-                            print("카카오톡으로 로그인 성공")
+                            print("카카오톡웹으로 로그인 성공")
                             _ = oauthToken
                             self.presentToHome()
                         }
                     }
+                    
+                    self.getUserInfo()
+                    
                 }
             }
         }
@@ -84,6 +89,27 @@ extension LoginViewController {
         homeVC.modalPresentationStyle = .fullScreen
         present(homeVC, animated: false, completion: nil)
 
+    }
+    
+    // user 정보 가져오기
+    func getUserInfo() {
+        UserApi.shared.me() { (user, error) in
+            if let error = error {
+                print(error)
+            } else {
+                
+                print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                let name = user?.kakaoAccount?.profile?.nickname
+                let email = user?.kakaoAccount?.email
+                guard let name = name else {return}
+                self.kakao.kakaoNickname = name
+                self.kakao.email = email!
+                print("KAKAONAME----->", name)
+                print("KAKAOEMAIL----->", email!)
+                
+                postKakao(name, email ?? "")
+            }
+        }
     }
     
 }

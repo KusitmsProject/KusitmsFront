@@ -24,7 +24,7 @@ struct ByEmotion: Decodable, Hashable {
 }
 
 extension ByEmotion {
-    static var list = [
+    static var list: [ByEmotion] = [
         ByEmotion(_id: 0,
                  date: "2022-11-12",
                  postIdx: 2,
@@ -32,7 +32,48 @@ extension ByEmotion {
                  artist: "BTS",
                  track: "Dynamite",
                  lyrics: "null'Cause I, I, I'm in the stars tonight\nSo, watch me bring the fire, and set the night alight\nYour shoes on, get up in the morn'\nCup of milk, let's rock 'n' roll\n",
+                 options: 1),
+        ByEmotion(_id: 1,
+                 date: "2022-11-12",
+                 postIdx: 3,
+                 musicIdx: 4,
+                 artist: "BTS",
+                 track: "Dynamite",
+                 lyrics: "null'Cause I, I, I'm in the stars tonight\nSo, watch me bring the fire, and set the night alight\nYour shoes on, get up in the morn'\nCup of milk, let's rock 'n' roll\n",
+                 options: 0),
+        ByEmotion(_id: 2,
+                 date: "2022-11-12",
+                 postIdx: 5,
+                 musicIdx: 6,
+                 artist: "BTS",
+                 track: "Dynamite",
+                 lyrics: "null'Cause I, I, I'm in the stars tonight\nSo, watch me bring the fire, and set the night alight\nYour shoes on, get up in the morn'\nCup of milk, let's rock 'n' roll\n",
+                 options: 0),
+        ByEmotion(_id: 3,
+                 date: "2022-11-12",
+                 postIdx: 7,
+                 musicIdx: 8,
+                 artist: "BTS",
+                 track: "Dynamite",
+                 lyrics: "null'Cause I, I, I'm in the stars tonight\nSo, watch me bring the fire, and set the night alight\nYour shoes on, get up in the morn'\nCup of milk, let's rock 'n' roll\n",
+                 options: 1),
+        ByEmotion(_id: 4,
+                 date: "2022-11-12",
+                 postIdx: 7,
+                 musicIdx: 8,
+                 artist: "BTS",
+                 track: "Dynamite",
+                 lyrics: "null'Cause I, I, I'm in the stars tonight\nSo, watch me bring the fire, and set the night alight\nYour shoes on, get up in the morn'\nCup of milk, let's rock 'n' roll\n",
+                 options: 1),
+        ByEmotion(_id: 5,
+                 date: "2022-11-12",
+                 postIdx: 7,
+                 musicIdx: 8,
+                 artist: "BTS",
+                 track: "Dynamite",
+                 lyrics: "null'Cause I, I, I'm in the stars tonight\nSo, watch me bring the fire, and set the night alight\nYour shoes on, get up in the morn'\nCup of milk, let's rock 'n' roll\n",
                  options: 1)
+        
     ]
 }
 
