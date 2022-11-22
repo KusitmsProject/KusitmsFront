@@ -6,24 +6,38 @@
 //
 
 import UIKit
+import KakaoSDKCommon
+import KakaoSDKUser
+import KakaoSDKAuth
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var userLabel: UILabel!
+    
+    var user = User()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getUserInfo()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // user 정보 가져오기
+    func getUserInfo() {
+        UserApi.shared.me() { (user, error) in
+            if let error = error {
+                print(error)
+            } else {
+                let name = user?.kakaoAccount?.profile?.nickname
+                guard let name = name else {return}
+                self.user.name = name
+                self.setUI()
+            }
+        }
     }
-    */
+    
+    func setUI() {
+        userLabel.text = user.name+"님"
+    }
+    
 
 }

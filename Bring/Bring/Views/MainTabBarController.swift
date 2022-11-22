@@ -7,6 +7,8 @@
 
 import UIKit
 import Foundation
+import KakaoSDKUser
+import KakaoSDKAuth
 
 class MainTabBarController: UITabBarController {
     
@@ -14,8 +16,22 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         delegate = self
-
+        getUserInfo()
     }
+    
+    // user 정보 가져오기
+    func getUserInfo() {
+        UserApi.shared.me { user, error in
+            if let error = error {
+                print("!!!!!!!", error)
+            } else {
+                let name = user?.kakaoAccount?.profile?.nickname
+                guard let name = name else {return}
+                print("----->",name)
+            }
+        }
+    }
+    
     
     // TabBarContoller가 보여지기 시작하는 시점에
     override func viewWillAppear(_ animated: Bool) {

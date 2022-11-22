@@ -37,14 +37,17 @@ class SliderCell: UICollectionViewCell {
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "ByEmoji", bundle: nil)
-        let ByEmoji = storyboard.instantiateViewController(withIdentifier: "ByEmojiViewController") 
+        
+    }
+    
+    @IBAction func GoPlayTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Music", bundle: nil)
+        let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController")
         if let vc = self.next(ofType: UIViewController.self) {
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-            ByEmoji.modalPresentationStyle = .fullScreen
-            vc.present(ByEmoji, animated: true, completion: nil)
+            Music.modalPresentationStyle = .fullScreen
+            vc.present(Music, animated: true, completion: nil)
         }
-
     }
     
 }

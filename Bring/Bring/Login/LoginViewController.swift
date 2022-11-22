@@ -9,6 +9,8 @@ import UIKit
 import KakaoSDKUser
 
 class LoginViewController: UIViewController {
+    
+    let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +29,17 @@ class LoginViewController: UIViewController {
 
     }
     
+}
+
+extension LoginViewController {
+    
     // 카카오 앱으로 로그인
         func loginWithApp() {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
                 } else {
-                    print("loginWithKakaoTalk() success.")
+                    print("****************loginWithKakaoTalk() success****************")
                     
                     UserApi.shared.me {(user, error) in
                         if let error = error {
@@ -54,7 +60,9 @@ class LoginViewController: UIViewController {
                 if let error = error {
                     print(error)
                 } else {
-                    print("loginWithKakaoAccount() success.")
+                
+                    print("##############ACCESSTOKEN##############", oauthToken!.accessToken)
+                    print("****************loginWithKakaoTalk() SUCESS****************")
                     
                     UserApi.shared.me {(user, error) in
                         if let error = error {
@@ -71,8 +79,6 @@ class LoginViewController: UIViewController {
     
     // 화면 전환 함수
     func presentToHome() {
-        
-        let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         guard let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController else { return }
         homeVC.modalPresentationStyle = .fullScreen

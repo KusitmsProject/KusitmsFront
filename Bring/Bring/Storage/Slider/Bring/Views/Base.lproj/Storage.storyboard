@@ -114,6 +114,9 @@
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="goPlayBtn"/>
+                                                            <connections>
+                                                                <action selector="GoPlayTapped:" destination="o88-KG-TjG" eventType="touchUpInside" id="mNX-cR-KlB"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
