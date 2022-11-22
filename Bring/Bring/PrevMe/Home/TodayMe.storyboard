@@ -401,6 +401,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                     <color key="baseBackgroundColor" red="0.72941176470588232" green="0.6705882352941176" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6xH-A4-8fU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -426,6 +429,7 @@
                         <outlet property="recordBtn" destination="XQM-Rb-JCw" id="OBM-2f-v8Q"/>
                         <outlet property="recordView" destination="fz2-XR-agL" id="34J-w4-sWN"/>
                         <outlet property="sadBtn" destination="Das-Xf-BhX" id="Ke8-MA-dEE"/>
+                        <outlet property="saveBtn" destination="n2f-hs-9HX" id="l4j-NP-Ifk"/>
                         <outlet property="searchBar" destination="ufa-Ls-xje" id="Zd9-cQ-nRq"/>
                         <outlet property="selectImage" destination="tLJ-Bv-l7v" id="znJ-Lh-V34"/>
                         <outlet property="smileBtn" destination="O4M-cH-Mn6" id="zdn-M2-0Fl"/>

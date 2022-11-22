@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 class ByEmojiViewController: UIViewController {
 
@@ -14,7 +15,8 @@ class ByEmojiViewController: UIViewController {
     @IBOutlet var searchEmoji: UIButton!
     @IBOutlet var searchView: UIView!
     
-
+    @IBOutlet var youtubeView: YTPlayerView!
+    
     @IBOutlet var smileBtn: UIButton!
     @IBOutlet var tiredBtn: UIButton!
     @IBOutlet var explodeBtn: UIButton!
@@ -22,21 +24,44 @@ class ByEmojiViewController: UIViewController {
     @IBOutlet var angryBtn: UIButton!
     @IBOutlet var loveBtn: UIButton!
     
+    @IBOutlet var sameCollectionView: UICollectionView!
+    @IBOutlet var diffCollectionView: UICollectionView!
     
-    @IBOutlet var collectionView: UICollectionView!
+    // 첫 뷰 : 카드 데이터 모델 가져오기
+    let emotionCards: [EmotionSlider] = EmotionSlider.emotionCards
     
+    // 같은 감정 collectionView
+    let songsByEmotion: [ByEmotion] = ByEmotion.list
+    
+    // 다른 감정 collectionView
+    let songsBySong: [BySong] = BySong.list
+    
+    var tappedBtn = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        setUI()
+        
+//        youtubeView.load(withVideoId: "WfA47O-Fb_M")
+        
+        sameCollectionView.dataSource = self
+        sameCollectionView.delegate = self
+        
+        diffCollectionView.dataSource = self
+        diffCollectionView.delegate = self
 
+
+    }
+    
+    func setUI() {
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0
         searchBar.searchTextField.font = .systemFont(ofSize: 11)
-
+        youtubeView.load(withVideoId: "WfA47O-Fb_M")
+        youtubeView.layer.cornerRadius = 10
     }
+    
     
     @IBAction func smileTapped(_ sender: Any) {
         setTapped(smileBtn)
@@ -45,6 +70,7 @@ class ByEmojiViewController: UIViewController {
         reset(sadBtn)
         reset(explodeBtn)
         reset(tiredBtn)
+        tappedBtn = 0
     }
     @IBAction func loveTapped(_ sender: Any) {
         setTapped(loveBtn)
@@ -53,6 +79,7 @@ class ByEmojiViewController: UIViewController {
         reset(explodeBtn)
         reset(angryBtn)
         reset(tiredBtn)
+        tappedBtn = 1
     }
     @IBAction func angryTapped(_ sender: Any) {
         setTapped(angryBtn)
@@ -61,6 +88,7 @@ class ByEmojiViewController: UIViewController {
         reset(tiredBtn)
         reset(explodeBtn)
         reset(sadBtn)
+        tappedBtn = 2
     }
     @IBAction func sadTapped(_ sender: Any) {
         setTapped(sadBtn)
@@ -69,6 +97,7 @@ class ByEmojiViewController: UIViewController {
         reset(smileBtn)
         reset(explodeBtn)
         reset(angryBtn)
+        tappedBtn = 3
     }
     @IBAction func explodeTapped(_ sender: Any) {
         setTapped(explodeBtn)
@@ -77,6 +106,7 @@ class ByEmojiViewController: UIViewController {
         reset(loveBtn)
         reset(tiredBtn)
         reset(sadBtn)
+        tappedBtn = 4
     }
     @IBAction func tiredTapped(_ sender: Any) {
         setTapped(tiredBtn)
@@ -85,6 +115,7 @@ class ByEmojiViewController: UIViewController {
         reset(loveBtn)
         reset(angryBtn)
         reset(sadBtn)
+        tappedBtn = 5
     }
     
     func reset(_ btn: UIButton) {
@@ -166,17 +197,39 @@ class ByEmojiViewController: UIViewController {
     
 }
 
-
 extension ByEmojiViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ByEmojiCell", for: indexPath) as? ByEmojiCell else{
-            return UICollectionViewCell()
+        
+        if collectionView == sameCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sameCell", for: indexPath) as? sameCell else{
+                return UICollectionViewCell()
+            }
+            
+            let song = songsByEmotion[indexPath.item]
+            cell.configure(song)
+            return cell
+            
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "diffCell", for: indexPath) as? diffCell else{
+                return UICollectionViewCell()
+            }
+            
+            let song = songsBySong[indexPath.item]
+            if song.emotion == "Happy" {
+                cell.configure(song)
+                return cell
+            } else {
+                cell.noCell(song)
+                return cell
+
+            }
+        
+            
         }
-        return cell
     }
 }
 

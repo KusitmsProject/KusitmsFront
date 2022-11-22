@@ -103,6 +103,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                             <color key="baseBackgroundColor" red="0.72941176470000002" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fcg-Xk-t7v"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -144,6 +147,7 @@
                     <connections>
                         <outlet property="mapView" destination="lKf-zH-JXI" id="DYj-4n-rC3"/>
                         <outlet property="miniModal" destination="6ve-vd-ulh" id="oLZ-8M-rZg"/>
+                        <outlet property="nickNameField" destination="kgq-Ya-v1O" id="fjY-vh-5t8"/>
                         <outlet property="searchBar" destination="t7f-oN-60q" id="Orc-Pk-XGV"/>
                     </connections>
                 </viewController>

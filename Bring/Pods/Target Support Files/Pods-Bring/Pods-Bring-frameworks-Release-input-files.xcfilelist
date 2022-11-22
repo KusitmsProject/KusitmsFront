@@ -1,2 +1,12 @@
 ${PODS_ROOT}/Target Support Files/Pods-Bring/Pods-Bring-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework
+${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework
+${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework
+${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework
+${BUILT_PRODUCTS_DIR}/KakaoSDKAuth/KakaoSDKAuth.framework
+${BUILT_PRODUCTS_DIR}/KakaoSDKCommon/KakaoSDKCommon.framework
+${BUILT_PRODUCTS_DIR}/KakaoSDKUser/KakaoSDKUser.framework
+${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework
+${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework
+${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework

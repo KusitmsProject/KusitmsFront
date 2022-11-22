@@ -25,11 +25,14 @@
 		03374F4E291962FC004AB96A /* LyricsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F4C291962FC004AB96A /* LyricsCell.xib */; };
 		03374F5129196441004AB96A /* SaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03374F4F29196441004AB96A /* SaveCell.swift */; };
 		03374F5229196441004AB96A /* SaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03374F5029196441004AB96A /* SaveCell.xib */; };
-		034D76692928F602006FD543 /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D76682928F601006FD543 /* TodayCDViewController.swift */; };
-		034D766B2928F622006FD543 /* TodayCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D766A2928F622006FD543 /* TodayCD.storyboard */; };
-		034D766D29293374006FD543 /* ByEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D766C29293374006FD543 /* ByEmojiCell.swift */; };
+		033DE61B292C456D006CB604 /* TodayCDViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033DE619292C456D006CB604 /* TodayCDViewController.storyboard */; };
+		033DE61C292C456D006CB604 /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61A292C456D006CB604 /* TodayCDViewController.swift */; };
+		033DE61E292C46EC006CB604 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61D292C46EC006CB604 /* LoginViewController.swift */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
+		03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B28292A65CC00C006C8 /* CDStorage.swift */; };
+		03954B2B292B06F900C006C8 /* sameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B2A292B06F900C006C8 /* sameCell.swift */; };
+		03954B2D292B206B00C006C8 /* diffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B2C292B206B00C006C8 /* diffCell.swift */; };
 		03971D872914E867007C6659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D862914E867007C6659 /* AppDelegate.swift */; };
 		03971D892914E867007C6659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03971D882914E867007C6659 /* SceneDelegate.swift */; };
 		03971D8E2914E867007C6659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03971D8C2914E867007C6659 /* Main.storyboard */; };
@@ -41,11 +44,15 @@
 		03AE8B232928A28B0018433E /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B212928A28B0018433E /* Storage.storyboard */; };
 		03AE8B262928A3F00018433E /* ByEmoji.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B252928A3F00018433E /* ByEmoji.storyboard */; };
 		03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */; };
+		03AEE15C292A4157003117B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03AEE15B292A4157003117B4 /* GoogleService-Info.plist */; };
 		03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */; };
 		03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */; };
 		03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */; };
+		03C6A031292C3EF400B651E6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C6A030292C3EF400B651E6 /* Login.storyboard */; };
 		03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C73402291EAC1B00F8B959 /* TextCell.swift */; };
 		03C73405291EAC1B00F8B959 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C73403291EAC1B00F8B959 /* TextCell.xib */; };
+		03CD707C292B8B08002BD2C2 /* PostImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD707B292B8B08002BD2C2 /* PostImage.swift */; };
+		03CD707E292BA473002BD2C2 /* GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD707D292BA473002BD2C2 /* GET.swift */; };
 		03E52C38292474D300E0F33C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E52C37292474D300E0F33C /* MapViewController.swift */; };
 		03EC79A42922235D002D88EC /* TodayMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EC79A32922235D002D88EC /* TodayMe.storyboard */; };
 		03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0E57C291A2F940023BAEB /* Record.storyboard */; };
@@ -60,13 +67,12 @@
 		03F0E591291A47660023BAEB /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F0E58F291A47660023BAEB /* FriendCell.xib */; };
 		03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0E592291A48A80023BAEB /* PlaceCell.swift */; };
 		03F0E595291A48A80023BAEB /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F0E593291A48A80023BAEB /* PlaceCell.xib */; };
-		03F0E598291A493F0023BAEB /* EmotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0E596291A493F0023BAEB /* EmotionCell.swift */; };
-		03F0E599291A493F0023BAEB /* EmotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F0E597291A493F0023BAEB /* EmotionCell.xib */; };
 		03F9EB222918C8260095C7CF /* Lyrics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F9EB212918C8260095C7CF /* Lyrics.storyboard */; };
 		03F9EB242918CE430095C7CF /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9EB232918CE430095C7CF /* CALayer.swift */; };
 		03F9EB292918F97F0095C7CF /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 03F9EB282918F97F0095C7CF /* PanModal */; };
 		03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9EB2A291900900095C7CF /* LyricsModalController.swift */; };
 		03FD3DBA291F46F200E154B2 /* PrevmeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */; };
+		D1CCE25E0C5420E5EB5EE757 /* Pods_Bring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C48529E665DC2CEC4B1039E /* Pods_Bring.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,11 +94,14 @@
 		03374F4C291962FC004AB96A /* LyricsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LyricsCell.xib; sourceTree = "<group>"; };
 		03374F4F29196441004AB96A /* SaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCell.swift; sourceTree = "<group>"; };
 		03374F5029196441004AB96A /* SaveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveCell.xib; sourceTree = "<group>"; };
-		034D76682928F601006FD543 /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayCDViewController.swift; path = "../../../../Bring 2/Bring/TodayCD/TodayCDViewController.swift"; sourceTree = "<group>"; };
-		034D766A2928F622006FD543 /* TodayCD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayCD.storyboard; path = ../../../../Bring/Bring/TodayCD/TodayCD.storyboard; sourceTree = "<group>"; };
-		034D766C29293374006FD543 /* ByEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiCell.swift; sourceTree = "<group>"; };
+		033DE619292C456D006CB604 /* TodayCDViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayCDViewController.storyboard; sourceTree = "<group>"; };
+		033DE61A292C456D006CB604 /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayCDViewController.swift; sourceTree = "<group>"; };
+		033DE61D292C46EC006CB604 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
+		03954B28292A65CC00C006C8 /* CDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDStorage.swift; sourceTree = "<group>"; };
+		03954B2A292B06F900C006C8 /* sameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sameCell.swift; sourceTree = "<group>"; };
+		03954B2C292B206B00C006C8 /* diffCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diffCell.swift; sourceTree = "<group>"; };
 		03971D832914E867007C6659 /* Bring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03971D862914E867007C6659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03971D882914E867007C6659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,11 +115,15 @@
 		03AE8B222928A28B0018433E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bring/Views/Base.lproj/Storage.storyboard; sourceTree = "<group>"; };
 		03AE8B252928A3F00018433E /* ByEmoji.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByEmoji.storyboard; sourceTree = "<group>"; };
 		03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiViewController.swift; sourceTree = "<group>"; };
+		03AEE15B292A4157003117B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
 		03C0E0AF29179D5E00C80331 /* TodayMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMeViewController.swift; sourceTree = "<group>"; };
+		03C6A030292C3EF400B651E6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		03C73402291EAC1B00F8B959 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		03C73403291EAC1B00F8B959 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
+		03CD707B292B8B08002BD2C2 /* PostImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImage.swift; sourceTree = "<group>"; };
+		03CD707D292BA473002BD2C2 /* GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GET.swift; sourceTree = "<group>"; };
 		03E52C37292474D300E0F33C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		03EC79A32922235D002D88EC /* TodayMe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayMe.storyboard; sourceTree = "<group>"; };
 		03F0E57C291A2F940023BAEB /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
@@ -125,14 +138,13 @@
 		03F0E58F291A47660023BAEB /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		03F0E592291A48A80023BAEB /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		03F0E593291A48A80023BAEB /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
-		03F0E596291A493F0023BAEB /* EmotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionCell.swift; sourceTree = "<group>"; };
-		03F0E597291A493F0023BAEB /* EmotionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmotionCell.xib; sourceTree = "<group>"; };
 		03F9EB212918C8260095C7CF /* Lyrics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lyrics.storyboard; sourceTree = "<group>"; };
 		03F9EB232918CE430095C7CF /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		03F9EB2A291900900095C7CF /* LyricsModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsModalController.swift; sourceTree = "<group>"; };
 		03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevmeRecord.swift; sourceTree = "<group>"; };
-		08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
-		A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
+		1C48529E665DC2CEC4B1039E /* Pods_Bring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F2EA694AAAB46FA3A2C1B0 /* Pods-Bring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.release.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.release.xcconfig"; sourceTree = "<group>"; };
+		8262974692D337AB8224E970 /* Pods-Bring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bring.debug.xcconfig"; path = "Target Support Files/Pods-Bring/Pods-Bring.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F9EB292918F97F0095C7CF /* PanModal in Frameworks */,
+				D1CCE25E0C5420E5EB5EE757 /* Pods_Bring.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +212,8 @@
 			children = (
 				03971D852914E867007C6659 /* Bring */,
 				03971D842914E867007C6659 /* Products */,
-				BC8D670321221612ECCE5E62 /* Pods */,
+				A88CA8785606A6184CF11126 /* Pods */,
+				50F90D1C42B279C33099244C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +228,8 @@
 		03971D852914E867007C6659 /* Bring */ = {
 			isa = PBXGroup;
 			children = (
+				03C6A02F292C3EC300B651E6 /* Login */,
+				03CD707A292B8AF1002BD2C2 /* Network */,
 				03AE8B292928BF1C0018433E /* TodayCD */,
 				03A1CCC42915F97500901B7A /* Resources */,
 				03A1CCC12915F95200901B7A /* Models */,
@@ -224,6 +240,7 @@
 				03A1CCC22915F95A00901B7A /* Views */,
 				03C0E0B329179FA600C80331 /* PrevMe */,
 				03971D942914E868007C6659 /* Info.plist */,
+				03AEE15B292A4157003117B4 /* GoogleService-Info.plist */,
 				03971D912914E868007C6659 /* LaunchScreen.storyboard */,
 			);
 			path = Bring;
@@ -234,6 +251,7 @@
 			children = (
 				03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */,
 				037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */,
+				03954B28292A65CC00C006C8 /* CDStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,15 +359,6 @@
 			path = PlaceCell;
 			sourceTree = "<group>";
 		};
-		03A27EF3291E771F00765E98 /* EmotionCell */ = {
-			isa = PBXGroup;
-			children = (
-				03F0E596291A493F0023BAEB /* EmotionCell.swift */,
-				03F0E597291A493F0023BAEB /* EmotionCell.xib */,
-			);
-			path = EmotionCell;
-			sourceTree = "<group>";
-		};
 		03A27EF4291E772700765E98 /* TitleCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,7 +382,8 @@
 			children = (
 				03AE8B252928A3F00018433E /* ByEmoji.storyboard */,
 				03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */,
-				034D766C29293374006FD543 /* ByEmojiCell.swift */,
+				03954B2A292B06F900C006C8 /* sameCell.swift */,
+				03954B2C292B206B00C006C8 /* diffCell.swift */,
 			);
 			path = ByEmoji;
 			sourceTree = "<group>";
@@ -381,8 +391,8 @@
 		03AE8B292928BF1C0018433E /* TodayCD */ = {
 			isa = PBXGroup;
 			children = (
-				034D766A2928F622006FD543 /* TodayCD.storyboard */,
-				034D76682928F601006FD543 /* TodayCDViewController.swift */,
+				033DE619292C456D006CB604 /* TodayCDViewController.storyboard */,
+				033DE61A292C456D006CB604 /* TodayCDViewController.swift */,
 			);
 			path = TodayCD;
 			sourceTree = "<group>";
@@ -400,6 +410,15 @@
 			path = PrevMe;
 			sourceTree = "<group>";
 		};
+		03C6A02F292C3EC300B651E6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				03C6A030292C3EF400B651E6 /* Login.storyboard */,
+				033DE61D292C46EC006CB604 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		03C73406291EAC1F00F8B959 /* TextCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +426,15 @@
 				03C73403291EAC1B00F8B959 /* TextCell.xib */,
 			);
 			path = TextCell;
+			sourceTree = "<group>";
+		};
+		03CD707A292B8AF1002BD2C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				03CD707B292B8B08002BD2C2 /* PostImage.swift */,
+				03CD707D292BA473002BD2C2 /* GET.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		03EC79A529222388002D88EC /* Map */ = {
@@ -436,7 +464,6 @@
 				03A27EEF291E76F300765E98 /* DateCell */,
 				03A27EF1291E770F00765E98 /* FriendCell */,
 				03A27EF2291E771800765E98 /* PlaceCell */,
-				03A27EF3291E771F00765E98 /* EmotionCell */,
 				03C73406291EAC1F00F8B959 /* TextCell */,
 			);
 			path = RecordTVC;
@@ -471,11 +498,19 @@
 			path = LyricsTVC;
 			sourceTree = "<group>";
 		};
-		BC8D670321221612ECCE5E62 /* Pods */ = {
+		50F90D1C42B279C33099244C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */,
-				08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */,
+				1C48529E665DC2CEC4B1039E /* Pods_Bring.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A88CA8785606A6184CF11126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8262974692D337AB8224E970 /* Pods-Bring.debug.xcconfig */,
+				37F2EA694AAAB46FA3A2C1B0 /* Pods-Bring.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -555,16 +590,17 @@
 				03AE8B262928A3F00018433E /* ByEmoji.storyboard in Resources */,
 				03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */,
 				03971D902914E868007C6659 /* Assets.xcassets in Resources */,
+				03C6A031292C3EF400B651E6 /* Login.storyboard in Resources */,
 				03F0E585291A36320023BAEB /* SeasonCell.xib in Resources */,
 				03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */,
 				03F0E595291A48A80023BAEB /* PlaceCell.xib in Resources */,
 				03971D8E2914E867007C6659 /* Main.storyboard in Resources */,
-				034D766B2928F622006FD543 /* TodayCD.storyboard in Resources */,
+				033DE61B292C456D006CB604 /* TodayCDViewController.storyboard in Resources */,
+				03AEE15C292A4157003117B4 /* GoogleService-Info.plist in Resources */,
 				03F0E589291A40BD0023BAEB /* DateCell.xib in Resources */,
 				03AE8B232928A28B0018433E /* Storage.storyboard in Resources */,
 				0330C71B291646B300737848 /* Calendar.storyboard in Resources */,
 				03374F5229196441004AB96A /* SaveCell.xib in Resources */,
-				03F0E599291A493F0023BAEB /* EmotionCell.xib in Resources */,
 				03374F4A29196122004AB96A /* TitleCell.xib in Resources */,
 				03F0E591291A47660023BAEB /* FriendCell.xib in Resources */,
 				03C73405291EAC1B00F8B959 /* TextCell.xib in Resources */,
@@ -624,33 +660,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */,
+				03CD707E292BA473002BD2C2 /* GET.swift in Sources */,
 				03F0E588291A40BD0023BAEB /* DateCell.swift in Sources */,
+				03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */,
+				033DE61E292C46EC006CB604 /* LoginViewController.swift in Sources */,
+				033DE61C292C456D006CB604 /* TodayCDViewController.swift in Sources */,
 				03374F4D291962FC004AB96A /* LyricsCell.swift in Sources */,
 				03F0E584291A36320023BAEB /* SeasonCell.swift in Sources */,
 				03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */,
+				03954B2B292B06F900C006C8 /* sameCell.swift in Sources */,
 				0330C714291641E300737848 /* CalendarViewController.swift in Sources */,
 				03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */,
 				03322622291E823500856940 /* UIResponder.swift in Sources */,
+				03954B2D292B206B00C006C8 /* diffCell.swift in Sources */,
 				03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */,
 				03F0E590291A47660023BAEB /* FriendCell.swift in Sources */,
 				03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */,
 				03A1CCC82916003A00901B7A /* MainNavigationController.swift in Sources */,
 				0330C712291641D300737848 /* MypageViewController.swift in Sources */,
-				03F0E598291A493F0023BAEB /* EmotionCell.swift in Sources */,
 				03140F92291F1FFC0090B78C /* SearchCell.swift in Sources */,
 				03374F5129196441004AB96A /* SaveCell.swift in Sources */,
 				03971D872914E867007C6659 /* AppDelegate.swift in Sources */,
 				037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */,
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
-				034D766D29293374006FD543 /* ByEmojiCell.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
 				0330C716291641F300737848 /* HomeViewController.swift in Sources */,
+				03CD707C292B8B08002BD2C2 /* PostImage.swift in Sources */,
 				03374F4929196122004AB96A /* TitleCell.swift in Sources */,
 				037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */,
 				0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */,
 				03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */,
 				03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */,
-				034D76692928F602006FD543 /* TodayCDViewController.swift in Sources */,
 				03F9EB242918CE430095C7CF /* CALayer.swift in Sources */,
 				03A1CCC62915FED600901B7A /* MainTabBarController.swift in Sources */,
 				03971D892914E867007C6659 /* SceneDelegate.swift in Sources */,
@@ -822,7 +862,7 @@
 		};
 		03971D982914E868007C6659 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A44178C01BAAF90F574B0522 /* Pods-Bring.debug.xcconfig */;
+			baseConfigurationReference = 8262974692D337AB8224E970 /* Pods-Bring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -861,7 +901,7 @@
 		};
 		03971D992914E868007C6659 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08D58ED54F01F0B3DEBA3750 /* Pods-Bring.release.xcconfig */;
+			baseConfigurationReference = 37F2EA694AAAB46FA3A2C1B0 /* Pods-Bring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

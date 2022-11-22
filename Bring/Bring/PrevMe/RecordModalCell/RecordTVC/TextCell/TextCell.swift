@@ -7,13 +7,26 @@
 
 import UIKit
 
-class TextCell: UITableViewCell {
+protocol TextCellDelegate: AnyObject{
+    func didInsertRecords(_ inText: String)
+}
+
+class TextCell: UITableViewCell, UITextFieldDelegate {
+    
+    public weak var delegate: TextCellDelegate?
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var checkMark: UIImageView!
+    
+    var record: Record?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.textField.delegate = self
+        
         setField()
+        
         self.textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
@@ -30,6 +43,17 @@ class TextCell: UITableViewCell {
         } else {
             checkMark.tintColor = UIColor(named: "boxLightGray")
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == self.textField{
+            let text: String = textField.text!
+            
+            self.delegate?.didInsertRecords(text)
+        }
+        
+        return true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

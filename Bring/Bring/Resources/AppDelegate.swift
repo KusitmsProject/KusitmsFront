@@ -6,12 +6,23 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAnalytics
+import KakaoSDKCommon
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // firebase install for google analytics
+        FirebaseApp.configure()
+        
+        // KakaoSDK 초기화 코드 추가
+        KakaoSDK.initSDK(appKey: "6dd520035847d71b97a6b95ee0f34df1")
+        
         return true
     }
 
