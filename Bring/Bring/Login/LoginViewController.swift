@@ -9,6 +9,10 @@ import UIKit
 import KakaoSDKUser
 
 class LoginViewController: UIViewController {
+    
+    var kakao = Kakao(kakaoNickname: "", email: "")
+    
+    let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,19 +31,23 @@ class LoginViewController: UIViewController {
 
     }
     
+}
+
+extension LoginViewController {
+    
     // 카카오 앱으로 로그인
         func loginWithApp() {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
                 } else {
-                    print("loginWithKakaoTalk() success.")
+                    print("****************loginWithKakaoTalk() success****************")
                     
                     UserApi.shared.me {(user, error) in
                         if let error = error {
                             print(error)
                         } else {
-                            print("카카오톡으로 로그인 성공")
+                            print("카카오톡앱으로 로그인 성공")
                             _ = oauthToken
                             self.presentToHome()
                         }
@@ -54,17 +62,22 @@ class LoginViewController: UIViewController {
                 if let error = error {
                     print(error)
                 } else {
-                    print("loginWithKakaoAccount() success.")
+                
+                    print("##############ACCESSTOKEN##############", oauthToken!.accessToken)
+                    print("****************loginWithKakaoTalk() SUCESS****************")
                     
                     UserApi.shared.me {(user, error) in
                         if let error = error {
                             print(error)
                         } else {
-                            print("카카오톡으로 로그인 성공")
+                            print("카카오톡웹으로 로그인 성공")
                             _ = oauthToken
                             self.presentToHome()
                         }
                     }
+                    
+                    self.getUserInfo()
+                    
                 }
             }
         }
@@ -72,12 +85,31 @@ class LoginViewController: UIViewController {
     // 화면 전환 함수
     func presentToHome() {
         
-        let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
         guard let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController else { return }
         homeVC.modalPresentationStyle = .fullScreen
         present(homeVC, animated: false, completion: nil)
 
+    }
+    
+    // user 정보 가져오기
+    func getUserInfo() {
+        UserApi.shared.me() { (user, error) in
+            if let error = error {
+                print(error)
+            } else {
+                
+                print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                let name = user?.kakaoAccount?.profile?.nickname
+                let email = user?.kakaoAccount?.email
+                guard let name = name else {return}
+                self.kakao.kakaoNickname = name
+                self.kakao.email = email!
+                print("KAKAONAME----->", name)
+                print("KAKAOEMAIL----->", email!)
+                
+                postKakao(name, email ?? "")
+            }
+        }
     }
     
 }

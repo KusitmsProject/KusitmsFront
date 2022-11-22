@@ -8,7 +8,7 @@
 import UIKit
 import youtube_ios_player_helper
 
-class ByEmojiViewController: UIViewController {
+class MusicViewController: UIViewController {
 
     @IBOutlet var emojiBtns: UIView!
     @IBOutlet var searchBar: UISearchBar!
@@ -197,7 +197,7 @@ class ByEmojiViewController: UIViewController {
     
 }
 
-extension ByEmojiViewController: UICollectionViewDataSource {
+extension MusicViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
     }
@@ -233,7 +233,7 @@ extension ByEmojiViewController: UICollectionViewDataSource {
     }
 }
 
-extension ByEmojiViewController: UICollectionViewDelegateFlowLayout {
+extension MusicViewController: UICollectionViewDelegateFlowLayout {
      
     // cell 사이즈 조정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

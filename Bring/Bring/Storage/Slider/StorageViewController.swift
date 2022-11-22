@@ -19,6 +19,7 @@ class StorageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("=============", emotionCards)
         collectionView.dataSource = self
         collectionView.delegate = self
         

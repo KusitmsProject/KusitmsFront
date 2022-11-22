@@ -92,6 +92,7 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - PromisesObjC (2.1.1)
+  - SwiftyJSON (4.3.0)
   - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
@@ -100,6 +101,7 @@ DEPENDENCIES:
   - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKUser
+  - SwiftyJSON (~> 4.0)
   - youtube-ios-player-helper
 
 SPEC REPOS:
@@ -117,6 +119,7 @@ SPEC REPOS:
     - KakaoSDKUser
     - nanopb
     - PromisesObjC
+    - SwiftyJSON
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
@@ -133,8 +136,9 @@ SPEC CHECKSUMS:
   KakaoSDKUser: 9a42e9b74855ce876b071c841418aa6726534010
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: ca26fa0422f3b70b49787b8851f8196aae86a90a
+PODFILE CHECKSUM: 7484c72f9d2c8ef00a0c35a019da4b204044ee09
 
 COCOAPODS: 1.11.3

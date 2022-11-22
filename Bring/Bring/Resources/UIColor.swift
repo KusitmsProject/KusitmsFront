@@ -16,4 +16,6 @@ extension UIColor {
     static let mainSelect = UIColor(named: "mainSelect")
     static let prevMain = UIColor(named: "prevMain")
     static let prevMainSoft = UIColor(named: "prevMainSoft")
+    static let prevText = UIColor(named: "prevText")
+    static let todayText = UIColor(named: "todayText")
 }

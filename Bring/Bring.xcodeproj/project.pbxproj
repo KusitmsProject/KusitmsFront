@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03007DB4292C8C8000227727 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03007DB3292C8C8000227727 /* EmojiViewController.swift */; };
+		03007DB6292C8C8800227727 /* Emoji.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03007DB5292C8C8800227727 /* Emoji.storyboard */; };
+		03007DB8292C9A6A00227727 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03007DB7292C9A6A00227727 /* MusicCell.swift */; };
 		03140F92291F1FFC0090B78C /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03140F90291F1FFC0090B78C /* SearchCell.swift */; };
 		03140F93291F1FFC0090B78C /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03140F91291F1FFC0090B78C /* SearchCell.xib */; };
 		0329FBE22924F07200A1F982 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0329FBE42924F07200A1F982 /* Map.storyboard */; };
@@ -28,6 +31,8 @@
 		033DE61B292C456D006CB604 /* TodayCDViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033DE619292C456D006CB604 /* TodayCDViewController.storyboard */; };
 		033DE61C292C456D006CB604 /* TodayCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61A292C456D006CB604 /* TodayCDViewController.swift */; };
 		033DE61E292C46EC006CB604 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61D292C46EC006CB604 /* LoginViewController.swift */; };
+		033DE620292C5687006CB604 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61F292C5687006CB604 /* UserInfo.swift */; };
+		0345B785292CD6CD006E93AD /* Kakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345B784292CD6CD006E93AD /* Kakao.swift */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
 		03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B28292A65CC00C006C8 /* CDStorage.swift */; };
@@ -42,8 +47,8 @@
 		03A1CCC82916003A00901B7A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A1CCC72916003A00901B7A /* MainNavigationController.swift */; };
 		03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A1CCEA29160AE400901B7A /* CustomBarItem.swift */; };
 		03AE8B232928A28B0018433E /* Storage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B212928A28B0018433E /* Storage.storyboard */; };
-		03AE8B262928A3F00018433E /* ByEmoji.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B252928A3F00018433E /* ByEmoji.storyboard */; };
-		03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */; };
+		03AE8B262928A3F00018433E /* Music.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE8B252928A3F00018433E /* Music.storyboard */; };
+		03AE8B282928A3FA0018433E /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE8B272928A3FA0018433E /* MusicViewController.swift */; };
 		03AEE15C292A4157003117B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03AEE15B292A4157003117B4 /* GoogleService-Info.plist */; };
 		03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */; };
 		03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */; };
@@ -52,7 +57,6 @@
 		03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C73402291EAC1B00F8B959 /* TextCell.swift */; };
 		03C73405291EAC1B00F8B959 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C73403291EAC1B00F8B959 /* TextCell.xib */; };
 		03CD707C292B8B08002BD2C2 /* PostImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD707B292B8B08002BD2C2 /* PostImage.swift */; };
-		03CD707E292BA473002BD2C2 /* GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD707D292BA473002BD2C2 /* GET.swift */; };
 		03E52C38292474D300E0F33C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E52C37292474D300E0F33C /* MapViewController.swift */; };
 		03EC79A42922235D002D88EC /* TodayMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EC79A32922235D002D88EC /* TodayMe.storyboard */; };
 		03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0E57C291A2F940023BAEB /* Record.storyboard */; };
@@ -76,6 +80,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03007DB3292C8C8000227727 /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmojiViewController.swift; path = Bring/Mypage/EmojiViewController.swift; sourceTree = SOURCE_ROOT; };
+		03007DB5292C8C8800227727 /* Emoji.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Emoji.storyboard; sourceTree = "<group>"; };
+		03007DB7292C9A6A00227727 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		03140F90291F1FFC0090B78C /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		03140F91291F1FFC0090B78C /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		0329FBE32924F07200A1F982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Map.storyboard; sourceTree = "<group>"; };
@@ -97,6 +104,8 @@
 		033DE619292C456D006CB604 /* TodayCDViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayCDViewController.storyboard; sourceTree = "<group>"; };
 		033DE61A292C456D006CB604 /* TodayCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayCDViewController.swift; sourceTree = "<group>"; };
 		033DE61D292C46EC006CB604 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		033DE61F292C5687006CB604 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		0345B784292CD6CD006E93AD /* Kakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakao.swift; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
 		03954B28292A65CC00C006C8 /* CDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDStorage.swift; sourceTree = "<group>"; };
@@ -113,8 +122,8 @@
 		03A1CCC72916003A00901B7A /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		03A1CCEA29160AE400901B7A /* CustomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarItem.swift; sourceTree = "<group>"; };
 		03AE8B222928A28B0018433E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bring/Views/Base.lproj/Storage.storyboard; sourceTree = "<group>"; };
-		03AE8B252928A3F00018433E /* ByEmoji.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ByEmoji.storyboard; sourceTree = "<group>"; };
-		03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmojiViewController.swift; sourceTree = "<group>"; };
+		03AE8B252928A3F00018433E /* Music.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Music.storyboard; sourceTree = "<group>"; };
+		03AE8B272928A3FA0018433E /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		03AEE15B292A4157003117B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03BD38BB291E7D8E0089DBA7 /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureCell.xib; sourceTree = "<group>"; };
@@ -123,7 +132,6 @@
 		03C73402291EAC1B00F8B959 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		03C73403291EAC1B00F8B959 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		03CD707B292B8B08002BD2C2 /* PostImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImage.swift; sourceTree = "<group>"; };
-		03CD707D292BA473002BD2C2 /* GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GET.swift; sourceTree = "<group>"; };
 		03E52C37292474D300E0F33C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		03EC79A32922235D002D88EC /* TodayMe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayMe.storyboard; sourceTree = "<group>"; };
 		03F0E57C291A2F940023BAEB /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
@@ -160,6 +168,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03007DB2292C8C6F00227727 /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				03007DB3292C8C8000227727 /* EmojiViewController.swift */,
+				03007DB5292C8C8800227727 /* Emoji.storyboard */,
+				03007DB7292C9A6A00227727 /* MusicCell.swift */,
+			);
+			path = Emoji;
+			sourceTree = "<group>";
+		};
 		03140F8E291F1FCF0090B78C /* RecordModal */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +270,7 @@
 				03FD3DB9291F46F200E154B2 /* PrevmeRecord.swift */,
 				037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */,
 				03954B28292A65CC00C006C8 /* CDStorage.swift */,
+				033DE61F292C5687006CB604 /* UserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,7 +327,8 @@
 		03A1CCDD2916028000901B7A /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				03AE8B242928A3E00018433E /* ByEmoji */,
+				03007DB2292C8C6F00227727 /* Emoji */,
+				03AE8B242928A3E00018433E /* Music */,
 				037DD2B929289A900078DD77 /* Slider */,
 			);
 			path = Storage;
@@ -377,15 +397,15 @@
 			path = SaveCell;
 			sourceTree = "<group>";
 		};
-		03AE8B242928A3E00018433E /* ByEmoji */ = {
+		03AE8B242928A3E00018433E /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				03AE8B252928A3F00018433E /* ByEmoji.storyboard */,
-				03AE8B272928A3FA0018433E /* ByEmojiViewController.swift */,
+				03AE8B252928A3F00018433E /* Music.storyboard */,
+				03AE8B272928A3FA0018433E /* MusicViewController.swift */,
 				03954B2A292B06F900C006C8 /* sameCell.swift */,
 				03954B2C292B206B00C006C8 /* diffCell.swift */,
 			);
-			path = ByEmoji;
+			path = Music;
 			sourceTree = "<group>";
 		};
 		03AE8B292928BF1C0018433E /* TodayCD */ = {
@@ -432,7 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				03CD707B292B8B08002BD2C2 /* PostImage.swift */,
-				03CD707D292BA473002BD2C2 /* GET.swift */,
+				0345B784292CD6CD006E93AD /* Kakao.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -581,13 +601,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03007DB6292C8C8800227727 /* Emoji.storyboard in Resources */,
 				03F0E58D291A44F20023BAEB /* WeatherCell.xib in Resources */,
 				03374F4E291962FC004AB96A /* LyricsCell.xib in Resources */,
 				03971D932914E868007C6659 /* LaunchScreen.storyboard in Resources */,
 				0329FBE22924F07200A1F982 /* Map.storyboard in Resources */,
 				0330C7202916470D00737848 /* Mypage.storyboard in Resources */,
 				03EC79A42922235D002D88EC /* TodayMe.storyboard in Resources */,
-				03AE8B262928A3F00018433E /* ByEmoji.storyboard in Resources */,
+				03AE8B262928A3F00018433E /* Music.storyboard in Resources */,
 				03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */,
 				03971D902914E868007C6659 /* Assets.xcassets in Resources */,
 				03C6A031292C3EF400B651E6 /* Login.storyboard in Resources */,
@@ -660,14 +681,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */,
-				03CD707E292BA473002BD2C2 /* GET.swift in Sources */,
 				03F0E588291A40BD0023BAEB /* DateCell.swift in Sources */,
 				03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */,
 				033DE61E292C46EC006CB604 /* LoginViewController.swift in Sources */,
 				033DE61C292C456D006CB604 /* TodayCDViewController.swift in Sources */,
 				03374F4D291962FC004AB96A /* LyricsCell.swift in Sources */,
 				03F0E584291A36320023BAEB /* SeasonCell.swift in Sources */,
-				03AE8B282928A3FA0018433E /* ByEmojiViewController.swift in Sources */,
+				03AE8B282928A3FA0018433E /* MusicViewController.swift in Sources */,
+				03007DB8292C9A6A00227727 /* MusicCell.swift in Sources */,
 				03954B2B292B06F900C006C8 /* sameCell.swift in Sources */,
 				0330C714291641E300737848 /* CalendarViewController.swift in Sources */,
 				03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */,
@@ -676,6 +697,7 @@
 				03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */,
 				03F0E590291A47660023BAEB /* FriendCell.swift in Sources */,
 				03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */,
+				0345B785292CD6CD006E93AD /* Kakao.swift in Sources */,
 				03A1CCC82916003A00901B7A /* MainNavigationController.swift in Sources */,
 				0330C712291641D300737848 /* MypageViewController.swift in Sources */,
 				03140F92291F1FFC0090B78C /* SearchCell.swift in Sources */,
@@ -690,9 +712,11 @@
 				037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */,
 				0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */,
 				03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */,
+				03007DB4292C8C8000227727 /* EmojiViewController.swift in Sources */,
 				03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */,
 				03F9EB242918CE430095C7CF /* CALayer.swift in Sources */,
 				03A1CCC62915FED600901B7A /* MainTabBarController.swift in Sources */,
+				033DE620292C5687006CB604 /* UserInfo.swift in Sources */,
 				03971D892914E867007C6659 /* SceneDelegate.swift in Sources */,
 				0330C710291641B500737848 /* StorageViewController.swift in Sources */,
 				03E52C38292474D300E0F33C /* MapViewController.swift in Sources */,
