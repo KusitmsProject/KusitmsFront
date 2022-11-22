@@ -12,6 +12,21 @@
 		03007DB8292C9A6A00227727 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03007DB7292C9A6A00227727 /* MusicCell.swift */; };
 		03140F92291F1FFC0090B78C /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03140F90291F1FFC0090B78C /* SearchCell.swift */; };
 		03140F93291F1FFC0090B78C /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03140F91291F1FFC0090B78C /* SearchCell.xib */; };
+		0319836B292D3DD8009B1050 /* CalenderBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319836A292D3DD8009B1050 /* CalenderBean.swift */; };
+		0319836D292D3E2B009B1050 /* CalenderDetailBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319836C292D3E2B009B1050 /* CalenderDetailBean.swift */; };
+		0319836F292D3E49009B1050 /* QuestionBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319836E292D3E49009B1050 /* QuestionBean.swift */; };
+		03198371292D3E5A009B1050 /* VideoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198370292D3E5A009B1050 /* VideoBean.swift */; };
+		03198373292D3EBD009B1050 /* WebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198372292D3EBD009B1050 /* WebModel.swift */; };
+		03198376292D3EDB009B1050 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198375292D3EDB009B1050 /* WebService.swift */; };
+		03198379292D3FB6009B1050 /* HttpWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198378292D3FB6009B1050 /* HttpWrapper.swift */; };
+		0319837B292D3FC8009B1050 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319837A292D3FC8009B1050 /* JSONUtil.swift */; };
+		0319837D292D4029009B1050 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0319837C292D4029009B1050 /* Detail.storyboard */; };
+		0319837F292D403C009B1050 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0319837E292D403C009B1050 /* DetailViewController.swift */; };
+		03198381292D45A8009B1050 /* DLogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198380292D45A8009B1050 /* DLogUtil.swift */; };
+		03198383292D477A009B1050 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198382292D477A009B1050 /* DateExtension.swift */; };
+		03198385292D47D1009B1050 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198384292D47D1009B1050 /* UIImageExtension.swift */; };
+		03198387292D47E2009B1050 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198386292D47E2009B1050 /* UIViewExtension.swift */; };
+		0319838A292D484E009B1050 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03198389292D484E009B1050 /* Constant.swift */; };
 		0329FBE22924F07200A1F982 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0329FBE42924F07200A1F982 /* Map.storyboard */; };
 		0330C710291641B500737848 /* StorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330C70F291641B500737848 /* StorageViewController.swift */; };
 		0330C712291641D300737848 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330C711291641D300737848 /* MypageViewController.swift */; };
@@ -33,6 +48,18 @@
 		033DE61E292C46EC006CB604 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61D292C46EC006CB604 /* LoginViewController.swift */; };
 		033DE620292C5687006CB604 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61F292C5687006CB604 /* UserInfo.swift */; };
 		0345B785292CD6CD006E93AD /* Kakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345B784292CD6CD006E93AD /* Kakao.swift */; };
+		0360CEC0292D510C00729EF9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBB292D510C00729EF9 /* UIColor+Extension.swift */; };
+		0360CEC1292D510C00729EF9 /* UIBezierPath+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBC292D510C00729EF9 /* UIBezierPath+Extension.swift */; };
+		0360CEC2292D510C00729EF9 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBD292D510C00729EF9 /* UIFont+Extension.swift */; };
+		0360CEC3292D510C00729EF9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBE292D510C00729EF9 /* UITextField+Extension.swift */; };
+		0360CEC4292D510C00729EF9 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBF292D510C00729EF9 /* UIView+Extention.swift */; };
+		0360CEE0292D528500729EF9 /* LyricsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0360CEDB292D528500729EF9 /* LyricsTableViewCell.xib */; };
+		0360CEE1292D528500729EF9 /* LyricsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEDC292D528500729EF9 /* LyricsTableViewCell.swift */; };
+		0360CEE2292D528500729EF9 /* LyricsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0360CEDD292D528500729EF9 /* LyricsList.storyboard */; };
+		0360CEE3292D528500729EF9 /* LyricsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEDE292D528500729EF9 /* LyricsListViewController.swift */; };
+		0360CEE4292D528500729EF9 /* MockStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEDF292D528500729EF9 /* MockStrings.swift */; };
+		0360CEE8292D543C00729EF9 /* ImoticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEE6292D543C00729EF9 /* ImoticonViewController.swift */; };
+		0360CEE9292D543C00729EF9 /* Imoticon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0360CEE7292D543C00729EF9 /* Imoticon.storyboard */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
 		03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B28292A65CC00C006C8 /* CDStorage.swift */; };
@@ -85,6 +112,21 @@
 		03007DB7292C9A6A00227727 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		03140F90291F1FFC0090B78C /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		03140F91291F1FFC0090B78C /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		0319836A292D3DD8009B1050 /* CalenderBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderBean.swift; sourceTree = "<group>"; };
+		0319836C292D3E2B009B1050 /* CalenderDetailBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDetailBean.swift; sourceTree = "<group>"; };
+		0319836E292D3E49009B1050 /* QuestionBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBean.swift; sourceTree = "<group>"; };
+		03198370292D3E5A009B1050 /* VideoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoBean.swift; sourceTree = "<group>"; };
+		03198372292D3EBD009B1050 /* WebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebModel.swift; sourceTree = "<group>"; };
+		03198375292D3EDB009B1050 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		03198378292D3FB6009B1050 /* HttpWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpWrapper.swift; sourceTree = "<group>"; };
+		0319837A292D3FC8009B1050 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
+		0319837C292D4029009B1050 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		0319837E292D403C009B1050 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		03198380292D45A8009B1050 /* DLogUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLogUtil.swift; sourceTree = "<group>"; };
+		03198382292D477A009B1050 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		03198384292D47D1009B1050 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		03198386292D47E2009B1050 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		03198389292D484E009B1050 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0329FBE32924F07200A1F982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Map.storyboard; sourceTree = "<group>"; };
 		0330C70F291641B500737848 /* StorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewController.swift; sourceTree = "<group>"; };
 		0330C711291641D300737848 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +148,18 @@
 		033DE61D292C46EC006CB604 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		033DE61F292C5687006CB604 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		0345B784292CD6CD006E93AD /* Kakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakao.swift; sourceTree = "<group>"; };
+		0360CEBB292D510C00729EF9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		0360CEBC292D510C00729EF9 /* UIBezierPath+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBezierPath+Extension.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UIBezierPath+Extension.swift"; sourceTree = "<group>"; };
+		0360CEBD292D510C00729EF9 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UIFont+Extension.swift"; sourceTree = "<group>"; };
+		0360CEBE292D510C00729EF9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Extension.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UITextField+Extension.swift"; sourceTree = "<group>"; };
+		0360CEBF292D510C00729EF9 /* UIView+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extention.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UIView+Extention.swift"; sourceTree = "<group>"; };
+		0360CEDB292D528500729EF9 /* LyricsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LyricsTableViewCell.xib; sourceTree = "<group>"; };
+		0360CEDC292D528500729EF9 /* LyricsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsTableViewCell.swift; sourceTree = "<group>"; };
+		0360CEDD292D528500729EF9 /* LyricsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LyricsList.storyboard; sourceTree = "<group>"; };
+		0360CEDE292D528500729EF9 /* LyricsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsListViewController.swift; sourceTree = "<group>"; };
+		0360CEDF292D528500729EF9 /* MockStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStrings.swift; sourceTree = "<group>"; };
+		0360CEE6292D543C00729EF9 /* ImoticonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImoticonViewController.swift; sourceTree = "<group>"; };
+		0360CEE7292D543C00729EF9 /* Imoticon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Imoticon.storyboard; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
 		03954B28292A65CC00C006C8 /* CDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDStorage.swift; sourceTree = "<group>"; };
@@ -196,12 +250,57 @@
 			path = SearchBar;
 			sourceTree = "<group>";
 		};
+		03198369292D3DA8009B1050 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				0319836A292D3DD8009B1050 /* CalenderBean.swift */,
+				0319836C292D3E2B009B1050 /* CalenderDetailBean.swift */,
+				0319836E292D3E49009B1050 /* QuestionBean.swift */,
+				03198370292D3E5A009B1050 /* VideoBean.swift */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
+		03198374292D3ECD009B1050 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03198375292D3EDB009B1050 /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		03198377292D3F9E009B1050 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				03198378292D3FB6009B1050 /* HttpWrapper.swift */,
+				0319837A292D3FC8009B1050 /* JSONUtil.swift */,
+				03198380292D45A8009B1050 /* DLogUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		03198388292D4840009B1050 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				03198389292D484E009B1050 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		0334090A2917BE0F0005B4C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0360CEBC292D510C00729EF9 /* UIBezierPath+Extension.swift */,
+				0360CEBB292D510C00729EF9 /* UIColor+Extension.swift */,
+				0360CEBD292D510C00729EF9 /* UIFont+Extension.swift */,
+				0360CEBE292D510C00729EF9 /* UITextField+Extension.swift */,
+				0360CEBF292D510C00729EF9 /* UIView+Extention.swift */,
 				0334090B2917BE1F0005B4C4 /* UIColor.swift */,
 				03F9EB232918CE430095C7CF /* CALayer.swift */,
 				03322621291E823500856940 /* UIResponder.swift */,
+				03198382292D477A009B1050 /* DateExtension.swift */,
+				03198384292D47D1009B1050 /* UIImageExtension.swift */,
+				03198386292D47E2009B1050 /* UIViewExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +312,29 @@
 				03BD38BC291E7D8E0089DBA7 /* PictureCell.xib */,
 			);
 			path = PictureCell;
+			sourceTree = "<group>";
+		};
+		0360CEDA292D528500729EF9 /* LyricsList */ = {
+			isa = PBXGroup;
+			children = (
+				0360CEDB292D528500729EF9 /* LyricsTableViewCell.xib */,
+				0360CEDC292D528500729EF9 /* LyricsTableViewCell.swift */,
+				0360CEDD292D528500729EF9 /* LyricsList.storyboard */,
+				0360CEDE292D528500729EF9 /* LyricsListViewController.swift */,
+				0360CEDF292D528500729EF9 /* MockStrings.swift */,
+			);
+			name = LyricsList;
+			path = "../../../../한국대학생IT경영학회/todaycd 원본  복사본/Bring/TodayCD/LyricsList";
+			sourceTree = "<group>";
+		};
+		0360CEE5292D543C00729EF9 /* Imoticon */ = {
+			isa = PBXGroup;
+			children = (
+				0360CEE6292D543C00729EF9 /* ImoticonViewController.swift */,
+				0360CEE7292D543C00729EF9 /* Imoticon.storyboard */,
+			);
+			name = Imoticon;
+			path = "../../../../한국대학생IT경영학회/todaycd 원본  복사본/Bring/TodayCD/Imoticon";
 			sourceTree = "<group>";
 		};
 		037DD2B929289A900078DD77 /* Slider */ = {
@@ -246,6 +368,10 @@
 		03971D852914E867007C6659 /* Bring */ = {
 			isa = PBXGroup;
 			children = (
+				03198388292D4840009B1050 /* Constant */,
+				03198377292D3F9E009B1050 /* Util */,
+				03198374292D3ECD009B1050 /* Service */,
+				03198369292D3DA8009B1050 /* Bean */,
 				03C6A02F292C3EC300B651E6 /* Login */,
 				03CD707A292B8AF1002BD2C2 /* Network */,
 				03AE8B292928BF1C0018433E /* TodayCD */,
@@ -271,6 +397,7 @@
 				037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */,
 				03954B28292A65CC00C006C8 /* CDStorage.swift */,
 				033DE61F292C5687006CB604 /* UserInfo.swift */,
+				03198372292D3EBD009B1050 /* WebModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,6 +438,8 @@
 			children = (
 				0330C71A291646B300737848 /* Calendar.storyboard */,
 				0330C713291641E300737848 /* CalendarViewController.swift */,
+				0319837C292D4029009B1050 /* Detail.storyboard */,
+				0319837E292D403C009B1050 /* DetailViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -411,6 +540,8 @@
 		03AE8B292928BF1C0018433E /* TodayCD */ = {
 			isa = PBXGroup;
 			children = (
+				0360CEE5292D543C00729EF9 /* Imoticon */,
+				0360CEDA292D528500729EF9 /* LyricsList */,
 				033DE619292C456D006CB604 /* TodayCDViewController.storyboard */,
 				033DE61A292C456D006CB604 /* TodayCDViewController.swift */,
 			);
@@ -608,10 +739,12 @@
 				0329FBE22924F07200A1F982 /* Map.storyboard in Resources */,
 				0330C7202916470D00737848 /* Mypage.storyboard in Resources */,
 				03EC79A42922235D002D88EC /* TodayMe.storyboard in Resources */,
+				0360CEE0292D528500729EF9 /* LyricsTableViewCell.xib in Resources */,
 				03AE8B262928A3F00018433E /* Music.storyboard in Resources */,
 				03BD38BE291E7D8E0089DBA7 /* PictureCell.xib in Resources */,
 				03971D902914E868007C6659 /* Assets.xcassets in Resources */,
 				03C6A031292C3EF400B651E6 /* Login.storyboard in Resources */,
+				0319837D292D4029009B1050 /* Detail.storyboard in Resources */,
 				03F0E585291A36320023BAEB /* SeasonCell.xib in Resources */,
 				03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */,
 				03F0E595291A48A80023BAEB /* PlaceCell.xib in Resources */,
@@ -625,6 +758,8 @@
 				03374F4A29196122004AB96A /* TitleCell.xib in Resources */,
 				03F0E591291A47660023BAEB /* FriendCell.xib in Resources */,
 				03C73405291EAC1B00F8B959 /* TextCell.xib in Resources */,
+				0360CEE2292D528500729EF9 /* LyricsList.storyboard in Resources */,
+				0360CEE9292D543C00729EF9 /* Imoticon.storyboard in Resources */,
 				0330C7192916464300737848 /* Home.storyboard in Resources */,
 				03F9EB222918C8260095C7CF /* Lyrics.storyboard in Resources */,
 				03140F93291F1FFC0090B78C /* SearchCell.xib in Resources */,
@@ -680,29 +815,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0360CEC1292D510C00729EF9 /* UIBezierPath+Extension.swift in Sources */,
 				03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */,
 				03F0E588291A40BD0023BAEB /* DateCell.swift in Sources */,
 				03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */,
+				03198376292D3EDB009B1050 /* WebService.swift in Sources */,
+				0319836F292D3E49009B1050 /* QuestionBean.swift in Sources */,
+				0360CEE1292D528500729EF9 /* LyricsTableViewCell.swift in Sources */,
+				03198383292D477A009B1050 /* DateExtension.swift in Sources */,
 				033DE61E292C46EC006CB604 /* LoginViewController.swift in Sources */,
+				0360CEC0292D510C00729EF9 /* UIColor+Extension.swift in Sources */,
+				0360CEE3292D528500729EF9 /* LyricsListViewController.swift in Sources */,
 				033DE61C292C456D006CB604 /* TodayCDViewController.swift in Sources */,
+				0319836B292D3DD8009B1050 /* CalenderBean.swift in Sources */,
+				0360CEE4292D528500729EF9 /* MockStrings.swift in Sources */,
 				03374F4D291962FC004AB96A /* LyricsCell.swift in Sources */,
 				03F0E584291A36320023BAEB /* SeasonCell.swift in Sources */,
 				03AE8B282928A3FA0018433E /* MusicViewController.swift in Sources */,
 				03007DB8292C9A6A00227727 /* MusicCell.swift in Sources */,
+				0360CEC3292D510C00729EF9 /* UITextField+Extension.swift in Sources */,
 				03954B2B292B06F900C006C8 /* sameCell.swift in Sources */,
+				03198379292D3FB6009B1050 /* HttpWrapper.swift in Sources */,
 				0330C714291641E300737848 /* CalendarViewController.swift in Sources */,
 				03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */,
 				03322622291E823500856940 /* UIResponder.swift in Sources */,
 				03954B2D292B206B00C006C8 /* diffCell.swift in Sources */,
 				03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */,
 				03F0E590291A47660023BAEB /* FriendCell.swift in Sources */,
+				03198385292D47D1009B1050 /* UIImageExtension.swift in Sources */,
 				03BD38BD291E7D8E0089DBA7 /* PictureCell.swift in Sources */,
 				0345B785292CD6CD006E93AD /* Kakao.swift in Sources */,
+				03198381292D45A8009B1050 /* DLogUtil.swift in Sources */,
 				03A1CCC82916003A00901B7A /* MainNavigationController.swift in Sources */,
 				0330C712291641D300737848 /* MypageViewController.swift in Sources */,
 				03140F92291F1FFC0090B78C /* SearchCell.swift in Sources */,
 				03374F5129196441004AB96A /* SaveCell.swift in Sources */,
 				03971D872914E867007C6659 /* AppDelegate.swift in Sources */,
+				0319837F292D403C009B1050 /* DetailViewController.swift in Sources */,
 				037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */,
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
@@ -712,15 +861,24 @@
 				037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */,
 				0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */,
 				03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */,
+				03198371292D3E5A009B1050 /* VideoBean.swift in Sources */,
 				03007DB4292C8C8000227727 /* EmojiViewController.swift in Sources */,
+				03198387292D47E2009B1050 /* UIViewExtension.swift in Sources */,
 				03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */,
+				0360CEC4292D510C00729EF9 /* UIView+Extention.swift in Sources */,
 				03F9EB242918CE430095C7CF /* CALayer.swift in Sources */,
 				03A1CCC62915FED600901B7A /* MainTabBarController.swift in Sources */,
 				033DE620292C5687006CB604 /* UserInfo.swift in Sources */,
+				03198373292D3EBD009B1050 /* WebModel.swift in Sources */,
+				0360CEC2292D510C00729EF9 /* UIFont+Extension.swift in Sources */,
+				0360CEE8292D543C00729EF9 /* ImoticonViewController.swift in Sources */,
+				0319836D292D3E2B009B1050 /* CalenderDetailBean.swift in Sources */,
 				03971D892914E867007C6659 /* SceneDelegate.swift in Sources */,
 				0330C710291641B500737848 /* StorageViewController.swift in Sources */,
 				03E52C38292474D300E0F33C /* MapViewController.swift in Sources */,
+				0319838A292D484E009B1050 /* Constant.swift in Sources */,
 				03FD3DBA291F46F200E154B2 /* PrevmeRecord.swift in Sources */,
+				0319837B292D3FC8009B1050 /* JSONUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
