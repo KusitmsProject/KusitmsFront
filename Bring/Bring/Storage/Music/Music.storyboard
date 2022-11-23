@@ -495,8 +495,10 @@
                     </view>
                     <connections>
                         <outlet property="angryBtn" destination="Arg-OC-KyV" id="ufX-Zi-4cQ"/>
+                        <outlet property="artistLabel" destination="zrZ-Su-dRM" id="ujR-9z-G0T"/>
                         <outlet property="diffCollectionView" destination="87s-JJ-FC7" id="G5z-KN-fUv"/>
                         <outlet property="emojiBtns" destination="y9w-Hv-1FJ" id="c7D-MP-kFM"/>
+                        <outlet property="emojiCard" destination="dgV-te-OYZ" id="JYa-UL-hHi"/>
                         <outlet property="explodeBtn" destination="Ifw-Pr-GP1" id="pdX-H7-GPw"/>
                         <outlet property="loveBtn" destination="fRy-lq-aYH" id="eYd-Hl-Arq"/>
                         <outlet property="sadBtn" destination="Se5-54-jcl" id="62l-5U-nRA"/>
@@ -506,6 +508,7 @@
                         <outlet property="searchView" destination="QvL-Zq-tHX" id="hZg-Ic-VkW"/>
                         <outlet property="smileBtn" destination="gEK-Hr-Pd2" id="CP8-kM-kVq"/>
                         <outlet property="tiredBtn" destination="hV3-cb-VFK" id="Dsv-v3-0hC"/>
+                        <outlet property="trackLabel" destination="Fa2-dU-IbU" id="o8Q-Oh-b4J"/>
                         <outlet property="youtubeView" destination="pc0-Xq-jvi" id="J3t-YL-3Yg"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,8 @@ import PanModal
 
 class TodayMeViewController: UIViewController {
     
+    @IBOutlet var emotionView: UIView!
+    @IBOutlet var searchView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var photoView: UIView!
@@ -47,6 +49,9 @@ class TodayMeViewController: UIViewController {
         tableView.dataSource = self
         
         filteredData = []
+        
+        searchBar.delegate = self
+        searchBar.text = PrevmeData.data.music
         
         tableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
 
@@ -146,6 +151,10 @@ class TodayMeViewController: UIViewController {
 
     
     func setUI() {
+        
+        self.tableView.bringSubviewToFront(self.emotionView)
+        
+        
         photoView.layer.shadowOffset = CGSize(width: 0, height: 3)
         photoView.layer.shadowOpacity = 0.15
         photoView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
@@ -195,6 +204,28 @@ extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension TodayMeViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+           filteredData = []
+           
+           if searchText == "" {
+               filteredData = []
+               tableView.layer.borderColor = UIColor.clear.cgColor
+           }
+           
+           for word in data {
+               if word.contains(searchText) {
+                   filteredData.append(word)
+                   tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
+                   tableView.layer.borderWidth = 1
+                   tableView.layer.cornerRadius = 10
+
+               }
+           }
+           
+           self.tableView.reloadData()
+       }
+    
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         let track = searchBar.text!

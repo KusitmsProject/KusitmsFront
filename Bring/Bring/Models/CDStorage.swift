@@ -6,10 +6,6 @@
 //
 
 import Foundation
-//
-//struct ByEmoji: Decodable {
-//    var song: [Song]
-//}
 
 // [감정보관함] 감정별 게시글 조회
 struct ByEmotion: Decodable, Hashable {

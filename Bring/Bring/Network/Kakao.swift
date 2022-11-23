@@ -10,6 +10,7 @@ import Alamofire
 import SwiftyJSON
 
 
+var userDefaults = UserDefaultsManager()
 
 func postKakao(_ nickName: String, _ email: String) {
     
@@ -36,10 +37,9 @@ func postKakao(_ nickName: String, _ email: String) {
             guard let result = response.data else {return}
             do {
                 let decoder = JSONDecoder()
-                print("#######################")
-                let json = JSON(result)
-                print("+++++++++++SUCCESS+++++++++")
+                let json = try decoder.decode(User.self, from: result)
                 print(json)
+                userDefaults.accessToken = json.result.jwt;
             } catch {
                 print("error!\(error)")
             }
