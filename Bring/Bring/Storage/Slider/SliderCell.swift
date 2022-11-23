@@ -42,7 +42,9 @@ class SliderCell: UICollectionViewCell {
         emotion = emotionCards.emotion
         
         titleLabel.text = emotionCards.track
+        titleLabel.textColor = UIColor(hexString: emotionCards.color)
         artistLabel.text = emotionCards.artist
+        artistLabel.textColor = UIColor(hexString: emotionCards.color)
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {

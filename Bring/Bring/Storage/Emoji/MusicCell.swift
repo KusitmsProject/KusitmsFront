@@ -16,6 +16,8 @@ class MusicCell: UICollectionViewCell {
     @IBOutlet var trackArtist: UILabel!
     @IBOutlet var arrowIcon: UIImageView!
     
+    var track: String = ""
+    var artist: String = ""
     
     func configure(_ song: ByEmotion) {
         cell.layer.cornerRadius = 20
@@ -24,9 +26,11 @@ class MusicCell: UICollectionViewCell {
         cell.layer.shadowOpacity = 0.1
         
         dateLabel.text = song.date
-    
+        
         
         trackArtist.text = String(song.track + "-" + song.artist)
+        track = song.track
+        artist = song.artist
         
         let option: String
         if song.options == 0 {
@@ -42,5 +46,24 @@ class MusicCell: UICollectionViewCell {
             arrowIcon.image = UIImage(named: "arrow-ic-blue")
             trackArtist.textColor = UIColor(named: "todayText")
         }
+    }
+
+    override var isSelected: Bool{
+        didSet {
+           if isSelected {
+               let storyboard = UIStoryboard(name: "Music", bundle: nil)
+               guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
+               if let vc = self.next(ofType: UIViewController.self) {
+                   vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                   Music.modalPresentationStyle = .fullScreen
+                   Music.track = track
+                   Music.artist = artist
+//                   Music.emojiCard = 
+                   vc.present(Music, animated: true, completion: nil)
+               }
+           } else {
+              
+           }
+         }
     }
 }

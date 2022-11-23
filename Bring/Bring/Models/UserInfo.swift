@@ -1,13 +1,7 @@
-//
-//  UserInfo.swift
-//  Bring
-//
-//  Created by 오예진 on 2022/11/22.
-//
 
 import Foundation
 
-// MARK: - Kakao
+// MARK: - Kakao (Request)
 struct Kakao: Encodable {
     var kakaoNickname: String
     var email: String
@@ -18,26 +12,30 @@ struct Kakao: Encodable {
 //    }
 }
 
-
-
-// MARK: - User
+// MARK: - Welcome
 struct User: Codable {
-    var isSuccess: Bool
-    var code: Int
-    var message: String
-    var result: Result
+    let message: String
+    let isSuccess: Bool
+    let result: userResult
+    let code: Int
 }
 
 // MARK: - Result
-struct Result: Codable {
-    var kakaoNickname: String
-    var userIdx: Int
-    var jwt: String
+struct userResult: Codable {
+    let kakaoNickname: String
+    let userIdx: Int
+    let jwt: String
 
-//    enum CodingKeys: String, CodingKey {
-//        case kakaoNickname = "kakao_nickname"
-//        case userIdx, jwt
-//    }
+    enum CodingKeys: String, CodingKey {
+        case kakaoNickname = "kakao_nickname"
+        case userIdx, jwt
+    }
 }
 
 
+class UserDefaultsManager: ObservableObject {
+    
+    @Published var accessToken: String = UserDefaults.standard.string(forKey: "AccessToken") ?? ""{
+        didSet { UserDefaults.standard.set(self.accessToken, forKey: "AccessToken")}
+    }
+}

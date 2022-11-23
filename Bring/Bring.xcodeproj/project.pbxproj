@@ -48,11 +48,6 @@
 		033DE61E292C46EC006CB604 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61D292C46EC006CB604 /* LoginViewController.swift */; };
 		033DE620292C5687006CB604 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DE61F292C5687006CB604 /* UserInfo.swift */; };
 		0345B785292CD6CD006E93AD /* Kakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345B784292CD6CD006E93AD /* Kakao.swift */; };
-		0360CEC0292D510C00729EF9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBB292D510C00729EF9 /* UIColor+Extension.swift */; };
-		0360CEC1292D510C00729EF9 /* UIBezierPath+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBC292D510C00729EF9 /* UIBezierPath+Extension.swift */; };
-		0360CEC2292D510C00729EF9 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBD292D510C00729EF9 /* UIFont+Extension.swift */; };
-		0360CEC3292D510C00729EF9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBE292D510C00729EF9 /* UITextField+Extension.swift */; };
-		0360CEC4292D510C00729EF9 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEBF292D510C00729EF9 /* UIView+Extention.swift */; };
 		0360CEE0292D528500729EF9 /* LyricsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0360CEDB292D528500729EF9 /* LyricsTableViewCell.xib */; };
 		0360CEE1292D528500729EF9 /* LyricsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEDC292D528500729EF9 /* LyricsTableViewCell.swift */; };
 		0360CEE2292D528500729EF9 /* LyricsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0360CEDD292D528500729EF9 /* LyricsList.storyboard */; };
@@ -84,6 +79,12 @@
 		03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C73402291EAC1B00F8B959 /* TextCell.swift */; };
 		03C73405291EAC1B00F8B959 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C73403291EAC1B00F8B959 /* TextCell.xib */; };
 		03CD707C292B8B08002BD2C2 /* PostImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD707B292B8B08002BD2C2 /* PostImage.swift */; };
+		03D41FDE292DB1820016E630 /* UIBezierPath+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D41FD9292DB1810016E630 /* UIBezierPath+Extension.swift */; };
+		03D41FDF292DB1820016E630 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D41FDA292DB1810016E630 /* UITextField+Extension.swift */; };
+		03D41FE0292DB1820016E630 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D41FDB292DB1810016E630 /* UIColor+Extension.swift */; };
+		03D41FE1292DB1820016E630 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D41FDC292DB1810016E630 /* UIFont+Extension.swift */; };
+		03D41FE2292DB1820016E630 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D41FDD292DB1820016E630 /* UIView+Extention.swift */; };
+		03D41FE4292E5CDC0016E630 /* ByEmo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D41FE3292E5CDC0016E630 /* ByEmo.swift */; };
 		03E52C38292474D300E0F33C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E52C37292474D300E0F33C /* MapViewController.swift */; };
 		03EC79A42922235D002D88EC /* TodayMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EC79A32922235D002D88EC /* TodayMe.storyboard */; };
 		03F0E57D291A2F940023BAEB /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0E57C291A2F940023BAEB /* Record.storyboard */; };
@@ -148,11 +149,6 @@
 		033DE61D292C46EC006CB604 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		033DE61F292C5687006CB604 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		0345B784292CD6CD006E93AD /* Kakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakao.swift; sourceTree = "<group>"; };
-		0360CEBB292D510C00729EF9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
-		0360CEBC292D510C00729EF9 /* UIBezierPath+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBezierPath+Extension.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UIBezierPath+Extension.swift"; sourceTree = "<group>"; };
-		0360CEBD292D510C00729EF9 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UIFont+Extension.swift"; sourceTree = "<group>"; };
-		0360CEBE292D510C00729EF9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Extension.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UITextField+Extension.swift"; sourceTree = "<group>"; };
-		0360CEBF292D510C00729EF9 /* UIView+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extention.swift"; path = "../../../../Desktop/todaycd 원본  복사본/Bring/Extensions/UIView+Extention.swift"; sourceTree = "<group>"; };
 		0360CEDB292D528500729EF9 /* LyricsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LyricsTableViewCell.xib; sourceTree = "<group>"; };
 		0360CEDC292D528500729EF9 /* LyricsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsTableViewCell.swift; sourceTree = "<group>"; };
 		0360CEDD292D528500729EF9 /* LyricsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LyricsList.storyboard; sourceTree = "<group>"; };
@@ -186,6 +182,12 @@
 		03C73402291EAC1B00F8B959 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		03C73403291EAC1B00F8B959 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		03CD707B292B8B08002BD2C2 /* PostImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImage.swift; sourceTree = "<group>"; };
+		03D41FD9292DB1810016E630 /* UIBezierPath+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBezierPath+Extension.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/todaycd 원본  복사본/Bring/Extensions/UIBezierPath+Extension.swift"; sourceTree = "<group>"; };
+		03D41FDA292DB1810016E630 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Extension.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/todaycd 원본  복사본/Bring/Extensions/UITextField+Extension.swift"; sourceTree = "<group>"; };
+		03D41FDB292DB1810016E630 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/todaycd 원본  복사본/Bring/Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		03D41FDC292DB1810016E630 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/todaycd 원본  복사본/Bring/Extensions/UIFont+Extension.swift"; sourceTree = "<group>"; };
+		03D41FDD292DB1820016E630 /* UIView+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extention.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/todaycd 원본  복사본/Bring/Extensions/UIView+Extention.swift"; sourceTree = "<group>"; };
+		03D41FE3292E5CDC0016E630 /* ByEmo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByEmo.swift; sourceTree = "<group>"; };
 		03E52C37292474D300E0F33C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		03EC79A32922235D002D88EC /* TodayMe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayMe.storyboard; sourceTree = "<group>"; };
 		03F0E57C291A2F940023BAEB /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
@@ -290,11 +292,11 @@
 		0334090A2917BE0F0005B4C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0360CEBC292D510C00729EF9 /* UIBezierPath+Extension.swift */,
-				0360CEBB292D510C00729EF9 /* UIColor+Extension.swift */,
-				0360CEBD292D510C00729EF9 /* UIFont+Extension.swift */,
-				0360CEBE292D510C00729EF9 /* UITextField+Extension.swift */,
-				0360CEBF292D510C00729EF9 /* UIView+Extention.swift */,
+				03D41FDB292DB1810016E630 /* UIColor+Extension.swift */,
+				03D41FDC292DB1810016E630 /* UIFont+Extension.swift */,
+				03D41FD9292DB1810016E630 /* UIBezierPath+Extension.swift */,
+				03D41FDA292DB1810016E630 /* UITextField+Extension.swift */,
+				03D41FDD292DB1820016E630 /* UIView+Extention.swift */,
 				0334090B2917BE1F0005B4C4 /* UIColor.swift */,
 				03F9EB232918CE430095C7CF /* CALayer.swift */,
 				03322621291E823500856940 /* UIResponder.swift */,
@@ -584,6 +586,7 @@
 			children = (
 				03CD707B292B8B08002BD2C2 /* PostImage.swift */,
 				0345B784292CD6CD006E93AD /* Kakao.swift */,
+				03D41FE3292E5CDC0016E630 /* ByEmo.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -815,7 +818,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0360CEC1292D510C00729EF9 /* UIBezierPath+Extension.swift in Sources */,
+				03D41FDE292DB1820016E630 /* UIBezierPath+Extension.swift in Sources */,
 				03C0E0B029179D5E00C80331 /* TodayMeViewController.swift in Sources */,
 				03F0E588291A40BD0023BAEB /* DateCell.swift in Sources */,
 				03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */,
@@ -824,7 +827,8 @@
 				0360CEE1292D528500729EF9 /* LyricsTableViewCell.swift in Sources */,
 				03198383292D477A009B1050 /* DateExtension.swift in Sources */,
 				033DE61E292C46EC006CB604 /* LoginViewController.swift in Sources */,
-				0360CEC0292D510C00729EF9 /* UIColor+Extension.swift in Sources */,
+				03D41FE1292DB1820016E630 /* UIFont+Extension.swift in Sources */,
+				03D41FE0292DB1820016E630 /* UIColor+Extension.swift in Sources */,
 				0360CEE3292D528500729EF9 /* LyricsListViewController.swift in Sources */,
 				033DE61C292C456D006CB604 /* TodayCDViewController.swift in Sources */,
 				0319836B292D3DD8009B1050 /* CalenderBean.swift in Sources */,
@@ -833,11 +837,11 @@
 				03F0E584291A36320023BAEB /* SeasonCell.swift in Sources */,
 				03AE8B282928A3FA0018433E /* MusicViewController.swift in Sources */,
 				03007DB8292C9A6A00227727 /* MusicCell.swift in Sources */,
-				0360CEC3292D510C00729EF9 /* UITextField+Extension.swift in Sources */,
 				03954B2B292B06F900C006C8 /* sameCell.swift in Sources */,
 				03198379292D3FB6009B1050 /* HttpWrapper.swift in Sources */,
 				0330C714291641E300737848 /* CalendarViewController.swift in Sources */,
 				03A1CCEB29160AE400901B7A /* CustomBarItem.swift in Sources */,
+				03D41FE2292DB1820016E630 /* UIView+Extention.swift in Sources */,
 				03322622291E823500856940 /* UIResponder.swift in Sources */,
 				03954B2D292B206B00C006C8 /* diffCell.swift in Sources */,
 				03F9EB2B291900900095C7CF /* LyricsModalController.swift in Sources */,
@@ -853,6 +857,7 @@
 				03971D872914E867007C6659 /* AppDelegate.swift in Sources */,
 				0319837F292D403C009B1050 /* DetailViewController.swift in Sources */,
 				037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */,
+				03D41FDF292DB1820016E630 /* UITextField+Extension.swift in Sources */,
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
 				0330C716291641F300737848 /* HomeViewController.swift in Sources */,
@@ -865,12 +870,11 @@
 				03007DB4292C8C8000227727 /* EmojiViewController.swift in Sources */,
 				03198387292D47E2009B1050 /* UIViewExtension.swift in Sources */,
 				03F0E594291A48A80023BAEB /* PlaceCell.swift in Sources */,
-				0360CEC4292D510C00729EF9 /* UIView+Extention.swift in Sources */,
 				03F9EB242918CE430095C7CF /* CALayer.swift in Sources */,
 				03A1CCC62915FED600901B7A /* MainTabBarController.swift in Sources */,
 				033DE620292C5687006CB604 /* UserInfo.swift in Sources */,
+				03D41FE4292E5CDC0016E630 /* ByEmo.swift in Sources */,
 				03198373292D3EBD009B1050 /* WebModel.swift in Sources */,
-				0360CEC2292D510C00729EF9 /* UIFont+Extension.swift in Sources */,
 				0360CEE8292D543C00729EF9 /* ImoticonViewController.swift in Sources */,
 				0319836D292D3E2B009B1050 /* CalenderDetailBean.swift in Sources */,
 				03971D892914E867007C6659 /* SceneDelegate.swift in Sources */,

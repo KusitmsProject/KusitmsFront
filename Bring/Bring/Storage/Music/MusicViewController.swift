@@ -10,6 +10,10 @@ import youtube_ios_player_helper
 
 class MusicViewController: UIViewController {
 
+    @IBOutlet var trackLabel: UILabel!
+    @IBOutlet var artistLabel: UILabel!
+    @IBOutlet var emojiCard: UIImageView!
+    
     @IBOutlet var emojiBtns: UIView!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var searchEmoji: UIButton!
@@ -38,6 +42,10 @@ class MusicViewController: UIViewController {
     
     var tappedBtn = 0
     
+    // 이전 화면을 통해 받아올 데이터
+    var track: String = ""
+    var artist: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +68,9 @@ class MusicViewController: UIViewController {
         searchBar.searchTextField.font = .systemFont(ofSize: 11)
         youtubeView.load(withVideoId: "WfA47O-Fb_M")
         youtubeView.layer.cornerRadius = 10
+        
+        trackLabel.text = track
+        artistLabel.text = artist
     }
     
     

@@ -23,7 +23,10 @@ class RecordModalController: UIViewController {
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         if let vc = self.presentingViewController as? TodayMeViewController {
             vc.record = record
+            vc.recordBtn.titleLabel!.font = UIFont.systemFont(ofSize: 10)
+            vc.recordBtn.setTitle("추억이 기록되었어요!", for: .normal)
         }
+        print("&&&&&&DISMISS&&&&&&")
         super.dismiss(animated: flag, completion: completion)
     }
      
