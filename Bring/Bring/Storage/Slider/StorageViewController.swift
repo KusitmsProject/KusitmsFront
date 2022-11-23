@@ -12,15 +12,11 @@ class StorageViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var pageControl: UIPageControl!
 
-    
-    // 카드 데이터 모델 가져오기
-    let emotionCards: [EmotionSlider] = EmotionSlider.emotionCards
+
+    var emotions: [byEmoResult] = byEmoResult.emotions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getSlider()
-        print("=============#############=============#############=============#############")
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -42,8 +38,8 @@ extension StorageViewController: UICollectionViewDataSource {
         }
         
         // messages에서 item을 가져와서 cell을 구성
-        let emotionCard = emotionCards[indexPath.item]
-        cell.configure(emotionCard)
+        let emotion = emotions[indexPath.item]
+        cell.configure(emotion)
         return cell
     }
 }

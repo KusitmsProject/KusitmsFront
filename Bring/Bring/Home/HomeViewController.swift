@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getPostsBySong(5)
     }
     
     // user 정보 가져오기
