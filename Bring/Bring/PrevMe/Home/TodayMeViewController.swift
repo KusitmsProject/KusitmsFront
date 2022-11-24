@@ -31,9 +31,10 @@ class TodayMeViewController: UIViewController {
     @IBOutlet var saveBtn: UIButton!
     
     
-    let data = ["All I Want for Christmas Is You", "All I Want for Christmas Is You - rock ver.", "All I Want for Christmas Is You - (This year ver.) "]
+//    let data = ["All I Want for Christmas Is You", "All I Want for Christmas Is You - rock ver.", "All I Want for Christmas Is You - (This year ver.) "]
+//    var filteredData: [String]!
     
-    var filteredData: [String]!
+    var trackResult: [TrackResult] = TrackResult.tracks
 
     var record: Record?
     
@@ -48,7 +49,7 @@ class TodayMeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        filteredData = []
+//        filteredData = []
         
         searchBar.delegate = self
         searchBar.text = PrevmeData.data.music
@@ -152,9 +153,6 @@ class TodayMeViewController: UIViewController {
     
     func setUI() {
         
-        self.tableView.bringSubviewToFront(self.emotionView)
-        
-        
         photoView.layer.shadowOffset = CGSize(width: 0, height: 3)
         photoView.layer.shadowOpacity = 0.15
         photoView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
@@ -181,22 +179,26 @@ class TodayMeViewController: UIViewController {
 extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredData.count
+        return trackResult.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as? SearchCell else { return UITableViewCell() }
-        cell.exLabel.text = filteredData[indexPath.row]
+        cell.exLabel.text = trackResult[indexPath.row].track
+        if cell.exLabel.text != "" {
+            tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
+               tableView.layer.borderWidth = 1
+               tableView.layer.cornerRadius = 10
+          
+        }
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        let title = filteredData[indexPath.row]
+        let title = trackResult[indexPath.row].track
         searchBar.text = title
-        filteredData = []
         tableView.reloadData()
-        tableView.layer.borderColor = UIColor.clear.cgColor
         return nil
     }
     
@@ -205,30 +207,28 @@ extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension TodayMeViewController: UISearchBarDelegate {
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-           filteredData = []
-           
-           if searchText == "" {
-               filteredData = []
-               tableView.layer.borderColor = UIColor.clear.cgColor
-           }
-           
-           for word in data {
-               if word.contains(searchText) {
-                   filteredData.append(word)
-                   tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
-                   tableView.layer.borderWidth = 1
-                   tableView.layer.cornerRadius = 10
-
-               }
-           }
-           
-           self.tableView.reloadData()
-       }
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//
+//           if searchText == "" {
+//               tableView.layer.borderColor = UIColor.clear.cgColor
+//           }
+//
+//               if trackResult[0].track != "" {
+//
+//                   tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
+//                   tableView.layer.borderWidth = 1
+//                   tableView.layer.cornerRadius = 10
+//
+//               }
+//        self.tableView.reloadData()
+//       }
     
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         let track = searchBar.text!
+        GetTrack(track ?? "") { json in
+            self.trackResult = json.result
+        }
         
         self.record = Record(userIdx: 1, date: "", emotion: "", season: "", weather: [""], lyrics: "", placeNickname: "", place: "", imageURL: "", record: "", track: track, artist: "", friendList: [""], options: 0)
         

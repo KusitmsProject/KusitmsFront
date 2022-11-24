@@ -57,6 +57,8 @@
 		0360CEE9292D543C00729EF9 /* Imoticon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0360CEE7292D543C00729EF9 /* Imoticon.storyboard */; };
 		0370F0BE292F0FE6004206BA /* PostsByEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370F0BD292F0FE6004206BA /* PostsByEmoji.swift */; };
 		0370F0C0292F1127004206BA /* GetPostsByEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370F0BF292F1127004206BA /* GetPostsByEmoji.swift */; };
+		0370F0C2292F4461004206BA /* SearchTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370F0C1292F4461004206BA /* SearchTrack.swift */; };
+		0370F0C4292F44BB004206BA /* GetTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370F0C3292F44BB004206BA /* GetTrack.swift */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
 		03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B28292A65CC00C006C8 /* CDStorage.swift */; };
@@ -165,6 +167,8 @@
 		0360CEE7292D543C00729EF9 /* Imoticon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Imoticon.storyboard; sourceTree = "<group>"; };
 		0370F0BD292F0FE6004206BA /* PostsByEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsByEmoji.swift; sourceTree = "<group>"; };
 		0370F0BF292F1127004206BA /* GetPostsByEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsByEmoji.swift; sourceTree = "<group>"; };
+		0370F0C1292F4461004206BA /* SearchTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrack.swift; sourceTree = "<group>"; };
+		0370F0C3292F44BB004206BA /* GetTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTrack.swift; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
 		03954B28292A65CC00C006C8 /* CDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDStorage.swift; sourceTree = "<group>"; };
@@ -417,6 +421,7 @@
 				03198372292D3EBD009B1050 /* WebModel.swift */,
 				0399D91D292E98D5005F0D8B /* PostsBySong.swift */,
 				0370F0BD292F0FE6004206BA /* PostsByEmoji.swift */,
+				0370F0C1292F4461004206BA /* SearchTrack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -608,6 +613,7 @@
 				03D41FE3292E5CDC0016E630 /* ByEmo.swift */,
 				0399D91F292E9AFA005F0D8B /* GetPostsBySong.swift */,
 				0370F0BF292F1127004206BA /* GetPostsByEmoji.swift */,
+				0370F0C3292F44BB004206BA /* GetTrack.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -855,6 +861,7 @@
 				0360CEE3292D528500729EF9 /* LyricsListViewController.swift in Sources */,
 				033DE61C292C456D006CB604 /* TodayCDViewController.swift in Sources */,
 				0319836B292D3DD8009B1050 /* CalenderBean.swift in Sources */,
+				0370F0C2292F4461004206BA /* SearchTrack.swift in Sources */,
 				0360CEE4292D528500729EF9 /* MockStrings.swift in Sources */,
 				03374F4D291962FC004AB96A /* LyricsCell.swift in Sources */,
 				03F0E584291A36320023BAEB /* SeasonCell.swift in Sources */,
@@ -886,6 +893,7 @@
 				03F0E57F291A2FD30023BAEB /* RecordModalController.swift in Sources */,
 				03F0E58C291A44F20023BAEB /* WeatherCell.swift in Sources */,
 				0330C716291641F300737848 /* HomeViewController.swift in Sources */,
+				0370F0C4292F44BB004206BA /* GetTrack.swift in Sources */,
 				03CD707C292B8B08002BD2C2 /* PostImage.swift in Sources */,
 				03374F4929196122004AB96A /* TitleCell.swift in Sources */,
 				037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */,
