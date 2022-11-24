@@ -19,6 +19,8 @@ class SliderCell: UICollectionViewCell {
     @IBOutlet var playBtn: UIButton!
     
     var emotion: String?
+    var track: String?
+    var artist: String?
     
     // 데이터 연결
     func configure(_ emotions: byEmoResult) {
@@ -90,6 +92,8 @@ class SliderCell: UICollectionViewCell {
         
         titleLabel.text = emotions.track
         artistLabel.text = emotions.artist
+        track = emotions.track
+        artist = emotions.artist
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {
@@ -99,6 +103,7 @@ class SliderCell: UICollectionViewCell {
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             Emoji.modalPresentationStyle = .fullScreen
             Emoji.emotion = emotion
+            GetPostsByEmoji(emotion ?? "HAPPY")
             vc.present(Emoji, animated: true, completion: nil)
         }
     }
@@ -109,6 +114,8 @@ class SliderCell: UICollectionViewCell {
         if let vc = self.next(ofType: UIViewController.self) {
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             Music.modalPresentationStyle = .fullScreen
+//            Music.track = track
+//            Music.artist = artist
             vc.present(Music, animated: true, completion: nil)
         }
     }

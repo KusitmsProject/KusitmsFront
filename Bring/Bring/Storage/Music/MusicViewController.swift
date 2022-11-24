@@ -40,11 +40,16 @@ class MusicViewController: UIViewController {
     // 다른 감정 collectionView
     let songsBySong: [BySong] = BySong.list
     
+    // 노래별 게시글 조회 데이터
+    let samepostings: [ResultBySong] = ResultBySong.samepostings
+    let diffpostings: [ResultBySong] = ResultBySong.diffpostings
+    
+    
     var tappedBtn = 0
     
     // 이전 화면을 통해 받아올 데이터
-    var track: String = ""
-    var artist: String = ""
+    var track: String?
+    var artist: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +71,11 @@ class MusicViewController: UIViewController {
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0
         searchBar.searchTextField.font = .systemFont(ofSize: 11)
-        youtubeView.load(withVideoId: "WfA47O-Fb_M")
+        youtubeView.load(withVideoId: samepostings[0].videoID)
         youtubeView.layer.cornerRadius = 10
         
-        trackLabel.text = track
-        artistLabel.text = artist
+        trackLabel.text = samepostings[0].track
+        artistLabel.text = samepostings[0].artist
     }
     
     
@@ -210,6 +215,7 @@ class MusicViewController: UIViewController {
 
 extension MusicViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 2
     }
     
@@ -220,7 +226,8 @@ extension MusicViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            let song = songsByEmotion[indexPath.item]
+            let song = samepostings[indexPath.item]
+        
             cell.configure(song)
             return cell
             
@@ -228,18 +235,11 @@ extension MusicViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "diffCell", for: indexPath) as? diffCell else{
                 return UICollectionViewCell()
             }
-            
-            let song = songsBySong[indexPath.item]
-            if song.emotion == "Happy" {
-                cell.configure(song)
-                return cell
-            } else {
-                cell.noCell(song)
-                return cell
 
-            }
-        
+            let song = diffpostings[indexPath.item]
             
+            cell.configure(song)
+            return cell
         }
     }
 }
@@ -249,8 +249,8 @@ extension MusicViewController: UICollectionViewDelegateFlowLayout {
     // cell 사이즈 조정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        // cell과 collectionView의 사이즈가 같음
-        return collectionView.bounds.size   // size 프로퍼티 안에 width, height 모두 있음.
+        let width = collectionView.bounds.width
+        return CGSize(width: width, height: 50)
 
     }
     

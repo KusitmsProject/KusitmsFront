@@ -9,7 +9,7 @@ import Foundation
 
 
 
-// MARK: - ByEmo
+// MARK: - ByEmo : 감정별 랜덤 게시물 리스트 조회
 struct ByEmo: Decodable {
     let isSuccess: Bool
     let code: Int

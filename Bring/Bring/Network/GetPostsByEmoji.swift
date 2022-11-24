@@ -1,5 +1,5 @@
 //
-//  PostsBySong.swift
+//  GetPostsByEmoji.swift
 //  Bring
 //
 //  Created by 오예진 on 2022/11/24.
@@ -8,17 +8,17 @@
 import Foundation
 import Alamofire
 
-func getPostsBySong(_ idx: Int) {
+func GetPostsByEmoji(_ emotion: String) {
     
     var token: String{
         let userDefaultManager = UserDefaultsManager()
         return userDefaultManager.accessToken
     }
     
-    let url = "http://3.34.31.255:8081/bring/emotion/searchTrack"
+    let url = "http://3.34.31.255:8081/bring/emotion/searchEmotion"
     
-    let parameters = ["musicIdx": idx]
-
+    let parameters = ["emotion": emotion]
+    
     AF.request(
             url,
             method: .get,
@@ -28,20 +28,22 @@ func getPostsBySong(_ idx: Int) {
             // 나중에 header 부분 token으로 바꿔 넣기
         )
     .validate(statusCode: 200..<500)
-        .response { response in
-            switch response.result{
-            case .success:
-                guard let result = response.data else {return}
-                do {
-                    let decoder = JSONDecoder()
-                    let json = try decoder.decode(PostsBySong.self, from: result)
-                } catch {
-                    print("error!\(error)")
-                }
-            default:
-                return
+    .response { response in
+        switch response.result{
+        case .success:
+            guard let result = response.data else {return}
+            do {
+                let decoder = JSONDecoder()
+                print(result)
+                let json = try decoder.decode(PostsByEmoji.self, from: result)
+                print("$$$$$$$$$$$$$$$$$$$$$")
+                print(json)
+                print("$$$$$$$$$$$$$$$$$$$$$")
+            } catch {
+                print("error!\(error)")
             }
+        default:
+            return
         }
-    
+    }
 }
-
