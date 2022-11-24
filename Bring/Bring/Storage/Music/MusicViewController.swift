@@ -50,13 +50,13 @@ class MusicViewController: UIViewController {
     // 이전 화면을 통해 받아올 데이터
     var track: String?
     var artist: String?
+    var emotion: String?
+    var videoId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
-        
-//        youtubeView.load(withVideoId: "WfA47O-Fb_M")
         
         sameCollectionView.dataSource = self
         sameCollectionView.delegate = self
@@ -71,11 +71,50 @@ class MusicViewController: UIViewController {
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0
         searchBar.searchTextField.font = .systemFont(ofSize: 11)
-        youtubeView.load(withVideoId: samepostings[0].videoID)
+        youtubeView.load(withVideoId: videoId ?? "")
         youtubeView.layer.cornerRadius = 10
         
-        trackLabel.text = samepostings[0].track
-        artistLabel.text = samepostings[0].artist
+        trackLabel.text = track
+        artistLabel.text = artist
+        
+        switch emotion {
+        case "HAPPY":
+            emojiCard.image  = UIImage(named: "smile-card")
+            trackLabel.textColor = UIColor(hexString: "8667C9")
+            artistLabel.textColor = UIColor(hexString: "8667C9")
+            searchEmoji.setTitle("😆", for: .normal)
+        case "ANGRY":
+            emojiCard.image  = UIImage(named: "angry-card")
+            trackLabel.textColor = UIColor(hexString: "EF8233")
+            artistLabel.textColor = UIColor(hexString: "EF8233")
+            searchEmoji.setTitle("😡", for: .normal)
+        case "LOVELY":
+            emojiCard.image  = UIImage(named: "love-card")
+            trackLabel.textColor = UIColor(hexString: "ED50C2")
+            artistLabel.textColor = UIColor(hexString: "ED50C2")
+            searchEmoji.setTitle("🥰", for: .normal)
+        case "SAD":
+            emojiCard.image  = UIImage(named: "sad-card")
+            trackLabel.textColor = UIColor(hexString: "5279B4")
+            artistLabel.textColor = UIColor(hexString: "5279B4")
+            searchEmoji.setTitle("😭", for: .normal)
+        case "TIRED":
+            emojiCard.image  = UIImage(named: "tired-card")
+            trackLabel.textColor = UIColor(hexString: "9D5FB2")
+            artistLabel.textColor = UIColor(hexString: "9D5FB2")
+            searchEmoji.setTitle("😮", for: .normal)
+        case "EXPLODE":
+            emojiCard.image  = UIImage(named: "explode-card")
+            trackLabel.textColor = UIColor(hexString: "6A5377")
+            artistLabel.textColor = UIColor(hexString: "6A5377")
+            searchEmoji.setTitle("🤯", for: .normal)
+        default:
+            emojiCard.image  = UIImage(named: "explode-card")
+            trackLabel.textColor = UIColor(hexString: "6A5377")
+            artistLabel.textColor = UIColor(hexString: "6A5377")
+            searchEmoji.setTitle("🤯", for: .normal)
+        }
+        
     }
     
     

@@ -21,11 +21,16 @@ class SliderCell: UICollectionViewCell {
     var emotion: String?
     var track: String?
     var artist: String?
+    var videoId: String?
     
     // 데이터 연결
     func configure(_ emotions: byEmoResult) {
         
         emotion = emotions.emotion
+        track = emotions.track
+        artist = emotions.artist
+        videoId = "x3sFsHrUyLQ"
+//        videoId = emotions.videoId
         
         var cardImg: UIImage?
         var storageBtnImg: UIImage?
@@ -109,12 +114,14 @@ class SliderCell: UICollectionViewCell {
     
     @IBAction func GoPlayTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Music", bundle: nil)
-        let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController")
+        guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
         if let vc = self.next(ofType: UIViewController.self) {
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             Music.modalPresentationStyle = .fullScreen
-//            Music.track = track
-//            Music.artist = artist
+            Music.track = track
+            Music.artist = artist
+            Music.emotion = emotion
+            Music.videoId = videoId
             vc.present(Music, animated: true, completion: nil)
         }
     }

@@ -46,7 +46,6 @@
                                         </constraints>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="emoji"/>
                                         <state key="selected" image="x"/>
                                         <connections>
                                             <action selector="searchEmojiTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zxY-6U-Y5l"/>
@@ -522,7 +521,6 @@
         <image name="arrow-ic-blue" width="8" height="15"/>
         <image name="calendar-ic-blue" width="19" height="21"/>
         <image name="calendar-ic-pupple" width="19" height="21"/>
-        <image name="emoji" width="17" height="17"/>
         <image name="smile-card" width="348" height="119"/>
         <image name="x" width="15" height="15"/>
         <systemColor name="systemBackgroundColor">
