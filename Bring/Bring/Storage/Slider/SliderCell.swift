@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SliderCellDelegate: AnyObject {
-    func nextView()
+    func nextView(emotion: String)
     func nextMusicView()
 }
 
@@ -111,7 +111,7 @@ class SliderCell: UICollectionViewCell {
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {
-        delegate?.nextView()
+        delegate?.nextView(emotion: emotion! ?? "")
     }
     
     @IBAction func GoPlayTapped(_ sender: Any) {

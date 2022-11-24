@@ -30,10 +30,6 @@ class TodayMeViewController: UIViewController {
     
     @IBOutlet var saveBtn: UIButton!
     
-    
-//    let data = ["All I Want for Christmas Is You", "All I Want for Christmas Is You - rock ver.", "All I Want for Christmas Is You - (This year ver.) "]
-//    var filteredData: [String]!
-    
     var trackResult: [TrackResult] = TrackResult.tracks
 
     var record: Record?
@@ -48,9 +44,7 @@ class TodayMeViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-//        filteredData = []
-        
+    
         searchBar.delegate = self
         searchBar.text = PrevmeData.data.music
         

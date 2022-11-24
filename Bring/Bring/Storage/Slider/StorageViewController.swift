@@ -84,12 +84,12 @@ extension StorageViewController: UIScrollViewDelegate {
 }
 
 extension StorageViewController: SliderCellDelegate {
-    func nextView() {
+    func nextView(emotion: String) {
         
         let storyboard = UIStoryboard(name: "Emoji", bundle: nil)
         guard let Emoji = storyboard.instantiateViewController(withIdentifier: "EmojiViewController") as? EmojiViewController else {return}
         
-        Emoji.setDataBind(self.emotions[0].emotion)
+        Emoji.setDataBind(emotion: emotion)
         
         self.navigationController?.pushViewController(Emoji, animated: true)
         
@@ -98,7 +98,6 @@ extension StorageViewController: SliderCellDelegate {
     func nextMusicView() {
         let storyboard = UIStoryboard(name: "Music", bundle: nil)
         guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
-        
         Music.setMusicDataBind(emotion: self.emotions[0].emotion, track: self.emotions[0].track, artist: self.emotions[0].artist, videoId: self.emotions[0].videoId)
         
         self.navigationController?.pushViewController(Music, animated: true)

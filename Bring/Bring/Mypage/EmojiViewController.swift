@@ -44,7 +44,7 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate {
         collectionView.delegate = self
     }
     
-    public func setDataBind(_ emotion: String) {
+    public func setDataBind(emotion: String) {
         self.emotion = emotion
     }
     
