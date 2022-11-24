@@ -15,6 +15,10 @@ class StorageViewController: UIViewController {
 
     var emotions: [byEmoResult] = byEmoResult.emotions
     
+    var emoji: String?
+    
+//    var emotion = emotions.emotion
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +43,10 @@ extension StorageViewController: UICollectionViewDataSource {
         
         // messages에서 item을 가져와서 cell을 구성
         let emotion = emotions[indexPath.item]
+        
         cell.configure(emotion)
+        emoji = emotion.emotion
+        cell.delegate = self
         return cell
     }
 }
@@ -73,5 +80,17 @@ extension StorageViewController: UIScrollViewDelegate {
         
         // 이 index를 currentPage에 업데이트!
         pageControl.currentPage = index
+    }
+}
+
+extension StorageViewController: SliderCellDelegate {
+    func nextView() {
+        let storyboard = UIStoryboard(name: "Emoji", bundle: nil)
+        guard let Emoji = storyboard.instantiateViewController(withIdentifier: "EmojiViewController") as? EmojiViewController else {return}
+//        vc.emotion = self.emotions[0].emotion
+        Emoji.setDataBind(self.emotions[0].emotion)
+
+        self.navigationController?.pushViewController(Emoji, animated: true)
+        
     }
 }

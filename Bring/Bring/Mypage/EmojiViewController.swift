@@ -44,6 +44,11 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate {
         collectionView.delegate = self
     }
     
+    public func setDataBind(_ emotion: String) {
+        self.emotion = emotion
+//        setUI()
+    }
+    
     // user 정보 가져오기
     func getUserInfo() {
         UserApi.shared.me { user, error in
@@ -58,7 +63,9 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func setUI() {
-        userEmotion.text = (emotion ?? "") + "!"
+
+        
+        userEmotion.text = "\(emotion ?? "")!"
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0
         searchBar.searchTextField.font = .systemFont(ofSize: 11)

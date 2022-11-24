@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SliderCellDelegate: AnyObject {
+    func nextView()
+}
+
 class SliderCell: UICollectionViewCell {
     
     @IBOutlet var artistLabel: UILabel!
@@ -22,6 +26,10 @@ class SliderCell: UICollectionViewCell {
     var track: String?
     var artist: String?
     var videoId: String?
+    
+    public weak var delegate: SliderCellDelegate?
+    
+    
     
     // 데이터 연결
     func configure(_ emotions: byEmoResult) {
@@ -102,14 +110,19 @@ class SliderCell: UICollectionViewCell {
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Emoji", bundle: nil)
-        guard let Emoji = storyboard.instantiateViewController(withIdentifier: "EmojiViewController") as? EmojiViewController else {return}
-        if let vc = self.next(ofType: UIViewController.self) {
-            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-            Emoji.modalPresentationStyle = .fullScreen
-            Emoji.emotion = emotion
-            vc.present(Emoji, animated: true, completion: nil)
-        }
+//        let storyboard = UIStoryboard(name: "Emoji", bundle: nil)
+//        guard let Emoji = storyboard.instantiateViewController(withIdentifier: "EmojiViewController") as? EmojiViewController else {return}
+//
+        delegate?.nextView()
+        
+//        if let vc = self.next(ofType: UIViewController.self) {
+//
+//            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//            Emoji.modalPresentationStyle = .fullScreen
+
+//            Emoji.emotion = emotion
+//            vc.present(Emoji, animated: true, completion: nil)
+        
     }
     
     @IBAction func GoPlayTapped(_ sender: Any) {
