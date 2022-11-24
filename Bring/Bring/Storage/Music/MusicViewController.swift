@@ -8,7 +8,7 @@
 import UIKit
 import youtube_ios_player_helper
 
-class MusicViewController: UIViewController {
+class MusicViewController: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet var trackLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
@@ -31,6 +31,10 @@ class MusicViewController: UIViewController {
     @IBOutlet var sameCollectionView: UICollectionView!
     @IBOutlet var diffCollectionView: UICollectionView!
     
+    var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
+    
+    var diffDataSource: UICollectionViewDiffableDataSource<Section, Item>!
+    
     // 첫 뷰 : 카드 데이터 모델 가져오기
     let emotionCards: [EmotionSlider] = EmotionSlider.emotionCards
     
@@ -44,6 +48,11 @@ class MusicViewController: UIViewController {
     let samepostings: [ResultBySong] = ResultBySong.samepostings
     let diffpostings: [ResultBySong] = ResultBySong.diffpostings
     
+    typealias Item = ResultBySong
+    
+    enum Section {
+        case main
+    }
     
     var tappedBtn = 0
     
@@ -58,16 +67,12 @@ class MusicViewController: UIViewController {
         
         setUI()
         
-        sameCollectionView.dataSource = self
         sameCollectionView.delegate = self
-        
-        diffCollectionView.dataSource = self
         diffCollectionView.delegate = self
-
 
     }
     
-    func setUI() {
+    private func setUI() {
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0
         searchBar.searchTextField.font = .systemFont(ofSize: 11)
@@ -115,7 +120,62 @@ class MusicViewController: UIViewController {
             searchEmoji.setTitle("🤯", for: .normal)
         }
         
+        // (1) Presentation : Diffable Datasource
+        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: sameCollectionView, cellProvider: {
+            sameCollectionView, indexPath, item in
+            guard let cell = sameCollectionView.dequeueReusableCell(withReuseIdentifier: "sameCell", for: indexPath) as? sameCell else {
+                return nil
+            }
+            cell.configure(item)
+            return cell
+        })
+        
+        diffDataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: diffCollectionView, cellProvider: {
+            sameCollectionView, indexPath, item in
+            guard let cell = sameCollectionView.dequeueReusableCell(withReuseIdentifier: "diffCell", for: indexPath) as? diffCell else {
+                return nil
+            }
+            cell.configure(item)
+            return cell
+        })
+        
+        
+        // (2) Data : snapshot
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+//        GetPostsByEmoji(emotion ?? "HAPPY") { json in
+//            self.postings = json.result
+//            snapshot.appendItems(self.postings, toSection: .main)
+//            self.dataSource.apply(snapshot)
+//        }
+        snapshot.appendItems(self.samepostings,toSection: .main)
+        self.dataSource.apply(snapshot)
+        
+        var diffSnapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        diffSnapshot.appendSections([.main])
+        diffSnapshot.appendItems(self.diffpostings,toSection: .main)
+        self.diffDataSource.apply(diffSnapshot)
+        
+        
+        // (3) Layout : compositional layout
+        self.sameCollectionView.collectionViewLayout = self.layout()
+        self.diffCollectionView.collectionViewLayout = self.layout()
     }
+    
+    
+    private func layout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
+       let item = NSCollectionLayoutItem(layoutSize: itemSize)
+       
+       let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.33))
+       let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+       
+       let section = NSCollectionLayoutSection(group: group)
+       section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+       
+       let layout = UICollectionViewCompositionalLayout(section: section)
+       return layout
+   }
     
     
     @IBAction func smileTapped(_ sender: Any) {

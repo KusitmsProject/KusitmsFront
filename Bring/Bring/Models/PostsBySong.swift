@@ -16,7 +16,7 @@ struct PostsBySong: Decodable {
 }
 
 // MARK: - PostsBySong -> Result
-struct ResultBySong: Decodable {
+struct ResultBySong: Decodable, Hashable {
     let date: String
     let postIdx, musicIdx: Int
     let videoID, artist, track, lyrics: String
