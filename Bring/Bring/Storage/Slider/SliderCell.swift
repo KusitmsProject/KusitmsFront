@@ -9,7 +9,7 @@ import UIKit
 
 protocol SliderCellDelegate: AnyObject {
     func nextView(emotion: String)
-    func nextMusicView()
+    func nextMusicView(emotion: String, track: String, artist: String, videoId: String)
 }
 
 class SliderCell: UICollectionViewCell {
@@ -38,8 +38,7 @@ class SliderCell: UICollectionViewCell {
         emotion = emotions.emotion
         track = emotions.track
         artist = emotions.artist
-        videoId = "x3sFsHrUyLQ"
-//        videoId = emotions.videoId
+        videoId = emotions.videoId
         
         var cardImg: UIImage?
         var storageBtnImg: UIImage?
@@ -111,11 +110,11 @@ class SliderCell: UICollectionViewCell {
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {
-        delegate?.nextView(emotion: emotion! ?? "")
+        delegate?.nextView(emotion: emotion!)
     }
     
     @IBAction func GoPlayTapped(_ sender: Any) {
-        delegate?.nextMusicView()
+        delegate?.nextMusicView(emotion: emotion!, track: track!, artist: artist!, videoId: videoId!)
     }
     
 }

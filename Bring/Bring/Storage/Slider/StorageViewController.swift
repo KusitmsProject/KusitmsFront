@@ -95,10 +95,10 @@ extension StorageViewController: SliderCellDelegate {
         
     }
     
-    func nextMusicView() {
+    func nextMusicView(emotion: String, track: String, artist: String, videoId: String) {
         let storyboard = UIStoryboard(name: "Music", bundle: nil)
         guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
-        Music.setMusicDataBind(emotion: self.emotions[0].emotion, track: self.emotions[0].track, artist: self.emotions[0].artist, videoId: self.emotions[0].videoId)
+        Music.setMusicDataBind(emotion: emotion, track: track, artist: artist, videoId: videoId)
         
         self.navigationController?.pushViewController(Music, animated: true)
     }

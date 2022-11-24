@@ -62,7 +62,6 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func setUI() {
-
         
         userEmotion.text = "\(emotion ?? "")!"
         searchView.layer.cornerRadius = 10

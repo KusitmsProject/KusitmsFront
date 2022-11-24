@@ -150,11 +150,6 @@ class MusicViewController: UIViewController, UICollectionViewDelegate {
         // (2) Data : snapshot
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.main])
-//        GetPostsByEmoji(emotion ?? "HAPPY") { json in
-//            self.postings = json.result
-//            snapshot.appendItems(self.postings, toSection: .main)
-//            self.dataSource.apply(snapshot)
-//        }
         snapshot.appendItems(self.samepostings,toSection: .main)
         self.dataSource.apply(snapshot)
         
