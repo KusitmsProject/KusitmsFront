@@ -72,6 +72,13 @@ class MusicViewController: UIViewController, UICollectionViewDelegate {
 
     }
     
+    public func setMusicDataBind(emotion: String, track: String, artist: String, videoId: String) {
+        self.emotion = emotion
+        self.track = track
+        self.artist = artist
+        self.videoId = videoId
+    }
+    
     private func setUI() {
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0
@@ -143,11 +150,6 @@ class MusicViewController: UIViewController, UICollectionViewDelegate {
         // (2) Data : snapshot
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.main])
-//        GetPostsByEmoji(emotion ?? "HAPPY") { json in
-//            self.postings = json.result
-//            snapshot.appendItems(self.postings, toSection: .main)
-//            self.dataSource.apply(snapshot)
-//        }
         snapshot.appendItems(self.samepostings,toSection: .main)
         self.dataSource.apply(snapshot)
         

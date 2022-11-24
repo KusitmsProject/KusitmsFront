@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol SliderCellDelegate: AnyObject {
+    func nextView(emotion: String)
+    func nextMusicView(emotion: String, track: String, artist: String, videoId: String)
+}
+
 class SliderCell: UICollectionViewCell {
     
     @IBOutlet var artistLabel: UILabel!
@@ -23,14 +28,17 @@ class SliderCell: UICollectionViewCell {
     var artist: String?
     var videoId: String?
     
+    public weak var delegate: SliderCellDelegate?
+    
+    
+    
     // 데이터 연결
     func configure(_ emotions: byEmoResult) {
         
         emotion = emotions.emotion
         track = emotions.track
         artist = emotions.artist
-        videoId = "x3sFsHrUyLQ"
-//        videoId = emotions.videoId
+        videoId = emotions.videoId
         
         var cardImg: UIImage?
         var storageBtnImg: UIImage?
@@ -102,28 +110,11 @@ class SliderCell: UICollectionViewCell {
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Emoji", bundle: nil)
-        guard let Emoji = storyboard.instantiateViewController(withIdentifier: "EmojiViewController") as? EmojiViewController else {return}
-        if let vc = self.next(ofType: UIViewController.self) {
-            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-            Emoji.modalPresentationStyle = .fullScreen
-            Emoji.emotion = emotion
-            vc.present(Emoji, animated: true, completion: nil)
-        }
+        delegate?.nextView(emotion: emotion!)
     }
     
     @IBAction func GoPlayTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Music", bundle: nil)
-        guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
-        if let vc = self.next(ofType: UIViewController.self) {
-            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-            Music.modalPresentationStyle = .fullScreen
-            Music.track = track
-            Music.artist = artist
-            Music.emotion = emotion
-            Music.videoId = videoId
-            vc.present(Music, animated: true, completion: nil)
-        }
+        delegate?.nextMusicView(emotion: emotion!, track: track!, artist: artist!, videoId: videoId!)
     }
     
 }
