@@ -19,7 +19,7 @@ class MusicCell: UICollectionViewCell {
     var track: String = ""
     var artist: String = ""
     
-    func configure(_ song: ByEmotion) {
+    func configure(_ song: ResultByEmoji) {
         cell.layer.cornerRadius = 20
         cell.frame.size.height = 46
         cell.layer.shadowOffset = CGSize(width: 0, height: 3)

@@ -103,7 +103,6 @@ class SliderCell: UICollectionViewCell {
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             Emoji.modalPresentationStyle = .fullScreen
             Emoji.emotion = emotion
-            GetPostsByEmoji(emotion ?? "HAPPY")
             vc.present(Emoji, animated: true, completion: nil)
         }
     }

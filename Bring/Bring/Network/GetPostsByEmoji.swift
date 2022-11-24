@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-func GetPostsByEmoji(_ emotion: String) {
+func GetPostsByEmoji(_ emotion: String, _ completedHandler : @escaping (PostsByEmoji)->Void) {
     
     var token: String{
         let userDefaultManager = UserDefaultsManager()
@@ -28,7 +28,7 @@ func GetPostsByEmoji(_ emotion: String) {
             // 나중에 header 부분 token으로 바꿔 넣기
         )
     .validate(statusCode: 200..<500)
-    .response { response in
+    .responseJSON(completionHandler: { response in
         switch response.result{
         case .success:
             guard let result = response.data else {return}
@@ -36,14 +36,12 @@ func GetPostsByEmoji(_ emotion: String) {
                 let decoder = JSONDecoder()
                 print(result)
                 let json = try decoder.decode(PostsByEmoji.self, from: result)
-                print("$$$$$$$$$$$$$$$$$$$$$")
-                print(json)
-                print("$$$$$$$$$$$$$$$$$$$$$")
+                completedHandler(json)
             } catch {
                 print("error!\(error)")
             }
         default:
             return
         }
-    }
+    })
 }
