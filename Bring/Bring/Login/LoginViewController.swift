@@ -11,6 +11,7 @@ import KakaoSDKUser
 class LoginViewController: UIViewController {
     
     var kakao = Kakao(kakaoNickname: "", email: "")
+    var userName = UserName()
     
     let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
@@ -91,9 +92,11 @@ extension LoginViewController {
         present(homeVC, animated: false, completion: nil)
 
     }
+
     
     // user 정보 가져오기
     func getUserInfo() {
+        
         UserApi.shared.me() { (user, error) in
             if let error = error {
                 print(error)
@@ -107,7 +110,8 @@ extension LoginViewController {
                 self.kakao.email = email!
                 print("KAKAONAME----->", name)
                 print("KAKAOEMAIL----->", email!)
-                
+                self.userName.name = name
+                print("=========>",self.userName.name)
                 postKakao(name, email ?? "")
             }
         }

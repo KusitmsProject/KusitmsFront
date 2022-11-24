@@ -55,6 +55,8 @@
 		0360CEE4292D528500729EF9 /* MockStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEDF292D528500729EF9 /* MockStrings.swift */; };
 		0360CEE8292D543C00729EF9 /* ImoticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360CEE6292D543C00729EF9 /* ImoticonViewController.swift */; };
 		0360CEE9292D543C00729EF9 /* Imoticon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0360CEE7292D543C00729EF9 /* Imoticon.storyboard */; };
+		0370F0BE292F0FE6004206BA /* PostsByEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370F0BD292F0FE6004206BA /* PostsByEmoji.swift */; };
+		0370F0C0292F1127004206BA /* GetPostsByEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370F0BF292F1127004206BA /* GetPostsByEmoji.swift */; };
 		037DD25E2927A3D60078DD77 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25D2927A3D60078DD77 /* SliderCell.swift */; };
 		037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */; };
 		03954B29292A65CC00C006C8 /* CDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03954B28292A65CC00C006C8 /* CDStorage.swift */; };
@@ -161,6 +163,8 @@
 		0360CEDF292D528500729EF9 /* MockStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStrings.swift; sourceTree = "<group>"; };
 		0360CEE6292D543C00729EF9 /* ImoticonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImoticonViewController.swift; sourceTree = "<group>"; };
 		0360CEE7292D543C00729EF9 /* Imoticon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Imoticon.storyboard; sourceTree = "<group>"; };
+		0370F0BD292F0FE6004206BA /* PostsByEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsByEmoji.swift; sourceTree = "<group>"; };
+		0370F0BF292F1127004206BA /* GetPostsByEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsByEmoji.swift; sourceTree = "<group>"; };
 		037DD25D2927A3D60078DD77 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		037DD25F2927AC1A0078DD77 /* EmotionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSlider.swift; sourceTree = "<group>"; };
 		03954B28292A65CC00C006C8 /* CDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDStorage.swift; sourceTree = "<group>"; };
@@ -412,6 +416,7 @@
 				033DE61F292C5687006CB604 /* UserInfo.swift */,
 				03198372292D3EBD009B1050 /* WebModel.swift */,
 				0399D91D292E98D5005F0D8B /* PostsBySong.swift */,
+				0370F0BD292F0FE6004206BA /* PostsByEmoji.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -602,6 +607,7 @@
 				0345B784292CD6CD006E93AD /* Kakao.swift */,
 				03D41FE3292E5CDC0016E630 /* ByEmo.swift */,
 				0399D91F292E9AFA005F0D8B /* GetPostsBySong.swift */,
+				0370F0BF292F1127004206BA /* GetPostsByEmoji.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -869,6 +875,7 @@
 				0345B785292CD6CD006E93AD /* Kakao.swift in Sources */,
 				03198381292D45A8009B1050 /* DLogUtil.swift in Sources */,
 				03A1CCC82916003A00901B7A /* MainNavigationController.swift in Sources */,
+				0370F0C0292F1127004206BA /* GetPostsByEmoji.swift in Sources */,
 				0330C712291641D300737848 /* MypageViewController.swift in Sources */,
 				03140F92291F1FFC0090B78C /* SearchCell.swift in Sources */,
 				03374F5129196441004AB96A /* SaveCell.swift in Sources */,
@@ -884,6 +891,7 @@
 				037DD2602927AC1A0078DD77 /* EmotionSlider.swift in Sources */,
 				0334090C2917BE1F0005B4C4 /* UIColor.swift in Sources */,
 				03C73404291EAC1B00F8B959 /* TextCell.swift in Sources */,
+				0370F0BE292F0FE6004206BA /* PostsByEmoji.swift in Sources */,
 				03198371292D3E5A009B1050 /* VideoBean.swift in Sources */,
 				03007DB4292C8C8000227727 /* EmojiViewController.swift in Sources */,
 				03198387292D47E2009B1050 /* UIViewExtension.swift in Sources */,

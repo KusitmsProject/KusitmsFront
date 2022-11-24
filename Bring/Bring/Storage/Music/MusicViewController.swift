@@ -8,7 +8,7 @@
 import UIKit
 import youtube_ios_player_helper
 
-class MusicViewController: UIViewController {
+class MusicViewController: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet var trackLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
@@ -31,6 +31,10 @@ class MusicViewController: UIViewController {
     @IBOutlet var sameCollectionView: UICollectionView!
     @IBOutlet var diffCollectionView: UICollectionView!
     
+    var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
+    
+    var diffDataSource: UICollectionViewDiffableDataSource<Section, Item>!
+    
     // 첫 뷰 : 카드 데이터 모델 가져오기
     let emotionCards: [EmotionSlider] = EmotionSlider.emotionCards
     
@@ -40,38 +44,138 @@ class MusicViewController: UIViewController {
     // 다른 감정 collectionView
     let songsBySong: [BySong] = BySong.list
     
+    // 노래별 게시글 조회 데이터
+    let samepostings: [ResultBySong] = ResultBySong.samepostings
+    let diffpostings: [ResultBySong] = ResultBySong.diffpostings
+    
+    typealias Item = ResultBySong
+    
+    enum Section {
+        case main
+    }
+    
     var tappedBtn = 0
     
     // 이전 화면을 통해 받아올 데이터
-    var track: String = ""
-    var artist: String = ""
+    var track: String?
+    var artist: String?
+    var emotion: String?
+    var videoId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
         
-//        youtubeView.load(withVideoId: "WfA47O-Fb_M")
-        
-        sameCollectionView.dataSource = self
         sameCollectionView.delegate = self
-        
-        diffCollectionView.dataSource = self
         diffCollectionView.delegate = self
-
 
     }
     
-    func setUI() {
+    private func setUI() {
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0
         searchBar.searchTextField.font = .systemFont(ofSize: 11)
-        youtubeView.load(withVideoId: "WfA47O-Fb_M")
+        youtubeView.load(withVideoId: videoId ?? "")
         youtubeView.layer.cornerRadius = 10
         
         trackLabel.text = track
         artistLabel.text = artist
+        
+        switch emotion {
+        case "HAPPY":
+            emojiCard.image  = UIImage(named: "smile-card")
+            trackLabel.textColor = UIColor(hexString: "8667C9")
+            artistLabel.textColor = UIColor(hexString: "8667C9")
+            searchEmoji.setTitle("😆", for: .normal)
+        case "ANGRY":
+            emojiCard.image  = UIImage(named: "angry-card")
+            trackLabel.textColor = UIColor(hexString: "EF8233")
+            artistLabel.textColor = UIColor(hexString: "EF8233")
+            searchEmoji.setTitle("😡", for: .normal)
+        case "LOVELY":
+            emojiCard.image  = UIImage(named: "love-card")
+            trackLabel.textColor = UIColor(hexString: "ED50C2")
+            artistLabel.textColor = UIColor(hexString: "ED50C2")
+            searchEmoji.setTitle("🥰", for: .normal)
+        case "SAD":
+            emojiCard.image  = UIImage(named: "sad-card")
+            trackLabel.textColor = UIColor(hexString: "5279B4")
+            artistLabel.textColor = UIColor(hexString: "5279B4")
+            searchEmoji.setTitle("😭", for: .normal)
+        case "TIRED":
+            emojiCard.image  = UIImage(named: "tired-card")
+            trackLabel.textColor = UIColor(hexString: "9D5FB2")
+            artistLabel.textColor = UIColor(hexString: "9D5FB2")
+            searchEmoji.setTitle("😮", for: .normal)
+        case "EXPLODE":
+            emojiCard.image  = UIImage(named: "explode-card")
+            trackLabel.textColor = UIColor(hexString: "6A5377")
+            artistLabel.textColor = UIColor(hexString: "6A5377")
+            searchEmoji.setTitle("🤯", for: .normal)
+        default:
+            emojiCard.image  = UIImage(named: "explode-card")
+            trackLabel.textColor = UIColor(hexString: "6A5377")
+            artistLabel.textColor = UIColor(hexString: "6A5377")
+            searchEmoji.setTitle("🤯", for: .normal)
+        }
+        
+        // (1) Presentation : Diffable Datasource
+        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: sameCollectionView, cellProvider: {
+            sameCollectionView, indexPath, item in
+            guard let cell = sameCollectionView.dequeueReusableCell(withReuseIdentifier: "sameCell", for: indexPath) as? sameCell else {
+                return nil
+            }
+            cell.configure(item)
+            return cell
+        })
+        
+        diffDataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: diffCollectionView, cellProvider: {
+            sameCollectionView, indexPath, item in
+            guard let cell = sameCollectionView.dequeueReusableCell(withReuseIdentifier: "diffCell", for: indexPath) as? diffCell else {
+                return nil
+            }
+            cell.configure(item)
+            return cell
+        })
+        
+        
+        // (2) Data : snapshot
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+//        GetPostsByEmoji(emotion ?? "HAPPY") { json in
+//            self.postings = json.result
+//            snapshot.appendItems(self.postings, toSection: .main)
+//            self.dataSource.apply(snapshot)
+//        }
+        snapshot.appendItems(self.samepostings,toSection: .main)
+        self.dataSource.apply(snapshot)
+        
+        var diffSnapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        diffSnapshot.appendSections([.main])
+        diffSnapshot.appendItems(self.diffpostings,toSection: .main)
+        self.diffDataSource.apply(diffSnapshot)
+        
+        
+        // (3) Layout : compositional layout
+        self.sameCollectionView.collectionViewLayout = self.layout()
+        self.diffCollectionView.collectionViewLayout = self.layout()
     }
+    
+    
+    private func layout() -> UICollectionViewCompositionalLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
+       let item = NSCollectionLayoutItem(layoutSize: itemSize)
+       
+       let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.33))
+       let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+       
+       let section = NSCollectionLayoutSection(group: group)
+       section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+       
+       let layout = UICollectionViewCompositionalLayout(section: section)
+       return layout
+   }
     
     
     @IBAction func smileTapped(_ sender: Any) {
@@ -210,6 +314,7 @@ class MusicViewController: UIViewController {
 
 extension MusicViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 2
     }
     
@@ -220,7 +325,8 @@ extension MusicViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            let song = songsByEmotion[indexPath.item]
+            let song = samepostings[indexPath.item]
+        
             cell.configure(song)
             return cell
             
@@ -228,18 +334,11 @@ extension MusicViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "diffCell", for: indexPath) as? diffCell else{
                 return UICollectionViewCell()
             }
-            
-            let song = songsBySong[indexPath.item]
-            if song.emotion == "Happy" {
-                cell.configure(song)
-                return cell
-            } else {
-                cell.noCell(song)
-                return cell
 
-            }
-        
+            let song = diffpostings[indexPath.item]
             
+            cell.configure(song)
+            return cell
         }
     }
 }
@@ -249,8 +348,8 @@ extension MusicViewController: UICollectionViewDelegateFlowLayout {
     // cell 사이즈 조정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        // cell과 collectionView의 사이즈가 같음
-        return collectionView.bounds.size   // size 프로퍼티 안에 width, height 모두 있음.
+        let width = collectionView.bounds.width
+        return CGSize(width: width, height: 50)
 
     }
     

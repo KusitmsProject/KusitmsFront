@@ -18,7 +18,7 @@ class diffCell: UICollectionViewCell {
     
     @IBOutlet var noLabel: UILabel!
     
-    func configure(_ song: BySong) {
+    func configure(_ song: ResultBySong) {
         cell.layer.cornerRadius = 30
         cell.frame.size.height = 46
         cell.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -36,8 +36,9 @@ class diffCell: UICollectionViewCell {
         noLabel.alpha = 0
     }
     
-    func noCell(_ song: BySong) {
-        cell.layer.cornerRadius = 30
+    func noCell(_ song: ResultBySong) {
+        
+        cell.layer.cornerRadius = 20
         cell.frame.size.height = 46
         cell.layer.shadowOffset = CGSize(width: 0, height: 3)
         cell.layer.shadowOpacity = 0.2
@@ -47,6 +48,7 @@ class diffCell: UICollectionViewCell {
         calendarIcon.alpha = 0
         arrowIcon.alpha = 0
         noLabel.alpha = 1
+        
     }
 }
 

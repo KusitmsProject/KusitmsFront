@@ -16,8 +16,8 @@ class sameCell: UICollectionViewCell {
     @IBOutlet var optionLabel: UILabel!
     @IBOutlet var arrowIcon: UIImageView!
     
-    func configure(_ song: ByEmotion) {
-        cell.layer.cornerRadius = 30
+    func configure(_ song: ResultBySong) {
+        cell.layer.cornerRadius = 20
         cell.frame.size.height = 46
         cell.layer.shadowOffset = CGSize(width: 0, height: 3)
         cell.layer.shadowOpacity = 0.1
