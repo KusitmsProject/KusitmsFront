@@ -72,6 +72,13 @@ class MusicViewController: UIViewController, UICollectionViewDelegate {
 
     }
     
+    public func setMusicDataBind(emotion: String, track: String, artist: String, videoId: String) {
+        self.emotion = emotion
+        self.track = track
+        self.artist = artist
+        self.videoId = videoId
+    }
+    
     private func setUI() {
         searchView.layer.cornerRadius = 10
         emojiBtns.alpha = 0

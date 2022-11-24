@@ -46,7 +46,6 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate {
     
     public func setDataBind(_ emotion: String) {
         self.emotion = emotion
-//        setUI()
     }
     
     // user 정보 가져오기

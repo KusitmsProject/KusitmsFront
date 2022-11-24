@@ -9,6 +9,7 @@ import UIKit
 
 protocol SliderCellDelegate: AnyObject {
     func nextView()
+    func nextMusicView()
 }
 
 class SliderCell: UICollectionViewCell {
@@ -110,33 +111,11 @@ class SliderCell: UICollectionViewCell {
     }
     
     @IBAction func ByEmojiTapped(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "Emoji", bundle: nil)
-//        guard let Emoji = storyboard.instantiateViewController(withIdentifier: "EmojiViewController") as? EmojiViewController else {return}
-//
         delegate?.nextView()
-        
-//        if let vc = self.next(ofType: UIViewController.self) {
-//
-//            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-//            Emoji.modalPresentationStyle = .fullScreen
-
-//            Emoji.emotion = emotion
-//            vc.present(Emoji, animated: true, completion: nil)
-        
     }
     
     @IBAction func GoPlayTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Music", bundle: nil)
-        guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
-        if let vc = self.next(ofType: UIViewController.self) {
-            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-            Music.modalPresentationStyle = .fullScreen
-            Music.track = track
-            Music.artist = artist
-            Music.emotion = emotion
-            Music.videoId = videoId
-            vc.present(Music, animated: true, completion: nil)
-        }
+        delegate?.nextMusicView()
     }
     
 }
