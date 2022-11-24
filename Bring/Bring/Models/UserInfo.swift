@@ -12,7 +12,7 @@ struct Kakao: Encodable {
 //    }
 }
 
-// MARK: - Welcome
+// MARK: - User
 struct User: Codable {
     let message: String
     let isSuccess: Bool
@@ -38,4 +38,9 @@ class UserDefaultsManager: ObservableObject {
     @Published var accessToken: String = UserDefaults.standard.string(forKey: "AccessToken") ?? ""{
         didSet { UserDefaults.standard.set(self.accessToken, forKey: "AccessToken")}
     }
+}
+
+
+struct UserName {
+    var name: String = ""
 }

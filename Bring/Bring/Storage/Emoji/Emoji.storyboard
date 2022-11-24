@@ -46,7 +46,6 @@
                                         </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="emoji"/>
                                         <state key="selected" image="x"/>
                                         <connections>
                                             <action selector="searchEmojiTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yeE-Oo-Amy"/>
@@ -97,6 +96,18 @@
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="윤아님은 지금!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bt-ho-ZjD">
+                                <rect key="frame" x="65" y="177" width="87" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.52549019607843139" green="0.40392156862745099" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWg-Qb-shn">
+                                <rect key="frame" x="65" y="195" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.4039215686" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bBF-EZ-9By">
                                 <rect key="frame" x="37" y="280" width="316" height="400"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -195,11 +206,15 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HbZ-Au-o4r" firstAttribute="top" secondItem="6bt-ho-ZjD" secondAttribute="bottom" constant="-43" id="0oz-qk-Lno"/>
                             <constraint firstItem="bIK-yc-ihQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="F7k-jM-bwD"/>
                             <constraint firstItem="bBF-EZ-9By" firstAttribute="top" secondItem="HbZ-Au-o4r" secondAttribute="bottom" constant="40" id="GJI-vi-hH1"/>
+                            <constraint firstItem="6bt-ho-ZjD" firstAttribute="leading" secondItem="HbZ-Au-o4r" secondAttribute="leading" constant="29" id="Gqw-Ge-4uQ"/>
+                            <constraint firstItem="WWg-Qb-shn" firstAttribute="leading" secondItem="HbZ-Au-o4r" secondAttribute="leading" constant="29" id="TNU-r0-3rL"/>
                             <constraint firstItem="Qws-yS-B39" firstAttribute="top" secondItem="bIK-yc-ihQ" secondAttribute="bottom" constant="13" id="b0h-aS-sRd"/>
                             <constraint firstItem="bBF-EZ-9By" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="eVD-TP-JYe"/>
                             <constraint firstItem="bIK-yc-ihQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="9" id="ep8-jO-TXt"/>
+                            <constraint firstItem="WWg-Qb-shn" firstAttribute="top" secondItem="6bt-ho-ZjD" secondAttribute="bottom" id="fEi-Gs-s7c"/>
                             <constraint firstItem="Qws-yS-B39" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fxB-kP-SwR"/>
                             <constraint firstItem="HbZ-Au-o4r" firstAttribute="top" secondItem="Qws-yS-B39" secondAttribute="bottom" constant="19" id="jCm-iO-gf3"/>
                             <constraint firstItem="HbZ-Au-o4r" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="sFH-Hq-ggw"/>
@@ -212,6 +227,8 @@
                         <outlet property="searchBar" destination="mC4-dj-XGP" id="eYu-IF-UpF"/>
                         <outlet property="searchEmoji" destination="6bC-Ay-Vfz" id="41L-DW-jhm"/>
                         <outlet property="searchView" destination="Tqx-uH-d4J" id="zWy-sR-8uf"/>
+                        <outlet property="userEmotion" destination="WWg-Qb-shn" id="aHh-eq-avh"/>
+                        <outlet property="userLabel" destination="6bt-ho-ZjD" id="Rua-d7-wvx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -222,7 +239,6 @@
     <resources>
         <image name="ByEmojiBG" width="390" height="844"/>
         <image name="arrow-ic-blue" width="8" height="15"/>
-        <image name="emoji" width="17" height="17"/>
         <image name="head-blue" width="15" height="14"/>
         <image name="smile-card" width="348" height="119"/>
         <image name="x" width="15" height="15"/>
