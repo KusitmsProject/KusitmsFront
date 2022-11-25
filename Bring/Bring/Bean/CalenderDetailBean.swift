@@ -21,6 +21,7 @@ class CalenderDetailBean {
     private static var place_key = "place"
     private static var artist_key = "artist"
     private static var lyrics_key = "lyrics"
+    private static var video_key = "videoId"
 
     var imageURL = ""
     var record = ""
@@ -34,6 +35,7 @@ class CalenderDetailBean {
     var place = ""
     var artist = ""
     var lyrics = ""
+    var videoId = ""
 
     func parsing(jsonObject: [String : Any]) {
         
@@ -49,6 +51,7 @@ class CalenderDetailBean {
         place = JSONUtil.parsingString(jsonObject: jsonObject, key: CalenderDetailBean.place_key)
         artist = JSONUtil.parsingString(jsonObject: jsonObject, key: CalenderDetailBean.artist_key)
         lyrics = JSONUtil.parsingString(jsonObject: jsonObject, key: CalenderDetailBean.lyrics_key)
+        videoId = JSONUtil.parsingString(jsonObject: jsonObject, key: CalenderDetailBean.video_key)
 
     }
 }

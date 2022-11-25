@@ -1127,7 +1127,7 @@
                         <outlet property="labelSeason" destination="XIY-qP-I3g" id="Rzs-sG-p19"/>
                         <outlet property="labelSong" destination="Zl6-cf-6MZ" id="Gx5-rj-nvC"/>
                         <outlet property="labelSongText" destination="pY5-23-ein" id="Sf8-v4-mgd"/>
-                        <outlet property="labelSongTitle" destination="SWb-Ta-rFN" id="17t-Ni-7YF"/>
+                        <outlet property="labelSongTitle" destination="K4D-Js-dF7" id="4gx-is-r5F"/>
                         <outlet property="labelTabTitle" destination="qLR-5g-0V1" id="7Xw-5g-QoX"/>
                         <outlet property="labelTitle" destination="YGw-1Q-CTC" id="qZp-Jk-5PW"/>
                         <outlet property="labelWeather" destination="kz2-sW-fwe" id="R1A-W4-aTp"/>

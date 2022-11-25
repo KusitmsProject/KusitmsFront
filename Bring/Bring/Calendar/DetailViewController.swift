@@ -77,15 +77,8 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         setListener()
         requestQuestionData()
         requestData()
-        initpalyer()
     }
     
-    func initpalyer() {
-        playerView.delegate = self
-        let playVarsDic = ["playsinline": 1]
-        playerView.load(withVideoId: videoBean.videoId, playerVars: playVarsDic)
-
-    }
     
     // 시간을 비교해서 해당 시간대가 현재인지 과거인지 미래인지 판단
     func initDate() {
@@ -279,6 +272,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         labelMonthDay.text = "\(month)월 \(day)일"
         
         // 서버 공통값
+        playerView.load(withVideoId: calenderDetailBean.videoId)
         labelSong.text = "\" \(calenderDetailBean.track) \""
         labelArtist.text = "\(calenderDetailBean.artist)"
         labelEmotion.text = "\" \(calenderDetailBean.emotion) \""
@@ -331,7 +325,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
             }
         } else {
             
-            textFieldQuestion.text = "\(year)년 \(month)월 \(day)일\n윤아님의 단 하나의 기록"
+            textFieldQuestion.text = "\(year)년 \(month)월 \(day)일\n영민님의 단 하나의 기록"
             
             //데이터 없음
             if(calenderDetailBean.track == "") {
@@ -390,7 +384,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 if dictResult != nil {
                     DLogUtil.debug(tag: #file, content: dictResult as Any)
                     if(dictResult?.count == 0) {
-                        return
+                        return 
                     }
                     self.questionBean.parsing(jsonObject: dictResult!)
                     DLogUtil.debug(tag: #file, content: self.questionBean.imageURL)
@@ -416,7 +410,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                         return
                     }
                     self.calenderDetailBean.parsing(jsonObject: dictResult!)
-                    self.requestYoutubeId(track: self.calenderDetailBean.track, artist: self.calenderDetailBean.artist)
+//                    self.requestYoutubeId(track: self.calenderDetailBean.track, artist: self.calenderDetailBean.artist)
                     self.updateView()
 
                 }
@@ -431,7 +425,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                         return
                     }
                     self.calenderDetailBean.parsing(jsonObject: dictResult!)
-                    self.requestYoutubeId(track: self.calenderDetailBean.track, artist: self.calenderDetailBean.artist)
+//                    self.requestYoutubeId(track: self.calenderDetailBean.track, artist: self.calenderDetailBean.artist)
                     self.updateView()
 
                 }
@@ -440,24 +434,24 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         }
     }
     
-    private func requestYoutubeId(track : String, artist : String) {
-        
-        WebModel.instance.requestYoutubeId(track: track, artist: artist)
-        WebModel.instance.onYoutubeIdDetail  = { dictResult in
-            if dictResult != nil {
-                DLogUtil.debug(tag: #file, content: dictResult as Any)
-                if(dictResult?.count == 0) {
-                    return
-                }
-                
-                self.videoBean.parsing(jsonObject: dictResult![0])
-                self.initpalyer()
-                
-            }
-
-        }
-        
-    }
+//    private func requestYoutubeId(track : String, artist : String) {
+//
+//        WebModel.instance.requestYoutubeId(track: track, artist: artist)
+//        WebModel.instance.onYoutubeIdDetail  = { dictResult in
+//            if dictResult != nil {
+//                DLogUtil.debug(tag: #file, content: dictResult as Any)
+//                if(dictResult?.count == 0) {
+//                    return
+//                }
+//
+//                self.videoBean.parsing(jsonObject: dictResult![0])
+//                self.initpalyer()
+//
+//            }
+//
+//        }
+//
+//    }
     
     private func changeDay(plusMinus : Bool) {
         var plusMinusDate = 0
