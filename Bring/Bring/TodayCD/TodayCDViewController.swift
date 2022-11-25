@@ -164,13 +164,11 @@ class TodayCDViewController: UIViewController {
             lyricsButton.setTitle(lyricsName, for: .normal)
         }
         
-        if imoticonImageNmae != nil,
-           photoImage != nil,
-           musicName != nil,
-           lyricsName != nil {
-            saveButton.backgroundColor = UIColor(hexString: "5984AF")
+        if imoticonImageNmae != nil &&
+           musicName != nil {
+            saveButton.backgroundColor = UIColor(hexString: "BAABDB")
         } else {
-            saveButton.backgroundColor = UIColor(hexString: "E1E1E1")
+            saveButton.backgroundColor = UIColor(hexString: "BAABDB")
         }
     }
 }

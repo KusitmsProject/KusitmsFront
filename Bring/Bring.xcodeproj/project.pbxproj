@@ -68,7 +68,6 @@
 		03971D8E2914E867007C6659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03971D8C2914E867007C6659 /* Main.storyboard */; };
 		03971D902914E868007C6659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03971D8F2914E868007C6659 /* Assets.xcassets */; };
 		03971D932914E868007C6659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03971D912914E868007C6659 /* LaunchScreen.storyboard */; };
-		0399D914292E828F005F0D8B /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0399D913292E828F005F0D8B /* splash.gif */; };
 		0399D918292E860E005F0D8B /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399D917292E860E005F0D8B /* AnimationViewController.swift */; };
 		0399D91C292E8652005F0D8B /* Animation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0399D91B292E8652005F0D8B /* Animation.storyboard */; };
 		0399D91E292E98D5005F0D8B /* PostsBySong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399D91D292E98D5005F0D8B /* PostsBySong.swift */; };
@@ -188,7 +187,6 @@
 		03971D8F2914E868007C6659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03971D922914E868007C6659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03971D942914E868007C6659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0399D913292E828F005F0D8B /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = splash.gif; path = "../../../한국대학생IT경영학회/splash.gif"; sourceTree = "<group>"; };
 		0399D917292E860E005F0D8B /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		0399D91B292E8652005F0D8B /* Animation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Animation.storyboard; sourceTree = "<group>"; };
 		0399D91D292E98D5005F0D8B /* PostsBySong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsBySong.swift; sourceTree = "<group>"; };
@@ -422,7 +420,6 @@
 				03971D942914E868007C6659 /* Info.plist */,
 				03AEE15B292A4157003117B4 /* GoogleService-Info.plist */,
 				03971D912914E868007C6659 /* LaunchScreen.storyboard */,
-				0399D913292E828F005F0D8B /* splash.gif */,
 			);
 			path = Bring;
 			sourceTree = "<group>";
@@ -815,7 +812,6 @@
 				03374F4A29196122004AB96A /* TitleCell.xib in Resources */,
 				03EF5C96292FBBB70001F900 /* PrevCell.xib in Resources */,
 				03F0E591291A47660023BAEB /* FriendCell.xib in Resources */,
-				0399D914292E828F005F0D8B /* splash.gif in Resources */,
 				03C73405291EAC1B00F8B959 /* TextCell.xib in Resources */,
 				0360CEE2292D528500729EF9 /* LyricsList.storyboard in Resources */,
 				0360CEE9292D543C00729EF9 /* Imoticon.storyboard in Resources */,
