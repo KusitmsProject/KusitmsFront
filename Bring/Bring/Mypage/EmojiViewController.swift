@@ -112,6 +112,7 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate {
                 return nil
             }
             cell.configure(item)
+            cell.musicDelegate = self
             return cell
         })
         

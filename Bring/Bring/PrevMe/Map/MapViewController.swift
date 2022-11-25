@@ -27,9 +27,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var nickNameField: UITextField!
     
-    let dobongLoc = CLLocationCoordinate2D(latitude: 37.6658609, longitude: 127.0317674) // 도봉구
-    let eunpyeongLoc = CLLocationCoordinate2D(latitude: 37.6176125, longitude: 126.9227004) // 은평구
-    let dongdaemoonLoc = CLLocationCoordinate2D(latitude: 37.5838012, longitude: 127.0507003) // 동대문구
+    let soongsilLoc = CLLocationCoordinate2D(latitude: 37.4964289688636, longitude: 126.955157917408) // 숭실대학교
+    let seoultechLoc = CLLocationCoordinate2D(latitude: 37.63356343703482, longitude: 127.07849982830763) // 서울과학기술대학교
+    let churchLoc = CLLocationCoordinate2D(latitude: 37.49660334532435, longitude: 126.95718620964912) // 명동성당
     
     
     var locationManager: CLLocationManager = CLLocationManager() // location manager
@@ -149,12 +149,12 @@ extension MapViewController: UISearchBarDelegate {
         print(self.place)
         
         switch searchBar.text {
-        case "도봉구":
-            setMapView(coordinate: dobongLoc, addr: "도봉구")
-        case "동대문구":
-            setMapView(coordinate: dongdaemoonLoc, addr: "동대문구")
-        case "은평구":
-            setMapView(coordinate: dobongLoc, addr: "은평구")
+        case "숭실대학교":
+            setMapView(coordinate: soongsilLoc, addr: "서울시 동작구 상도로 369")
+        case "서울과학기술대학교":
+            setMapView(coordinate: seoultechLoc, addr: "서울시 노원구 공릉로 232")
+        case "명동성당":
+            setMapView(coordinate: seoultechLoc, addr: "서울 중구 명동길 74")
         default:
             setMapView(coordinate: currentLoc, addr: "현재위치")
         }
