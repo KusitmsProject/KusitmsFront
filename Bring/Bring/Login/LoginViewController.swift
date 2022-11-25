@@ -78,7 +78,6 @@ extension LoginViewController {
                     }
                     
                     self.getUserInfo()
-                    getSlider()
                     getPostsBySong(5)
                 }
             }

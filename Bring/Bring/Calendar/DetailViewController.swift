@@ -51,9 +51,9 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet var labelEmotionTitle: UILabel!
     @IBOutlet var labelPhotoTitle: UILabel!
     
-    @IBOutlet var constSongtextToImotion: NSLayoutConstraint!
-    @IBOutlet var constLocationToSongtext: NSLayoutConstraint!
-    @IBOutlet var constRecordToView: NSLayoutConstraint!
+//    @IBOutlet var constSongtextToImotion: NSLayoutConstraint!
+//    @IBOutlet var constLocationToSongtext: NSLayoutConstraint!
+//    @IBOutlet var constRecordToView: NSLayoutConstraint!
     
     var calenderDetailBean = CalenderDetailBean()
     var questionBean = QuestionBean()
@@ -122,7 +122,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewPhoto.isHidden = true
                 viewRecord.isHidden = true
                 //기존값 20에다 칸 당 크기 빼기.
-                constRecordToView.constant = 20 - (115 * 10)
+//                constRecordToView.constant = 20 - (115 * 10)
                 viewPast.isHidden = false
 
 
@@ -150,13 +150,13 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewPeople.isHidden = false
                 viewLocation.isHidden = false
                 viewRecord.isHidden = false
-                constRecordToView.constant = 20
+//                constRecordToView.constant = 20
             } else {
                 viewSongText.isHidden = false
-                constRecordToView.constant = 20 - 277
+//                constRecordToView.constant = 20 - 277
             }
             
-            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
+//            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
             viewPast.isHidden = true
             playerView.isHidden = false
             imageViewQuestion.isHidden = true
@@ -180,8 +180,8 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
             viewPhoto.isHidden = true
             viewRecord.isHidden = true
             viewFuture.isHidden = false
-            constRecordToView.constant = 20 - (115 * 10)
-            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
+//            constRecordToView.constant = 20 - (115 * 10)
+//            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
             viewPast.isHidden = false
             playerView.isHidden = true
             imageViewQuestion.isHidden = false
@@ -249,7 +249,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         
         if(calenderState == "moment") {
             viewSongText.isHidden = true
-            constSongtextToImotion.constant = constSongtextToImotion.constant - 115
+//            constSongtextToImotion.constant = constSongtextToImotion.constant - 115
             labelTitle.text = "그날의 질문"
             labelTabTitle.text = "그때의 나"
             labelSongTitle.text = "그때의 노래"
@@ -262,8 +262,8 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
             viewPeople.isHidden = true
             viewLocation.isHidden = true
             viewRecord.isHidden = true
-            constLocationToSongtext.constant = constLocationToSongtext.constant - (115*5)
-            constRecordToView.constant = 20 - 277
+//            constLocationToSongtext.constant = constLocationToSongtext.constant - (115*5)
+//            constRecordToView.constant = 20 - 277
             labelTitle.text = "오늘의 기록"
             labelTabTitle.text = "오늘의 나"
             labelSongTitle.text = "오늘의 노래"
@@ -339,7 +339,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewImotion.isHidden = true
                 viewPhoto.isHidden = true
                 viewPast.isHidden = false
-                constRecordToView.constant = 20 - (115*5) - 277
+//                constRecordToView.constant = 20 - (115*5) - 277
                 labelPast.text = "기록이 존재하지 않습니다."
             } else {
                 viewSong.isHidden = false
@@ -348,7 +348,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewPhoto.isHidden = false
                 viewPast.isHidden = true
                 labelSongText.text = "\" \(calenderDetailBean.lyrics) \""
-                constRecordToView.constant = 20 - 277
+//                constRecordToView.constant = 20 - 277
             }
             
         }

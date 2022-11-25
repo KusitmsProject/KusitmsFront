@@ -145,43 +145,15 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate {
     
 }
 
-//extension EmojiViewController: UICollectionViewDataSource {
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return postings.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MusicCell", for: indexPath) as? MusicCell else {
-//            return UICollectionViewCell()
-//        }
-//        GetPostsByEmoji(emotion ?? "HAPPY") { json in
-//            self.postings = json.result
-//            print("@@@@@@@@@@@@")
-//            print(self.postings)
-//            print("@@@@@@@@@@@@")
-//        }
-//
-//        let song = postings[indexPath.item]
-//        cell.configure(song)
-//        return cell
-//    }
-//}
-
-//extension EmojiViewController: UICollectionViewDelegateFlowLayout {
-//
-//    // cell 사이즈 조정
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = collectionView.bounds.width
-//        return CGSize(width: width, height: 60)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return .zero
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return .zero
-//    }
-//}
+extension EmojiViewController: MusicCellDelegate {
+    func musicView(emotion: String, track: String, artist: String, videoId: String) {
+        print("여기로 넘어와지나요???")
+        
+        let storyboard = UIStoryboard(name: "Music", bundle: nil)
+        guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
+        Music.setMusicDataBind(emotion: emotion, track: track, artist: artist, videoId: videoId)
+        
+        self.navigationController?.pushViewController(Music, animated: true)
+    }
+    
+}

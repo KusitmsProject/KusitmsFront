@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MusicCellDelegate: AnyObject {
+    func musicView(emotion: String, track: String, artist: String, videoId: String)
+}
+
 class MusicCell: UICollectionViewCell {
     
     @IBOutlet var cell: UIView!
@@ -18,6 +22,10 @@ class MusicCell: UICollectionViewCell {
     
     var track: String = ""
     var artist: String = ""
+    var videoId: String?
+    var emotion: String?
+    
+    public weak var musicDelegate: MusicCellDelegate?
     
     func configure(_ song: ResultByEmoji) {
         cell.layer.cornerRadius = 20
@@ -31,6 +39,8 @@ class MusicCell: UICollectionViewCell {
         trackArtist.text = String(song.track + "-" + song.artist)
         track = song.track
         artist = song.artist
+        videoId = song.videoId
+        emotion = song.emotion
         
         let option: String
         if song.options == 0 {
@@ -51,16 +61,20 @@ class MusicCell: UICollectionViewCell {
     override var isSelected: Bool{
         didSet {
            if isSelected {
-               let storyboard = UIStoryboard(name: "Music", bundle: nil)
-               guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
-               if let vc = self.next(ofType: UIViewController.self) {
-                   vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-                   Music.modalPresentationStyle = .fullScreen
-                   Music.track = track
-                   Music.artist = artist
-//                   Music.emojiCard = 
-                   vc.present(Music, animated: true, completion: nil)
-               }
+               
+               print("cell tapped!!!!!!")
+               
+               musicDelegate?.musicView(emotion: emotion!, track: track, artist: artist, videoId: videoId!)
+//               
+//               let storyboard = UIStoryboard(name: "Music", bundle: nil)
+//               guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
+//               if let vc = self.next(ofType: UIViewController.self) {
+//                   vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//                   Music.modalPresentationStyle = .fullScreen
+//                   Music.track = track
+//                   Music.artist = artist
+//                   vc.present(Music, animated: true, completion: nil)
+//               }
            } else {
               
            }

@@ -20,6 +20,7 @@ class VideoBean {
     func parsing(jsonObject: [String : Any]) {
         
         videoId = JSONUtil.parsingString(jsonObject: jsonObject, key: VideoBean.videoId_key)
+        print("================>VIDEOID", videoId)
         videoTitle = JSONUtil.parsingString(jsonObject: jsonObject, key: VideoBean.videoTitle_key)
         videoURL = JSONUtil.parsingString(jsonObject: jsonObject, key: VideoBean.videoURK_key)
 

@@ -27,6 +27,11 @@ class StorageViewController: UIViewController {
         
         pageControl.numberOfPages = 6
         
+        getSlider() { json in
+            self.emotions = json.result
+        }
+
+        
     }
 
 }
@@ -40,7 +45,7 @@ extension StorageViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCell", for: indexPath) as? SliderCell else{
             return UICollectionViewCell()
         }
-        
+                
         // messages에서 item을 가져와서 cell을 구성
         let emotion = emotions[indexPath.item]
         

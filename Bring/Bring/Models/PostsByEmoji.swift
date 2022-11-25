@@ -19,11 +19,11 @@ struct PostsByEmoji: Decodable {
 struct ResultByEmoji: Decodable, Hashable {
     let date: String
     let postIdx, musicIdx: Int
-    let artist, track, lyrics, emotion: String
+    let artist, track, lyrics, emotion, videoId: String
     let options: Int
 }
 
 extension ResultByEmoji {
     
-    static var postings : [ResultByEmoji] = [ResultByEmoji(date: "2022-11-12", postIdx: 2, musicIdx: 3, artist: "BTS", track: "Dynamite", lyrics: "null'Cause I, I, I'm in the stars tonight\nSo, watch me bring the fire, and set the night alight\nYour shoes on, get up in the morn'\nCup of milk, let's rock 'n' roll\n", emotion: "HAPPY", options: 1)]
+    static var postings : [ResultByEmoji] = [ResultByEmoji(date: "2022-11-12", postIdx: 2, musicIdx: 3, artist: "BTS", track: "Dynamite", lyrics: "null'Cause I, I, I'm in the stars tonight\nSo, watch me bring the fire, and set the night alight\nYour shoes on, get up in the morn'\nCup of milk, let's rock 'n' roll\n", emotion: "HAPPY", videoId: "BS7tz2rAOSA", options: 1)]
 }

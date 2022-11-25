@@ -19,16 +19,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncY-6w-wFJ">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-oP-cuU">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="405"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 나" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uho-Ia-Rnv">
                                         <rect key="frame" x="28" y="50" width="75" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-oP-cuU">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="405"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPP-rp-M81">
                                         <rect key="frame" x="0.0" y="405" width="390" height="405"/>
                                         <subviews>
@@ -96,7 +96,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-9m-Bdo">
-                                                <rect key="frame" x="18" y="357" width="354" height="36"/>
+                                                <rect key="frame" x="18" y="369" width="354" height="36"/>
                                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="bYT-1L-tJl"/>
@@ -164,7 +164,7 @@
                                             <constraint firstItem="pg7-vY-aHZ" firstAttribute="top" secondItem="UEV-x5-Guc" secondAttribute="bottom" id="Ahr-gJ-jRA"/>
                                             <constraint firstItem="pg7-vY-aHZ" firstAttribute="trailing" secondItem="UEV-x5-Guc" secondAttribute="trailing" id="BhI-79-6cR"/>
                                             <constraint firstItem="1gC-bH-Kog" firstAttribute="leading" secondItem="BPP-rp-M81" secondAttribute="leading" constant="30" id="F0a-FO-R19"/>
-                                            <constraint firstAttribute="bottom" secondItem="gwk-9m-Bdo" secondAttribute="bottom" constant="12" id="KdJ-Pp-HjR"/>
+                                            <constraint firstAttribute="bottom" secondItem="gwk-9m-Bdo" secondAttribute="bottom" id="KdJ-Pp-HjR"/>
                                             <constraint firstItem="nBb-bT-rPo" firstAttribute="top" secondItem="ETp-Ic-PYw" secondAttribute="top" id="Lhz-zr-j2z"/>
                                             <constraint firstItem="sa3-WH-MQF" firstAttribute="leading" secondItem="gTI-fk-iq4" secondAttribute="trailing" constant="4" id="MVk-ck-SHW"/>
                                             <constraint firstItem="nBb-bT-rPo" firstAttribute="leading" secondItem="ETp-Ic-PYw" secondAttribute="leading" id="OJB-Z0-5xZ"/>
@@ -284,7 +284,7 @@
                             <constraint firstItem="ncY-6w-wFJ" firstAttribute="top" secondItem="PYL-AA-Vmg" secondAttribute="top" id="YAP-JX-eQN"/>
                             <constraint firstItem="ncY-6w-wFJ" firstAttribute="leading" secondItem="fUT-hK-rtD" secondAttribute="leading" id="foM-Q5-Y5R"/>
                             <constraint firstAttribute="trailing" secondItem="ncY-6w-wFJ" secondAttribute="trailing" id="gel-22-gnH"/>
-                            <constraint firstItem="fUT-hK-rtD" firstAttribute="bottom" secondItem="ncY-6w-wFJ" secondAttribute="bottom" id="lFq-Pz-TbR"/>
+                            <constraint firstAttribute="bottom" secondItem="ncY-6w-wFJ" secondAttribute="bottom" constant="34" id="lFq-Pz-TbR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="ozm-8m-WTi"/>
