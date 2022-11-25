@@ -25,7 +25,7 @@
                                 <color key="textColor" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrevRecord" translatesAutoresizingMaskIntoConstraints="NO" id="zlo-Da-8Wh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goPrevR" translatesAutoresizingMaskIntoConstraints="NO" id="zlo-Da-8Wh">
                                 <rect key="frame" x="1" y="36" width="358" height="176"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="176" id="1PG-cc-3Xe"/>
@@ -57,6 +57,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="PrevRecord" width="378" height="176"/>
+        <image name="goPrevR" width="378" height="176"/>
     </resources>
 </document>

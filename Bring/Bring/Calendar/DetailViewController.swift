@@ -25,7 +25,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet var viewPeople: UIView!
     @IBOutlet var viewLocation: UIView!
     @IBOutlet var labelLocationNickname: UILabel!
-//    @IBOutlet var viewSongText: UIView!
     @IBOutlet var viewImotion: UIView!
     @IBOutlet var viewPhoto: UIView!
     @IBOutlet var viewRecord: UIView!
@@ -51,10 +50,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet var labelEmotionTitle: UILabel!
     @IBOutlet var labelPhotoTitle: UILabel!
     
-//    @IBOutlet var constSongtextToImotion: NSLayoutConstraint!
-//    @IBOutlet var constLocationToSongtext: NSLayoutConstraint!
-//    @IBOutlet var constRecordToView: NSLayoutConstraint!
-    
     var calenderDetailBean = CalenderDetailBean()
     var questionBean = QuestionBean()
     var videoBean = VideoBean()
@@ -77,15 +72,8 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         setListener()
         requestQuestionData()
         requestData()
-        initpalyer()
     }
     
-    func initpalyer() {
-        playerView.delegate = self
-        let playVarsDic = ["playsinline": 1]
-        playerView.load(withVideoId: videoBean.videoId, playerVars: playVarsDic)
-
-    }
     
     // 시간을 비교해서 해당 시간대가 현재인지 과거인지 미래인지 판단
     func initDate() {
@@ -119,17 +107,13 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewPeople.isHidden = true
                 viewLocation.isHidden = true
                 viewImotion.isHidden = true
-//                viewSongText.isHidden = true
                 viewPhoto.isHidden = true
                 viewRecord.isHidden = true
-                //기존값 20에다 칸 당 크기 빼기.
-//                constRecordToView.constant = 20 - (115 * 10)
                 viewPast.isHidden = false
 
 
             }
             
-//            playerView.isHidden = false
             imageViewQuestion.isHidden = false
             viewFuture.isHidden = true
             dayState = todayDate.dateCompare(fromDate: date)
@@ -140,7 +124,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 return
             }
             
-//            viewSong.isHidden = false
             viewImotion.isHidden = false
             viewPhoto.isHidden = false
 
@@ -151,15 +134,9 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewPeople.isHidden = false
                 viewLocation.isHidden = false
                 viewRecord.isHidden = false
-//                constRecordToView.constant = 20
-            } else {
-//                viewSongText.isHidden = false
-//                constRecordToView.constant = 20 - 277
-            }
+             }
             
-//            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
             viewPast.isHidden = true
-//            playerView.isHidden = false
             imageViewQuestion.isHidden = true
             viewFuture.isHidden = true
             dayState = todayDate.dateCompare(fromDate: date)
@@ -170,21 +147,16 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 return
             }
             
-//            viewSong.isHidden = true
             viewWeather.isHidden = true
             viewSeason.isHidden = true
             viewDate.isHidden = true
             viewPeople.isHidden = true
             viewLocation.isHidden = true
             viewImotion.isHidden = true
-//            viewSongText.isHidden = true
             viewPhoto.isHidden = true
             viewRecord.isHidden = true
             viewFuture.isHidden = false
-//            constRecordToView.constant = 20 - (115 * 10)
-//            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
             viewPast.isHidden = false
-//            playerView.isHidden = false
             imageViewQuestion.isHidden = false
             dayState = todayDate.dateCompare(fromDate: date)
         }
@@ -228,11 +200,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         viewLocation.layer.cornerRadius = 10
         viewLocation.layer.masksToBounds = true
         
-//        viewSongText.layer.borderWidth = 1
-//        viewSongText.layer.borderColor = UIColor(named: "gradient1")?.cgColor
-//        viewSongText.layer.cornerRadius = 10
-//        viewSongText.layer.masksToBounds = true
-//
         viewImotion.layer.borderWidth = 1
         viewImotion.layer.borderColor = UIColor(named: "gradient1")?.cgColor
         viewImotion.layer.cornerRadius = 10
@@ -249,8 +216,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         viewRecord.layer.masksToBounds = true
         
         if(calenderState == "moment") {
-//            viewSongText.isHidden = true
-//            constSongtextToImotion.constant = constSongtextToImotion.constant - 115
             labelTitle.text = "그날의 질문"
             labelTabTitle.text = "그때의 나"
             labelSongTitle.text = "그때의 노래"
@@ -263,8 +228,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
             viewPeople.isHidden = true
             viewLocation.isHidden = true
             viewRecord.isHidden = true
-//            constLocationToSongtext.constant = constLocationToSongtext.constant - (115*5)
-//            constRecordToView.constant = 20 - 277
+            
             labelTitle.text = "오늘의 기록"
             labelTabTitle.text = "오늘의 나"
             labelSongTitle.text = "오늘의 노래"
@@ -279,6 +243,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         labelMonthDay.text = "\(month)월 \(day)일"
         
         // 서버 공통값
+        playerView.load(withVideoId: calenderDetailBean.videoId)
         labelSong.text = "\" \(calenderDetailBean.track) \""
         labelArtist.text = "\(calenderDetailBean.artist)"
         labelEmotion.text = "\" \(calenderDetailBean.emotion) \""
@@ -331,7 +296,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
             }
         } else {
             
-            textFieldQuestion.text = "\(year)년 \(month)월 \(day)일\n윤아님의 단 하나의 기록"
+            textFieldQuestion.text = "\(year)년 \(month)월 \(day)일\n영민님의 단 하나의 기록"
             
             //데이터 없음
             if(calenderDetailBean.track == "") {
@@ -390,7 +355,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 if dictResult != nil {
                     DLogUtil.debug(tag: #file, content: dictResult as Any)
                     if(dictResult?.count == 0) {
-                        return
+                        return 
                     }
                     self.questionBean.parsing(jsonObject: dictResult!)
                     DLogUtil.debug(tag: #file, content: self.questionBean.imageURL)
@@ -416,7 +381,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                         return
                     }
                     self.calenderDetailBean.parsing(jsonObject: dictResult!)
-                    self.requestYoutubeId(track: self.calenderDetailBean.track, artist: self.calenderDetailBean.artist)
                     self.updateView()
 
                 }
@@ -431,32 +395,12 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                         return
                     }
                     self.calenderDetailBean.parsing(jsonObject: dictResult!)
-                    self.requestYoutubeId(track: self.calenderDetailBean.track, artist: self.calenderDetailBean.artist)
                     self.updateView()
 
                 }
 
             }
         }
-    }
-    
-    private func requestYoutubeId(track : String, artist : String) {
-        
-        WebModel.instance.requestYoutubeId(track: track, artist: artist)
-        WebModel.instance.onYoutubeIdDetail  = { dictResult in
-            if dictResult != nil {
-                DLogUtil.debug(tag: #file, content: dictResult as Any)
-                if(dictResult?.count == 0) {
-                    return
-                }
-                
-                self.videoBean.parsing(jsonObject: dictResult![0])
-                self.initpalyer()
-                
-            }
-
-        }
-        
     }
     
     private func changeDay(plusMinus : Bool) {

@@ -19,29 +19,53 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIi-br-CF5">
                         <rect key="frame" x="-7.6666666666666572" y="-1.6666666666666714" width="380.33333333333326" height="220.33333333333337"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FrontBox" translatesAutoresizingMaskIntoConstraints="NO" id="p6K-pR-Bxc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LCard" translatesAutoresizingMaskIntoConstraints="NO" id="p6K-pR-Bxc">
                                 <rect key="frame" x="24.333333333333343" y="3.3333333333333286" width="167" height="214"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="Wxi-K1-I6V"/>
                                     <constraint firstAttribute="height" constant="214" id="fak-hj-7G0"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FrontBox2" translatesAutoresizingMaskIntoConstraints="NO" id="L1H-GI-oI3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/26일에" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heG-Aw-POT">
+                                <rect key="frame" x="78.666666666666671" y="31.333333333333336" width="58.000000000000014" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.11.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJg-gf-EQC">
+                                <rect key="frame" x="86.666666666666671" y="184" width="42.000000000000014" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RCard" translatesAutoresizingMaskIntoConstraints="NO" id="L1H-GI-oI3">
                                 <rect key="frame" x="197.33333333333331" y="3.3333333333333286" width="167" height="214"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="0QO-t4-HFt"/>
                                     <constraint firstAttribute="height" constant="214" id="Y5u-gs-awH"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.11.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae1-Xb-Pgk">
+                                <rect key="frame" x="259.66666666666669" y="184" width="42" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Ae1-Xb-Pgk" firstAttribute="top" secondItem="L1H-GI-oI3" secondAttribute="bottom" constant="-33.333333333333314" id="27a-de-wkA"/>
+                            <constraint firstItem="Ae1-Xb-Pgk" firstAttribute="centerX" secondItem="L1H-GI-oI3" secondAttribute="centerX" id="3KV-uR-a7P"/>
+                            <constraint firstItem="heG-Aw-POT" firstAttribute="top" secondItem="p6K-pR-Bxc" secondAttribute="top" constant="28" id="9C8-pB-xvn"/>
                             <constraint firstItem="p6K-pR-Bxc" firstAttribute="leading" secondItem="cIi-br-CF5" secondAttribute="leading" constant="24" id="FsE-gT-Ope"/>
+                            <constraint firstItem="QJg-gf-EQC" firstAttribute="top" secondItem="p6K-pR-Bxc" secondAttribute="bottom" constant="-33.333333333333314" id="HOy-ip-kku"/>
                             <constraint firstItem="p6K-pR-Bxc" firstAttribute="centerY" secondItem="cIi-br-CF5" secondAttribute="centerY" id="J4N-dU-ler"/>
                             <constraint firstItem="L1H-GI-oI3" firstAttribute="centerY" secondItem="cIi-br-CF5" secondAttribute="centerY" id="hhg-US-anX"/>
                             <constraint firstItem="L1H-GI-oI3" firstAttribute="leading" secondItem="p6K-pR-Bxc" secondAttribute="trailing" constant="5.9999999999999716" id="nhA-R3-fb8"/>
                             <constraint firstAttribute="width" constant="380" id="qv0-Au-8BD"/>
                             <constraint firstAttribute="height" constant="220" id="qvc-IK-o46"/>
+                            <constraint firstItem="heG-Aw-POT" firstAttribute="centerX" secondItem="p6K-pR-Bxc" secondAttribute="centerX" id="wLt-wb-C5Q"/>
                             <constraint firstAttribute="trailing" secondItem="L1H-GI-oI3" secondAttribute="trailing" constant="16" id="ydq-Ur-0qX"/>
+                            <constraint firstItem="QJg-gf-EQC" firstAttribute="centerX" secondItem="p6K-pR-Bxc" secondAttribute="centerX" id="ytM-51-EQQ"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -59,7 +83,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="FrontBox" width="197" height="244"/>
-        <image name="FrontBox2" width="195" height="244"/>
+        <image name="LCard" width="197" height="244"/>
+        <image name="RCard" width="197" height="244"/>
     </resources>
 </document>
