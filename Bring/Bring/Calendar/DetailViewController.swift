@@ -70,8 +70,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        playerView.load(withVideoId: videoBean.videoId)
         
         initDate()
         initView()
@@ -79,13 +77,15 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         setListener()
         requestQuestionData()
         requestData()
+        initpalyer()
     }
     
-//    func initpalyer() {
-////        playerView.delegate = self
-//        let playVarsDic = ["playsinline": 1]
-//
-//    }
+    func initpalyer() {
+        playerView.delegate = self
+        let playVarsDic = ["playsinline": 1]
+        playerView.load(withVideoId: videoBean.videoId, playerVars: playVarsDic)
+
+    }
     
     // 시간을 비교해서 해당 시간대가 현재인지 과거인지 미래인지 판단
     func initDate() {
@@ -451,7 +451,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 }
                 
                 self.videoBean.parsing(jsonObject: dictResult![0])
-//                self.initpalyer()
+                self.initpalyer()
                 
             }
 
