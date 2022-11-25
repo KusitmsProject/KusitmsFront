@@ -25,7 +25,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet var viewPeople: UIView!
     @IBOutlet var viewLocation: UIView!
     @IBOutlet var labelLocationNickname: UILabel!
-//    @IBOutlet var viewSongText: UIView!
     @IBOutlet var viewImotion: UIView!
     @IBOutlet var viewPhoto: UIView!
     @IBOutlet var viewRecord: UIView!
@@ -50,10 +49,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet var labelSongTitle: UILabel!
     @IBOutlet var labelEmotionTitle: UILabel!
     @IBOutlet var labelPhotoTitle: UILabel!
-    
-//    @IBOutlet var constSongtextToImotion: NSLayoutConstraint!
-//    @IBOutlet var constLocationToSongtext: NSLayoutConstraint!
-//    @IBOutlet var constRecordToView: NSLayoutConstraint!
     
     var calenderDetailBean = CalenderDetailBean()
     var questionBean = QuestionBean()
@@ -112,17 +107,13 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewPeople.isHidden = true
                 viewLocation.isHidden = true
                 viewImotion.isHidden = true
-//                viewSongText.isHidden = true
                 viewPhoto.isHidden = true
                 viewRecord.isHidden = true
-                //기존값 20에다 칸 당 크기 빼기.
-//                constRecordToView.constant = 20 - (115 * 10)
                 viewPast.isHidden = false
 
 
             }
             
-//            playerView.isHidden = false
             imageViewQuestion.isHidden = false
             viewFuture.isHidden = true
             dayState = todayDate.dateCompare(fromDate: date)
@@ -133,7 +124,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 return
             }
             
-//            viewSong.isHidden = false
             viewImotion.isHidden = false
             viewPhoto.isHidden = false
 
@@ -144,15 +134,9 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewPeople.isHidden = false
                 viewLocation.isHidden = false
                 viewRecord.isHidden = false
-//                constRecordToView.constant = 20
-            } else {
-//                viewSongText.isHidden = false
-//                constRecordToView.constant = 20 - 277
-            }
+             }
             
-//            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
             viewPast.isHidden = true
-//            playerView.isHidden = false
             imageViewQuestion.isHidden = true
             viewFuture.isHidden = true
             dayState = todayDate.dateCompare(fromDate: date)
@@ -163,21 +147,16 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 return
             }
             
-//            viewSong.isHidden = true
             viewWeather.isHidden = true
             viewSeason.isHidden = true
             viewDate.isHidden = true
             viewPeople.isHidden = true
             viewLocation.isHidden = true
             viewImotion.isHidden = true
-//            viewSongText.isHidden = true
             viewPhoto.isHidden = true
             viewRecord.isHidden = true
             viewFuture.isHidden = false
-//            constRecordToView.constant = 20 - (115 * 10)
-//            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
             viewPast.isHidden = false
-//            playerView.isHidden = false
             imageViewQuestion.isHidden = false
             dayState = todayDate.dateCompare(fromDate: date)
         }
@@ -221,11 +200,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         viewLocation.layer.cornerRadius = 10
         viewLocation.layer.masksToBounds = true
         
-//        viewSongText.layer.borderWidth = 1
-//        viewSongText.layer.borderColor = UIColor(named: "gradient1")?.cgColor
-//        viewSongText.layer.cornerRadius = 10
-//        viewSongText.layer.masksToBounds = true
-//
         viewImotion.layer.borderWidth = 1
         viewImotion.layer.borderColor = UIColor(named: "gradient1")?.cgColor
         viewImotion.layer.cornerRadius = 10
@@ -242,8 +216,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         viewRecord.layer.masksToBounds = true
         
         if(calenderState == "moment") {
-//            viewSongText.isHidden = true
-//            constSongtextToImotion.constant = constSongtextToImotion.constant - 115
             labelTitle.text = "그날의 질문"
             labelTabTitle.text = "그때의 나"
             labelSongTitle.text = "그때의 노래"
@@ -256,8 +228,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
             viewPeople.isHidden = true
             viewLocation.isHidden = true
             viewRecord.isHidden = true
-//            constLocationToSongtext.constant = constLocationToSongtext.constant - (115*5)
-//            constRecordToView.constant = 20 - 277
+            
             labelTitle.text = "오늘의 기록"
             labelTabTitle.text = "오늘의 나"
             labelSongTitle.text = "오늘의 노래"
@@ -410,7 +381,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                         return
                     }
                     self.calenderDetailBean.parsing(jsonObject: dictResult!)
-//                    self.requestYoutubeId(track: self.calenderDetailBean.track, artist: self.calenderDetailBean.artist)
                     self.updateView()
 
                 }
@@ -425,7 +395,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                         return
                     }
                     self.calenderDetailBean.parsing(jsonObject: dictResult!)
-//                    self.requestYoutubeId(track: self.calenderDetailBean.track, artist: self.calenderDetailBean.artist)
                     self.updateView()
 
                 }
@@ -433,25 +402,6 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
             }
         }
     }
-    
-//    private func requestYoutubeId(track : String, artist : String) {
-//
-//        WebModel.instance.requestYoutubeId(track: track, artist: artist)
-//        WebModel.instance.onYoutubeIdDetail  = { dictResult in
-//            if dictResult != nil {
-//                DLogUtil.debug(tag: #file, content: dictResult as Any)
-//                if(dictResult?.count == 0) {
-//                    return
-//                }
-//
-//                self.videoBean.parsing(jsonObject: dictResult![0])
-//                self.initpalyer()
-//
-//            }
-//
-//        }
-//
-//    }
     
     private func changeDay(plusMinus : Bool) {
         var plusMinusDate = 0
