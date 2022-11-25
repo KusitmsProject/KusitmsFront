@@ -144,3 +144,16 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate {
    }
     
 }
+
+extension EmojiViewController: MusicCellDelegate {
+    func musicView(emotion: String, track: String, artist: String, videoId: String) {
+        print("여기로 넘어와지나요???")
+        
+        let storyboard = UIStoryboard(name: "Music", bundle: nil)
+        guard let Music = storyboard.instantiateViewController(withIdentifier: "MusicViewController") as? MusicViewController else {return}
+        Music.setMusicDataBind(emotion: emotion, track: track, artist: artist, videoId: videoId)
+        
+        self.navigationController?.pushViewController(Music, animated: true)
+    }
+    
+}

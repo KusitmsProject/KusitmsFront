@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qWr-kp-Zqc">
+            <objects>
+                <navigationController id="g1P-if-WoE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="5X7-xR-zDp">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="6Vs-kS-hqR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfm-5E-9Lj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-886" y="-29"/>
+        </scene>
         <!--Music View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -22,13 +38,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감정 보관함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVA-Ym-g7B">
-                                <rect key="frame" x="28" y="56" width="91" height="24"/>
+                                <rect key="frame" x="28" y="100" width="91" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-DX-wZL">
-                                <rect key="frame" x="2.6666666666666572" y="93" width="385" height="40"/>
+                                <rect key="frame" x="2.6666666666666572" y="137" width="385" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvL-Zq-tHX">
                                         <rect key="frame" x="28" y="1" width="50" height="38"/>
@@ -259,7 +275,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile-card" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-te-OYZ">
-                                <rect key="frame" x="36" y="152" width="318" height="88"/>
+                                <rect key="frame" x="36" y="196" width="318" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="CGz-xP-kQw"/>
                                     <constraint firstAttribute="width" constant="318" id="hSR-DA-KYl"/>
@@ -267,13 +283,13 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fa2-dU-IbU">
-                                <rect key="frame" x="65" y="169" width="93" height="30"/>
+                                <rect key="frame" x="65" y="213" width="93" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" red="0.52549019607843139" green="0.40392156862745099" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pc0-Xq-jvi" customClass="YTPlayerView">
-                                <rect key="frame" x="37.666666666666657" y="253" width="315" height="177"/>
+                                <rect key="frame" x="37.666666666666657" y="297" width="315" height="177"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="XNr-96-U6Q"/>
@@ -281,7 +297,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8zP-ZT-yz4">
-                                <rect key="frame" x="37" y="450" width="316" height="107"/>
+                                <rect key="frame" x="37" y="494" width="316" height="107"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="316" id="IyN-69-Rlp"/>
@@ -363,13 +379,13 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="같은 노래, 다른 감정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtX-o3-gNm">
-                                <rect key="frame" x="38" y="596" width="120" height="18"/>
+                                <rect key="frame" x="38" y="640" width="120" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" red="0.56470588235294117" green="0.46666666666666667" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="87s-JJ-FC7">
-                                <rect key="frame" x="37" y="623" width="316" height="107"/>
+                                <rect key="frame" x="37" y="667" width="316" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="316" id="uTz-Xk-XHc"/>
                                     <constraint firstAttribute="height" constant="107" id="vdF-c3-w5y"/>
@@ -459,7 +475,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ed Sheeran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrZ-Su-dRM">
-                                <rect key="frame" x="65" y="199" width="83" height="18"/>
+                                <rect key="frame" x="65" y="243" width="83" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" red="0.52549019610000003" green="0.4039215686" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -492,6 +508,7 @@
                             <constraint firstItem="GOE-v3-oUF" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="qIz-cG-btf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rVq-up-6ra"/>
                     <connections>
                         <outlet property="angryBtn" destination="Arg-OC-KyV" id="ufX-Zi-4cQ"/>
                         <outlet property="artistLabel" destination="zrZ-Su-dRM" id="ujR-9z-G0T"/>

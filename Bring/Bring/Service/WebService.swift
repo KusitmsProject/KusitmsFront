@@ -37,7 +37,7 @@ class WebService {
         
         var header = HTTPHeaders()
               header.add(name: "X-ACCESS-TOKEN", value: "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWR4IjozLCJpYXQiOjE2NjkxMTM5NzQsImV4cCI6MTY3MDU4NTIwMn0.gNzVE9d-w5buLVtJyV-m7rUyUERt-GpWbebf1pMAMVY")
-              header.add(name: "Content-Type", value: "multipart/form-data")
+//              header.add(name: "Content-Type", value: "multipart/form-data")
         
         do {
             let data = try await HttpWrapper.requestGet(withUrl: url, withHeader: header)
@@ -54,7 +54,7 @@ class WebService {
         
         var header = HTTPHeaders()
               header.add(name: "X-ACCESS-TOKEN", value: "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWR4IjozLCJpYXQiOjE2NjkxMTM5NzQsImV4cCI6MTY3MDU4NTIwMn0.gNzVE9d-w5buLVtJyV-m7rUyUERt-GpWbebf1pMAMVY")
-              header.add(name: "Content-Type", value: "multipart/form-data")
+//              header.add(name: "Content-Type", value: "multipart/form-data")
         
         do {
             let data = try await HttpWrapper.requestGet(withUrl: url, withHeader: header)
@@ -71,7 +71,7 @@ class WebService {
         
         var header = HTTPHeaders()
               header.add(name: "X-ACCESS-TOKEN", value: "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWR4IjozLCJpYXQiOjE2NjkxMTM5NzQsImV4cCI6MTY3MDU4NTIwMn0.gNzVE9d-w5buLVtJyV-m7rUyUERt-GpWbebf1pMAMVY")
-              header.add(name: "Content-Type", value: "multipart/form-data")
+//              header.add(name: "Content-Type", value: "multipart/form-data")
         
         do {
             let data = try await HttpWrapper.requestGet(withUrl: url, withHeader: header)
