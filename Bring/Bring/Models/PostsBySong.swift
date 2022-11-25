@@ -12,7 +12,7 @@ struct PostsBySong: Decodable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: [ResultBySong]
+    let result: [[ResultBySong]]
 }
 
 // MARK: - PostsBySong -> Result

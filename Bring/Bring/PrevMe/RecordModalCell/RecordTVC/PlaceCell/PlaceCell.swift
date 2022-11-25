@@ -27,8 +27,6 @@ class PlaceCell: UITableViewCell {
         
         nickNameLabel.alpha = 0
         addressLabel.alpha = 0
-        
-        print("---------------=======", place)
     }
     
 
@@ -44,9 +42,11 @@ class PlaceCell: UITableViewCell {
             vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             vc.modalPresentationStyle = .fullScreen
             vc.present(mapStoryboard, animated: true, completion: nil)
-            
-            nickNameLabel.alpha = 1
-            addressLabel.alpha = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 8.0) {
+                self.nickNameLabel.alpha = 1
+                self.addressLabel.alpha = 1
+            }
+
             mapBtn.setTitle("", for: .normal)
             checkMark.tintColor = UIColor(named: "prevMain")
         }
@@ -58,7 +58,6 @@ class PlaceCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

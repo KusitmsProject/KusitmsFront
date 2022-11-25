@@ -25,7 +25,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet var viewPeople: UIView!
     @IBOutlet var viewLocation: UIView!
     @IBOutlet var labelLocationNickname: UILabel!
-    @IBOutlet var viewSongText: UIView!
+//    @IBOutlet var viewSongText: UIView!
     @IBOutlet var viewImotion: UIView!
     @IBOutlet var viewPhoto: UIView!
     @IBOutlet var viewRecord: UIView!
@@ -70,20 +70,21 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initDate()
         initView()
         updateView()
         setListener()
         requestQuestionData()
         requestData()
+        initpalyer()
     }
     
     func initpalyer() {
         playerView.delegate = self
         let playVarsDic = ["playsinline": 1]
         playerView.load(withVideoId: videoBean.videoId, playerVars: playVarsDic)
-        
+
     }
     
     // 시간을 비교해서 해당 시간대가 현재인지 과거인지 미래인지 판단
@@ -118,7 +119,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewPeople.isHidden = true
                 viewLocation.isHidden = true
                 viewImotion.isHidden = true
-                viewSongText.isHidden = true
+//                viewSongText.isHidden = true
                 viewPhoto.isHidden = true
                 viewRecord.isHidden = true
                 //기존값 20에다 칸 당 크기 빼기.
@@ -128,7 +129,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
 
             }
             
-            playerView.isHidden = true
+//            playerView.isHidden = false
             imageViewQuestion.isHidden = false
             viewFuture.isHidden = true
             dayState = todayDate.dateCompare(fromDate: date)
@@ -139,7 +140,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 return
             }
             
-            viewSong.isHidden = false
+//            viewSong.isHidden = false
             viewImotion.isHidden = false
             viewPhoto.isHidden = false
 
@@ -152,13 +153,13 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 viewRecord.isHidden = false
 //                constRecordToView.constant = 20
             } else {
-                viewSongText.isHidden = false
+//                viewSongText.isHidden = false
 //                constRecordToView.constant = 20 - 277
             }
             
 //            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
             viewPast.isHidden = true
-            playerView.isHidden = false
+//            playerView.isHidden = false
             imageViewQuestion.isHidden = true
             viewFuture.isHidden = true
             dayState = todayDate.dateCompare(fromDate: date)
@@ -169,21 +170,21 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 return
             }
             
-            viewSong.isHidden = true
+//            viewSong.isHidden = true
             viewWeather.isHidden = true
             viewSeason.isHidden = true
             viewDate.isHidden = true
             viewPeople.isHidden = true
             viewLocation.isHidden = true
             viewImotion.isHidden = true
-            viewSongText.isHidden = true
+//            viewSongText.isHidden = true
             viewPhoto.isHidden = true
             viewRecord.isHidden = true
             viewFuture.isHidden = false
 //            constRecordToView.constant = 20 - (115 * 10)
 //            DLogUtil.debug(tag: #file, content: "constant ? \(constRecordToView.constant)")
             viewPast.isHidden = false
-            playerView.isHidden = true
+//            playerView.isHidden = false
             imageViewQuestion.isHidden = false
             dayState = todayDate.dateCompare(fromDate: date)
         }
@@ -227,11 +228,11 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         viewLocation.layer.cornerRadius = 10
         viewLocation.layer.masksToBounds = true
         
-        viewSongText.layer.borderWidth = 1
-        viewSongText.layer.borderColor = UIColor(named: "gradient1")?.cgColor
-        viewSongText.layer.cornerRadius = 10
-        viewSongText.layer.masksToBounds = true
-        
+//        viewSongText.layer.borderWidth = 1
+//        viewSongText.layer.borderColor = UIColor(named: "gradient1")?.cgColor
+//        viewSongText.layer.cornerRadius = 10
+//        viewSongText.layer.masksToBounds = true
+//
         viewImotion.layer.borderWidth = 1
         viewImotion.layer.borderColor = UIColor(named: "gradient1")?.cgColor
         viewImotion.layer.cornerRadius = 10
@@ -248,7 +249,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         viewRecord.layer.masksToBounds = true
         
         if(calenderState == "moment") {
-            viewSongText.isHidden = true
+//            viewSongText.isHidden = true
 //            constSongtextToImotion.constant = constSongtextToImotion.constant - 115
             labelTitle.text = "그날의 질문"
             labelTabTitle.text = "그때의 나"
@@ -287,7 +288,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
         
         if(calenderState == "moment") {
             if(dayState != "Future") {
-                textFieldQuestion.text = questionBean.questionText
+                textFieldQuestion.text = "30일 후면, 크리스마스에요!\n크리스마스하면 생각나는 노래는 무엇인가요?"
                 if(questionBean.imageURL != "") {
                     imageViewQuestion.image = getImageFromUrl(urlString: questionBean.imageURL)
                     imageViewQuestion.isHidden = false
@@ -335,7 +336,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
             //데이터 없음
             if(calenderDetailBean.track == "") {
                 viewSong.isHidden = true
-                viewSongText.isHidden = true
+//                viewSongText.isHidden = true
                 viewImotion.isHidden = true
                 viewPhoto.isHidden = true
                 viewPast.isHidden = false
@@ -343,7 +344,7 @@ class DetailViewController: UIViewController, YTPlayerViewDelegate {
                 labelPast.text = "기록이 존재하지 않습니다."
             } else {
                 viewSong.isHidden = false
-                viewSongText.isHidden = false
+//                viewSongText.isHidden = false
                 viewImotion.isHidden = false
                 viewPhoto.isHidden = false
                 viewPast.isHidden = true
