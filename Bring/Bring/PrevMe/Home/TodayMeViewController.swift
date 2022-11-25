@@ -163,8 +163,15 @@ class TodayMeViewController: UIViewController {
         saveBtn.isEnabled = false
     }
 
-    // MARK: 서버로 기록 POST
+    // MARK: 서버로 기록 POST & 캘린더 뷰로 이동
     @IBAction func saveTapped(_ sender: Any) {
+        
+        print("save tapped")
+        // 캘린더 뷰로 이동
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+        guard let Calendar = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as? CalendarViewController else {return}
+    
+        self.navigationController?.pushViewController(Calendar, animated: true)
         
     }
     
@@ -200,22 +207,6 @@ extension TodayMeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension TodayMeViewController: UISearchBarDelegate {
-    
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//
-//           if searchText == "" {
-//               tableView.layer.borderColor = UIColor.clear.cgColor
-//           }
-//
-//               if trackResult[0].track != "" {
-//
-//                   tableView.layer.borderColor = UIColor(named: "boxLightGray")?.cgColor
-//                   tableView.layer.borderWidth = 1
-//                   tableView.layer.cornerRadius = 10
-//
-//               }
-//        self.tableView.reloadData()
-//       }
     
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
